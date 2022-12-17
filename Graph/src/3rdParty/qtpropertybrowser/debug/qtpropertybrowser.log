@@ -1,0 +1,14 @@
+﻿  Generate moc_predefs.h
+  lineedit.cpp
+  qtbuttonpropertybrowser.cpp
+  qtgroupboxpropertybrowser.cpp
+  qtpropertybrowser.cpp
+  qtpropertybrowserutils.cpp
+  qtvariantproperty.cpp
+  qrc_qtpropertybrowser.cpp
+  moc_lineedit.cpp
+  moc_qtpropertybrowserutils_p.cpp
+  qteditorfactory.cpp
+  qtpropertymanager.cpp
+  qttreepropertybrowser.cpp
+  qtpropertybrowser.vcxproj -> D:\Graph\src\3rdParty\qtpropertybrowser\..\..\lib.debug\qtpropertybrowser.lib

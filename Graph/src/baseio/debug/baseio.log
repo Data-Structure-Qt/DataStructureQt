@@ -1,0 +1,16 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: 中间目录(debug\)包含从另一个项目(qvgeio.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
+  Generate moc_predefs.h
+  CFormatDOT.cpp
+  CFormatGraphML.cpp
+  CFormatPlainDOT.cpp
+  CGraphBase.cpp
+d:\graph\src\baseio\cformatdot.cpp(125): warning C4100: “lastError”: 未引用的形参
+d:\graph\src\baseio\cformatdot.cpp(125): warning C4100: “g”: 未引用的形参
+d:\graph\src\baseio\cformatdot.cpp(125): warning C4100: “fileName”: 未引用的形参
+d:\graph\src\baseio\cformatdot.cpp(277): warning C4100: “lastError”: 未引用的形参
+d:\graph\src\baseio\cformatdot.cpp(277): warning C4100: “graph”: 未引用的形参
+d:\graph\src\baseio\cformatdot.cpp(277): warning C4100: “fileName”: 未引用的形参
+d:\graph\src\baseio\cformatplaindot.cpp(281): warning C4100: “lastError”: 未引用的形参
+d:\graph\src\baseio\cformatplaindot.cpp(281): warning C4100: “g”: 未引用的形参
+d:\graph\src\baseio\cformatplaindot.cpp(281): warning C4100: “fileName”: 未引用的形参
+  baseio.vcxproj -> D:\Graph\src\baseio\..\lib.debug\qvgeio.lib

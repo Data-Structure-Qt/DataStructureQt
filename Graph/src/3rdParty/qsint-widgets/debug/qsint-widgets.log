@@ -1,0 +1,39 @@
+﻿  Reading Qt configuration (D:/Qt5/5.14.2/msvc2017_64/bin/qmake)
+  Generate moc_predefs.h
+  colorbutton.cpp
+  colorcombobox.cpp
+  colordefs.cpp
+  colorgrid.cpp
+  doublespincombobox.cpp
+  ledwidget.cpp
+  pathpicker.cpp
+  qfontbutton.cpp
+  qmenubutton.cpp
+  qpenbutton.cpp
+  qpencombobox.cpp
+  qsplitbutton.cpp
+  roundprogressbar.cpp
+  slider.cpp
+  slider2d.cpp
+  spincombobox.cpp
+  spinslider.cpp
+  splitbutton.cpp
+  timepicker.cpp
+  moc_colorbutton.cpp
+  moc_colorcombobox.cpp
+  moc_colorgrid.cpp
+  moc_doublespincombobox.cpp
+  moc_ledwidget.cpp
+  moc_pathpicker.cpp
+  moc_qfontbutton.cpp
+  moc_qmenubutton.cpp
+  moc_qpenbutton.cpp
+  moc_qsplitbutton.cpp
+  moc_roundprogressbar.cpp
+  moc_slider.cpp
+  moc_slider2d.cpp
+  moc_spincombobox.cpp
+  moc_spinslider.cpp
+  moc_splitbutton.cpp
+  moc_timepicker.cpp
+  qsint-widgets.vcxproj -> D:\Graph\src\3rdParty\qsint-widgets\..\..\lib.debug\qsint-widgets.lib
