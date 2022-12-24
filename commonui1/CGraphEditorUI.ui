@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CGraphEditorUI</class>
+ <widget class="QWidget" name="CGraphEditorUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QPushButton" name="ResetpushButton">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>210</y>
+     <width>112</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>重置</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="NoTopopushButton">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>120</y>
+     <width>112</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>No_Topo</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>ResetpushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>CGraphEditorUI</receiver>
+   <slot>on_reset_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>212</x>
+     <y>269</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>263</x>
+     <y>255</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>NoTopopushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>CGraphEditorUI</receiver>
+   <slot>on_Non_topologicalSorting_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>227</x>
+     <y>24</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>284</x>
+     <y>21</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>on_bfs_btn_clicked()</slot>
+  <slot>on_dfs_btn_clicked()</slot>
+  <slot>on_topologicalSorting_btn_clicked()</slot>
+  <slot>on_reset_btn_clicked()</slot>
+  <slot>on_kruskal_btn_clicked()</slot>
+  <slot>on_dijkstra_btn_clicked()</slot>
+  <slot>on_prim_btn_clicked()</slot>
+  <slot>on_Non_topologicalSorting_btn_clicked()</slot>
+ </slots>
+</ui>
