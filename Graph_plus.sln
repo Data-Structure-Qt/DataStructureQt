@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.33026.149
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "baseapp", "baseapp\baseapp.vcxproj", "{3009D232-DF85-4B5D-A804-D5F1DE8CC7FF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{35659717-9269-35C5-955C-3BD6371EF5CD} = {35659717-9269-35C5-955C-3BD6371EF5CD}
+		{6A14DD35-CECB-3E35-84A1-AA9F30EFB46D} = {6A14DD35-CECB-3E35-84A1-AA9F30EFB46D}
+		{B277963D-2E7D-34D7-8698-03C537411A7D} = {B277963D-2E7D-34D7-8698-03C537411A7D}
+		{A98051A3-40E1-3C3A-9987-5C2F8CC28B23} = {A98051A3-40E1-3C3A-9987-5C2F8CC28B23}
+		{546859E0-FBE4-327A-A972-D4ECE60DCD6A} = {546859E0-FBE4-327A-A972-D4ECE60DCD6A}
+		{6444C7EA-ADF6-3916-9E7B-BE1CDAEDE013} = {6444C7EA-ADF6-3916-9E7B-BE1CDAEDE013}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qsint-widgets", "3rdParty\qsint-widgets\qsint-widgets.vcxproj", "{6444C7EA-ADF6-3916-9E7B-BE1CDAEDE013}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qtpropertybrowser", "3rdParty\qtpropertybrowser\qtpropertybrowser.vcxproj", "{A98051A3-40E1-3C3A-9987-5C2F8CC28B23}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "baseio", "baseio\baseio.vcxproj", "{35659717-9269-35C5-955C-3BD6371EF5CD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "commonui", "commonui\commonui.vcxproj", "{B277963D-2E7D-34D7-8698-03C537411A7D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "base", "base\base.vcxproj", "{6A14DD35-CECB-3E35-84A1-AA9F30EFB46D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "baseioui", "baseioui\baseioui.vcxproj", "{546859E0-FBE4-327A-A972-D4ECE60DCD6A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3009D232-DF85-4B5D-A804-D5F1DE8CC7FF}.Debug|x64.ActiveCfg = Debug|x64
+		{3009D232-DF85-4B5D-A804-D5F1DE8CC7FF}.Debug|x64.Build.0 = Debug|x64
+		{3009D232-DF85-4B5D-A804-D5F1DE8CC7FF}.Release|x64.ActiveCfg = Release|x64
+		{3009D232-DF85-4B5D-A804-D5F1DE8CC7FF}.Release|x64.Build.0 = Release|x64
+		{6444C7EA-ADF6-3916-9E7B-BE1CDAEDE013}.Debug|x64.ActiveCfg = Debug|x64
+		{6444C7EA-ADF6-3916-9E7B-BE1CDAEDE013}.Debug|x64.Build.0 = Debug|x64
+		{6444C7EA-ADF6-3916-9E7B-BE1CDAEDE013}.Release|x64.ActiveCfg = Release|x64
+		{6444C7EA-ADF6-3916-9E7B-BE1CDAEDE013}.Release|x64.Build.0 = Release|x64
+		{A98051A3-40E1-3C3A-9987-5C2F8CC28B23}.Debug|x64.ActiveCfg = Debug|x64
+		{A98051A3-40E1-3C3A-9987-5C2F8CC28B23}.Debug|x64.Build.0 = Debug|x64
+		{A98051A3-40E1-3C3A-9987-5C2F8CC28B23}.Release|x64.ActiveCfg = Release|x64
+		{A98051A3-40E1-3C3A-9987-5C2F8CC28B23}.Release|x64.Build.0 = Release|x64
+		{35659717-9269-35C5-955C-3BD6371EF5CD}.Debug|x64.ActiveCfg = Debug|x64
+		{35659717-9269-35C5-955C-3BD6371EF5CD}.Debug|x64.Build.0 = Debug|x64
+		{35659717-9269-35C5-955C-3BD6371EF5CD}.Release|x64.ActiveCfg = Release|x64
+		{35659717-9269-35C5-955C-3BD6371EF5CD}.Release|x64.Build.0 = Release|x64
+		{B277963D-2E7D-34D7-8698-03C537411A7D}.Debug|x64.ActiveCfg = Debug|x64
+		{B277963D-2E7D-34D7-8698-03C537411A7D}.Debug|x64.Build.0 = Debug|x64
+		{B277963D-2E7D-34D7-8698-03C537411A7D}.Release|x64.ActiveCfg = Release|x64
+		{B277963D-2E7D-34D7-8698-03C537411A7D}.Release|x64.Build.0 = Release|x64
+		{6A14DD35-CECB-3E35-84A1-AA9F30EFB46D}.Debug|x64.ActiveCfg = Debug|x64
+		{6A14DD35-CECB-3E35-84A1-AA9F30EFB46D}.Debug|x64.Build.0 = Debug|x64
+		{6A14DD35-CECB-3E35-84A1-AA9F30EFB46D}.Release|x64.ActiveCfg = Release|x64
+		{6A14DD35-CECB-3E35-84A1-AA9F30EFB46D}.Release|x64.Build.0 = Release|x64
+		{546859E0-FBE4-327A-A972-D4ECE60DCD6A}.Debug|x64.ActiveCfg = Debug|x64
+		{546859E0-FBE4-327A-A972-D4ECE60DCD6A}.Debug|x64.Build.0 = Debug|x64
+		{546859E0-FBE4-327A-A972-D4ECE60DCD6A}.Release|x64.ActiveCfg = Release|x64
+		{546859E0-FBE4-327A-A972-D4ECE60DCD6A}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {54C7B669-EC59-4828-95F7-B044A2F97CD1}
+	EndGlobalSection
+EndGlobal
