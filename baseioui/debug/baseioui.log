@@ -1,0 +1,27 @@
+﻿D:\software\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: 中间目录(debug\)包含从另一个项目(qvgeioui.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
+  CCSVImportDialog.cpp
+  CCreateTreeDialog.cpp
+  CDOTExportDialog.cpp
+  CEasyTableWidget.cpp
+  CImageExportDialog.cpp
+  CImportExportUIController.cpp
+d:\coding\codes\graph_plus\appbase\cmainwindow.h(96): warning C4100: “docType”: 未引用的形参 (编译源文件 CImportExportUIController.cpp)
+d:\coding\codes\graph_plus\appbase\cmainwindow.h(100): warning C4100: “docType”: 未引用的形参 (编译源文件 CImportExportUIController.cpp)
+d:\coding\codes\graph_plus\appbase\cmainwindow.h(100): warning C4100: “fileName”: 未引用的形参 (编译源文件 CImportExportUIController.cpp)
+d:\coding\codes\graph_plus\appbase\cmainwindow.h(103): warning C4100: “filter”: 未引用的形参 (编译源文件 CImportExportUIController.cpp)
+d:\coding\codes\graph_plus\appbase\cmainwindow.h(103): warning C4100: “title”: 未引用的形参 (编译源文件 CImportExportUIController.cpp)
+d:\coding\codes\graph_plus\appbase\cmainwindow.h(105): warning C4100: “docType”: 未引用的形参 (编译源文件 CImportExportUIController.cpp)
+d:\coding\codes\graph_plus\appbase\cmainwindow.h(105): warning C4100: “selectedFilter”: 未引用的形参 (编译源文件 CImportExportUIController.cpp)
+d:\coding\codes\graph_plus\appbase\cmainwindow.h(105): warning C4100: “fileName”: 未引用的形参 (编译源文件 CImportExportUIController.cpp)
+d:\coding\codes\graph_plus\base\citem.h(125): warning C4100: “changePos”: 未引用的形参 (编译源文件 CImportExportUIController.cpp)
+d:\coding\codes\graph_plus\base\citem.h(125): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CImportExportUIController.cpp)
+d:\coding\codes\graph_plus\base\citem.h(124): warning C4100: “yc”: 未引用的形参 (编译源文件 CImportExportUIController.cpp)
+d:\coding\codes\graph_plus\base\citem.h(124): warning C4100: “xc”: 未引用的形参 (编译源文件 CImportExportUIController.cpp)
+d:\coding\codes\graph_plus\base\citem.h(123): warning C4100: “newRect”: 未引用的形参 (编译源文件 CImportExportUIController.cpp)
+d:\coding\codes\graph_plus\base\citem.h(123): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CImportExportUIController.cpp)
+  moc_CCSVImportDialog.cpp
+  moc_CCreateTreeDialog.cpp
+  moc_CDOTExportDialog.cpp
+  moc_CImageExportDialog.cpp
+  moc_CImportExportUIController.cpp
+  baseioui.vcxproj -> D:\coding\codes\Graph_plus\baseioui\..\lib.debug\qvgeioui.lib
