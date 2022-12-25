@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>pic/15f22a31ece69881bd29efa5e524b999.jpeg</file>
+        <file>pic/536f74bd66b0c405694aa0c6a75c1f0ax.jpeg</file>
+        <file>pic/5b3f075762894574e9957fafcf223509_副本.png</file>
+        <file>pic/dccf457bca73b812975f37c8a6874044_副本.png</file>
+        <file>pic/5b3f075762894574e9957fafcf223509_副本2.png</file>
+        <file>pic/dccf457bca73b812975f37c8a6874044_副本1.png</file>
+        <file>pic/dccf457bca73b812975f37c8a6874044_副本3.png</file>
+        <file>pic/9787a5a83f513c21eec1921dcbd6b931.gif</file>
+        <file>pic/0508f31a656101be8baa42eb294c74d8.gif</file>
+    </qresource>
+</RCC>
