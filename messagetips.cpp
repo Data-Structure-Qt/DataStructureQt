@@ -22,7 +22,7 @@ MessageTips::MessageTips(QString showStr,QWidget *parent) : QWidget(parent),
 {
     setWindowFlags(Qt::Window|Qt::FramelessWindowHint|Qt::WindowStaysOnTopHint|Qt::Tool|Qt::X11BypassWindowManagerHint);
     this->setAttribute(Qt::WA_TranslucentBackground);
-    this->setAttribute(Qt::WA_TransparentForMouseEvents, true);// 禁止鼠标事件
+    this->setAttribute(Qt::WA_TransparentForMouseEvents, true);
     this->showStr = showStr;
     hBoxlayout->addWidget(mText);
     InitLayout();
@@ -31,49 +31,45 @@ MessageTips::MessageTips(QString showStr,QWidget *parent) : QWidget(parent),
 void MessageTips::InitLayout()
 {
     this->setWindowOpacity(opacityValue);
-
-    //文字显示居中，设置字体，大小，颜色
     font = new QFont("微软雅黑",textSize,QFont::Bold);
     mText->setFont(*font);
     mText->setText(showStr);
     mText->setAlignment(Qt::AlignCenter);
-    QPalette label_pe;//设置字体颜色
+    QPalette label_pe;
     label_pe.setColor(QPalette::Background, QColor(255, 0, 0));
     mText->setPalette(label_pe);
 
-    QTimer *mtimer = new QTimer(this);//隐藏的定时器
+    QTimer *mtimer = new QTimer(this);
     mtimer->setTimerType(Qt::PreciseTimer);
     connect(mtimer,&QTimer::timeout,this,[=](){
         if(opacityValue<=0){ this->close(); }
         opacityValue = opacityValue-closeSpeed;
-        this->setWindowOpacity(opacityValue);    //设置窗口透明度
+        this->setWindowOpacity(opacityValue);
         });
 
 
-    QTimer *mShowtimer = new QTimer(this);//显示时间的定时器
-    mShowtimer->setTimerType(Qt::PreciseTimer);// 修改定时器对象的精度
+    QTimer *mShowtimer = new QTimer(this);
+    mShowtimer->setTimerType(Qt::PreciseTimer);
     connect(mShowtimer,&QTimer::timeout,this,[=](){
-        mtimer->start(closeTime);//执行延时自动关闭
+        mtimer->start(closeTime);
         });
     mShowtimer->start(showTime);
 
-    //设置屏幕居中显示
     QDesktopWidget* desktop = QApplication::desktop();
     this->move((desktop->width() - this->width())/1.5, (desktop->height() - this->height())/1.5);
-    this->setAttribute(Qt::WA_TransparentForMouseEvents, true);// 禁止鼠标事件
+    this->setAttribute(Qt::WA_TransparentForMouseEvents, true);
 }
 
 void MessageTips::paintEvent(QPaintEvent *event)
 {
     QPainter painter(this);
-    painter.setBrush(QBrush(backgroundColor));//窗体的背景色
+    painter.setBrush(QBrush(backgroundColor));
 
-    painter.setPen(QPen(frameColor,frameSize));//窗体边框的颜色和笔画大小
+    painter.setPen(QPen(frameColor,frameSize));
     QRectF rect(0, 0, this->width(), this->height());
     painter.drawRoundedRect(rect, 15, 15); // round rect
 }
 
-//设置关闭的时间和速度，speed大小限定0~1
 void MessageTips::setCloseTimeSpeed(int closeTime, double closeSpeed)
 {
     if(closeSpeed>0 && closeSpeed<=1){
