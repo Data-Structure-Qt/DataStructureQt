@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CBinarySortTreeEditorUI</class>
+ <widget class="QWidget" name="CBinarySortTreeEditorUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>320</width>
+    <height>321</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>-10</x>
+     <y>10</y>
+     <width>341</width>
+     <height>301</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>平衡二叉树</string>
+   </property>
+   <widget class="QPushButton" name="BT_creatBT">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>80</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>创建三叉树</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="nodeDeleteButton">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>80</y>
+      <width>151</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>遍历寻找最长路径</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>BT_creatBT</sender>
+   <signal>clicked()</signal>
+   <receiver>CBinarySortTreeEditorUI</receiver>
+   <slot>on_binarytree_create_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>138</x>
+     <y>134</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>35</x>
+     <y>48</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>nodeDeleteButton</sender>
+   <signal>clicked()</signal>
+   <receiver>CBinarySortTreeEditorUI</receiver>
+   <slot>on_binarytree_node_delete_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>290</x>
+     <y>298</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>23</x>
+     <y>293</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>on_binarytree_node_search_btn_clicked()</slot>
+  <slot>on_binarytree_create_btn_clicked()</slot>
+  <slot>on_binarytree_delete_btn_clicked()</slot>
+  <slot>on_binarytree_node_delete_btn_clicked()</slot>
+ </slots>
+</ui>
