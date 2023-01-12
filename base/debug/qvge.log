@@ -1,0 +1,22 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: 中间目录(debug\)包含从另一个项目(qvge.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
+  Generate moc_predefs.h
+  CNodeEditorScene.cpp
+d:\newfile\avltree\binarytreesearch\src\qvge\citem.h(119): warning C4100: “changePos”: 未引用的形参
+d:\newfile\avltree\binarytreesearch\src\qvge\citem.h(119): warning C4100: “changeSize”: 未引用的形参
+d:\newfile\avltree\binarytreesearch\src\qvge\citem.h(118): warning C4100: “yc”: 未引用的形参
+d:\newfile\avltree\binarytreesearch\src\qvge\citem.h(118): warning C4100: “xc”: 未引用的形参
+d:\newfile\avltree\binarytreesearch\src\qvge\citem.h(117): warning C4100: “newRect”: 未引用的形参
+d:\newfile\avltree\binarytreesearch\src\qvge\citem.h(117): warning C4100: “oldRect”: 未引用的形参
+d:\newfile\avltree\binarytreesearch\src\qvge\cdirectedge.h(40): warning C4100: “changePos”: 未引用的形参
+d:\newfile\avltree\binarytreesearch\src\qvge\cdirectedge.h(40): warning C4100: “changeSize”: 未引用的形参
+d:\newfile\avltree\binarytreesearch\src\qvge\cdirectedge.h(39): warning C4100: “yc”: 未引用的形参
+d:\newfile\avltree\binarytreesearch\src\qvge\cdirectedge.h(39): warning C4100: “xc”: 未引用的形参
+d:\newfile\avltree\binarytreesearch\src\qvge\cdirectedge.h(38): warning C4100: “newRect”: 未引用的形参
+d:\newfile\avltree\binarytreesearch\src\qvge\cdirectedge.h(38): warning C4100: “oldRect”: 未引用的形参
+d:\newfile\avltree\binarytreesearch\src\qvge\isceneeditcontroller.h(35): warning C4100: “keyEvent”: 未引用的形参
+d:\newfile\avltree\binarytreesearch\src\qvge\isceneeditcontroller.h(35): warning C4100: “scene”: 未引用的形参
+d:\newfile\avltree\binarytreesearch\src\qvge\isceneeditcontroller.h(36): warning C4100: “keyEvent”: 未引用的形参
+d:\newfile\avltree\binarytreesearch\src\qvge\isceneeditcontroller.h(36): warning C4100: “scene”: 未引用的形参
+d:\newfile\avltree\binarytreesearch\src\qvge\cnodeeditorscene.cpp(613): warning C4189: “item”: 局部变量已初始化但不引用
+d:\newfile\avltree\binarytreesearch\src\qvge\cnodeeditorscene.cpp(1459): warning C4189: “rectSize”: 局部变量已初始化但不引用
+  qvge.vcxproj -> D:\newFile\AVLTree\BinaryTreeSearch\src\qvge\..\lib.debug\qvge.lib
