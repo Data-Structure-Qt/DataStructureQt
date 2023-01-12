@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SortCreator" Collapsed="true">
+    <Position X="21.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SortCreator.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SortObejct" Collapsed="true">
+    <Position X="3" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAiACAAAAAEAAAAEAEAABAAAACAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>SortObejct.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDiffUndoManager" Collapsed="true">
+    <Position X="10.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACIVCAEAQAAAAAAAAGAAAAQAAAAAAIAAEAAAAAAAAA=</HashCode>
+      <FileName>CDiffUndoManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDirectEdge" Collapsed="true">
+    <Position X="3" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IggACAEwAAAAIAAAAACAABQIAAAEAAAAAABAMQAAAAA=</HashCode>
+      <FileName>CDirectEdge.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CEdge" Collapsed="true">
+    <Position X="3" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>glDAIAAgADUACCgAA0CQABkMCwUEICIAGhACAFIEBAE=</HashCode>
+      <FileName>CEdge.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CEditorSceneActions" Collapsed="true">
+    <Position X="0.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAAAAAAAAIAAAAAAAAAAAABAEAAAAAAAAAAA=</HashCode>
+      <FileName>CEditorSceneActions.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CEditorScene_p" Collapsed="true">
+    <Position X="21.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAABAAAAAIAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>CEditorScene_p.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CFileSerializerCSV" Collapsed="true">
+    <Position X="8" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABABAAAAAICQAAAAIAAAAACAABAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>CFileSerializerCSV.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CFileSerializerDOT" Collapsed="true">
+    <Position X="10.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IRAAAEACQICQCAAAYAAAAAKIAJAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CFileSerializerDOT.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CFileSerializerGEXF" Collapsed="true">
+    <Position X="12.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAABAAAAoCQQAAAIBAIBACgABAAAQAAgAAAACAAAAA=</HashCode>
+      <FileName>CFileSerializerGEXF.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CFileSerializerGraphML" Collapsed="true">
+    <Position X="14.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAICQAAAAIAAAAACAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CFileSerializerGraphML.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CFileSerializerPlainDOT" Collapsed="true">
+    <Position X="17" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAICQAAAAIAAAAACAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CFileSerializerPlainDOT.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CFileSerializerXGR" Collapsed="true">
+    <Position X="19.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAICQAAAAIAAAAACAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CFileSerializerXGR.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CGraphInterface" Collapsed="true">
+    <Position X="9.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAIACAAAAAAAAAIIAAAAJAAAAkAAAAIQAA=</HashCode>
+      <FileName>CGraphInterface.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CImageExport" Collapsed="true">
+    <Position X="3.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAICQAAAAKAAAAACAABAAAAQAAAAAAAAAAAI=</HashCode>
+      <FileName>CImageExport.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Stub" Collapsed="true">
+    <Position X="23.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>CItem.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CItem" Collapsed="true">
+    <Position X="1.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gkAIKAkAAQAgJRAACGIUADwHGhMMCCQADOBBMYIAAQQ=</HashCode>
+      <FileName>CItem.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CNode" Collapsed="true">
+    <Position X="0.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gDgALIQEiIAEoAwSAAgIAIwFCgE0CCEQCQFCOYDDBoA=</HashCode>
+      <FileName>CNode.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CNodePort" Collapsed="true">
+    <Position X="5.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgIAAAAgAACAAAAAACACAAAAAgEIAjQgAEAAhOAICAI=</HashCode>
+      <FileName>CNodePort.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CPDFExport" Collapsed="true">
+    <Position X="1.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAICQAgAAIAIAAACAABAAAAAAACEAAAIAABA=</HashCode>
+      <FileName>CPDFExport.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CPolyEdge" Collapsed="true">
+    <Position X="3" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAwCIIAgAAggIAAEQAAAEAwKCgAEAAIAAABBMQAAAiA=</HashCode>
+      <FileName>CPolyEdge.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSVGExport" Collapsed="true">
+    <Position X="5.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAICQAAAAKAAAAACAAhAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>CSVGExport.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSimpleUndoManager" Collapsed="true">
+    <Position X="8.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACIEAIEAQAAAAAAAAEAAAAAAABAAAAAAEAAAACAAAA=</HashCode>
+      <FileName>CSimpleUndoManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CUtils" Collapsed="true">
+    <Position X="21.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAMAAAAQAAAAAAAAgAlAAAAAAAAQIAAAAIQAAABFAA=</HashCode>
+      <FileName>CUtils.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IContextMenuProvider" Collapsed="true">
+    <Position X="13.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IContextMenuProvider.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IFileExport" Collapsed="true">
+    <Position X="23.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IFileExport.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IFileSerializer" Collapsed="true">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAICQAAAAIAAAAACAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IFileSerializer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IGraphInterface" Collapsed="true">
+    <Position X="9.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIACAAAAAAAAAAIAAAABAAAAgAAAAIQAA=</HashCode>
+      <FileName>IGraphInterface.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IInteractive" Collapsed="true">
+    <Position X="3" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAABYAAAAAEAAAAAAIAiCAAAAAAQAAAgA=</HashCode>
+      <FileName>IInteractive.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ISceneEditController" Collapsed="true">
+    <Position X="12.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAoBARAAAAAAAAAAAAIEMAAAAAAAAAAAAAAACACAAAA=</HashCode>
+      <FileName>ISceneEditController.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ISceneItemFactory" Collapsed="true">
+    <Position X="0.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ISceneItemFactory.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ISceneMenuController" Collapsed="true">
+    <Position X="25.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>ISceneMenuController.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IUndoManager" Collapsed="true">
+    <Position X="9.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIEAAEAQAAAAAAAAEAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>IUndoManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BubbleSort" Collapsed="true">
+    <Position X="3" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAiAAAAAAAEAAAAEAAJAAAAAEAAkAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>BubbleSort.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuickSort" Collapsed="true">
+    <Position X="5.25" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgABAAAAAEAAQAFAAAIAgCAEQAEAIAIAQIAAIAAAAA=</HashCode>
+      <FileName>QuickSort.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SelectionSort" Collapsed="true">
+    <Position X="0.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAiAAAAAAAEAACAEAABAAAAAEBAkAAAAEAIAAAAAAAA=</HashCode>
+      <FileName>SelectionSort.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CControlPoint" Collapsed="true">
+    <Position X="13.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAQAAAAAAAAACEACAAAA=</HashCode>
+      <FileName>CControlPoint.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CItemsEvaluator" Collapsed="true">
+    <Position X="6.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CEditorScene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDeletableItems" Collapsed="true">
+    <Position X="6.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CEditorScene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CEditorScene" Collapsed="true">
+    <Position X="3.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IQ7riVT0h0TwIGZTnMHq9A7GvztzUicOblvlN6LdhSY=</HashCode>
+      <FileName>CEditorScene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CEditorView" Collapsed="true">
+    <Position X="23.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAABIEAARhAAQwBQAEAADQBAAQACJQAgAAEAADABA=</HashCode>
+      <FileName>CEditorView.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CNodeEditorScene" Collapsed="true">
+    <Position X="3.5" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EYRLABAIIFABBCcQhOmcsAJAAAADDESBMoCQIAA5KAI=</HashCode>
+      <FileName>CNodeEditorScene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CNodeSceneActions" Collapsed="true">
+    <Position X="0.5" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAQACAAAAABAAAAAAIQDAAAAAAAAAAAAAAAAAQQBA=</HashCode>
+      <FileName>CNodeSceneActions.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CTextLabelEdit" Collapsed="true">
+    <Position X="25.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EgABAQAIAAEAAAAABIAAAAAAgAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>CTextLabelEdit.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CTransformRect" Collapsed="true">
+    <Position X="12.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAoIABAgAAAAAAAAAAIMMABAAwAAACwAAAAAGACJgAA=</HashCode>
+      <FileName>CTransformRect.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDPSERecoder" Collapsed="true">
+    <Position X="0.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CFileSerializerXGR.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="CAttribute" Collapsed="true">
+    <Position X="21.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAEAAAAAgABgAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>CAttribute.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="CAttributeConstrains" Collapsed="true">
+    <Position X="9" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CAttribute.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="CIntegerConstrains" Collapsed="true">
+    <Position X="12.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAIAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>CAttribute.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="CDoubleConstrains" Collapsed="true">
+    <Position X="5.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAACIAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>CAttribute.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="CAttributeConstrainsListBase" Collapsed="true">
+    <Position X="9" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>CAttribute.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="CAttributeConstrainsList" Collapsed="true">
+    <Position X="8" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>CAttribute.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="CAttributeConstrainsEnum" Collapsed="true">
+    <Position X="10.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>CAttribute.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Typedef Name="AttributesMap" Collapsed="true">
+    <Position X="23.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CAttribute.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ClassAttributesMap" Collapsed="true">
+    <Position X="25.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CAttribute.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ClassAttrIndex" Collapsed="true">
+    <Position X="21.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CAttribute.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="AttributeConstrainsMap" Collapsed="true">
+    <Position X="21.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CAttribute.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="IconsList" Collapsed="true">
+    <Position X="23.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CAttribute.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Enum Name="ConnectionFlags" Collapsed="true">
+    <Position X="21.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAACAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>CEdge.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SceneInfoState" Collapsed="true">
+    <Position X="23.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAASACAgAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CEditorSceneDefines.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ItemFlags" Collapsed="true">
+    <Position X="21.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAAQAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>CItem.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ItemStateFlags" Collapsed="true">
+    <Position X="23.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAIAAAAAECAAAIAAAAAEAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>CItem.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="NodeFlags" Collapsed="true">
+    <Position X="25.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CNode.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ItemDragTestResult" Collapsed="true">
+    <Position X="25.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAgAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IInteractive.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PropertiesID" Collapsed="true">
+    <Position X="21.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAABAAgAAAAAEAA=</HashCode>
+      <FileName>Properties.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EditMode" Collapsed="true">
+    <Position X="23.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAgAAAAAAAEAAAAAAAAAQAAABAAAAAAE=</HashCode>
+      <FileName>CNodeEditorScene.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

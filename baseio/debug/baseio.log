@@ -1,0 +1,4 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(534,5): warning MSB8028: 中间目录(debug\)包含从另一个项目(qvgeio.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
+  Generate moc_predefs.h
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(247,5): warning MSB8064: 项“debug\moc_predefs.h.cbt”的自定义生成成功，但指定的依赖项“d:\binarytreesearch(1)\binarytreesearch\src\baseio\debug\moc_predefs.h.cbt”不存在。这可能会导致增量生成无法正常工作。
+  baseio.vcxproj -> D:\BinaryTreeSearch(1)\BinaryTreeSearch\src\lib.debug\qvgeio.lib
