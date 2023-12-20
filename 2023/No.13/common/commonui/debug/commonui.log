@@ -1,0 +1,245 @@
+﻿  Reading Qt configuration (D:/Qt/5.14.0/msvc2017_64/bin/qmake)
+  Generate moc_predefs.h
+  Uic'ing CAttributesEditorUI.ui...
+  Uic'ing CClassAttributesEditorUI.ui...
+  Uic'ing CCommutationTable.ui...
+  Uic'ing CCreateTreeDialog.ui...
+  Uic'ing CCSVImportDialog.ui...
+  Uic'ing CDOTExportDialog.ui...
+  Uic'ing CExtListInputDialog.ui...
+  Uic'ing CImageExportDialog.ui...
+  Uic'ing CLinklistEditorUI.ui...
+  Uic'ing CNewAttributeDialog.ui...
+  Uic'ing CNodeEdgePropertiesUI.ui...
+  Uic'ing CNodePortEditorDialog.ui...
+  Uic'ing CNodesFactorDialog.ui...
+  Uic'ing CQuickHelpUI.ui...
+  Uic'ing CSceneOptionsDialog.ui...
+  Uic'ing CSearchDialog.ui...
+  Uic'ing painterDemo.ui...
+  Uic'ing QtWidgetsClass.ui...
+  Rcc'ing appbase.qrc...
+  Rcc'ing commonui.qrc...
+  Moc'ing highlighter.h...
+  Moc'ing CCreateTreeDialog.h...
+  Moc'ing CCSVImportDialog.h...
+  Moc'ing CDOTExportDialog.h...
+  Moc'ing CImageExportDialog.h...
+  Moc'ing CImportExportUIController.h...
+  Moc'ing CMainWindow.h...
+  Moc'ing CAttributesEditorUI.h...
+  Moc'ing CClassAttributesEditorUI.h...
+  Moc'ing CColorSchemesUIController.h...
+  Moc'ing CCommutationTable.h...
+  Moc'ing CExtListInputDialog.h...
+  Moc'ing gvgraph\CGVGraphLayoutUIController.h...
+  Moc'ing CNewAttributeDialog.h...
+  Moc'ing CNodeEdgePropertiesUI.h...
+  Moc'ing CNodeEditorUIController.h...
+  Moc'ing CNodePortEditorDialog.h...
+  Moc'ing CNodesFactorDialog.h...
+  Moc'ing CPropertyEditorUIBase.h...
+  Moc'ing CQuickHelpUI.h...
+  Moc'ing CSceneMenuUIController.h...
+  Moc'ing CSceneOptionsDialog.h...
+  Moc'ing CSearchDialog.h...
+  CAttributesEditorUI.cpp
+  CClassAttributesEditorUI.cpp
+  CColorSchemesUIController.cpp
+  CCommutationTable.cpp
+  CCreateTreeDialog.cpp
+  CCSVImportDialog.cpp
+  CDOTExportDialog.cpp
+  CEasyTableWidget.cpp
+  CExtListInputDialog.cpp
+  CImageExportDialog.cpp
+  CImportExportUIController.cpp
+  CMainWindow.cpp
+  CPlatformServices.cpp
+  CPlatformWin32.cpp
+  CGVGraphLayoutUIController.cpp
+  CNewAttributeDialog.cpp
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(97): warning C4100: “docType”: 未引用的形参 (编译源文件 CImportExportUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(101): warning C4100: “docType”: 未引用的形参 (编译源文件 CImportExportUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(101): warning C4100: “fileName”: 未引用的形参 (编译源文件 CImportExportUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(104): warning C4100: “filter”: 未引用的形参 (编译源文件 CImportExportUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(104): warning C4100: “title”: 未引用的形参 (编译源文件 CImportExportUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(106): warning C4100: “docType”: 未引用的形参 (编译源文件 CImportExportUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(106): warning C4100: “selectedFilter”: 未引用的形参 (编译源文件 CImportExportUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(106): warning C4100: “fileName”: 未引用的形参 (编译源文件 CImportExportUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(97): warning C4100: “docType”: 未引用的形参 (编译源文件 gvgraph\CGVGraphLayoutUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(101): warning C4100: “docType”: 未引用的形参 (编译源文件 gvgraph\CGVGraphLayoutUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(101): warning C4100: “fileName”: 未引用的形参 (编译源文件 gvgraph\CGVGraphLayoutUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(104): warning C4100: “filter”: 未引用的形参 (编译源文件 gvgraph\CGVGraphLayoutUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(104): warning C4100: “title”: 未引用的形参 (编译源文件 gvgraph\CGVGraphLayoutUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(106): warning C4100: “docType”: 未引用的形参 (编译源文件 gvgraph\CGVGraphLayoutUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(106): warning C4100: “selectedFilter”: 未引用的形参 (编译源文件 gvgraph\CGVGraphLayoutUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(106): warning C4100: “fileName”: 未引用的形参 (编译源文件 gvgraph\CGVGraphLayoutUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(97): warning C4100: “docType”: 未引用的形参 (编译源文件 CMainWindow.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(101): warning C4100: “docType”: 未引用的形参 (编译源文件 CMainWindow.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(101): warning C4100: “fileName”: 未引用的形参 (编译源文件 CMainWindow.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(104): warning C4100: “filter”: 未引用的形参 (编译源文件 CMainWindow.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(104): warning C4100: “title”: 未引用的形参 (编译源文件 CMainWindow.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(106): warning C4100: “docType”: 未引用的形参 (编译源文件 CMainWindow.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(106): warning C4100: “selectedFilter”: 未引用的形参 (编译源文件 CMainWindow.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(106): warning C4100: “fileName”: 未引用的形参 (编译源文件 CMainWindow.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changePos”: 未引用的形参 (编译源文件 CCommutationTable.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CCommutationTable.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “yc”: 未引用的形参 (编译源文件 CCommutationTable.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “xc”: 未引用的形参 (编译源文件 CCommutationTable.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “newRect”: 未引用的形参 (编译源文件 CCommutationTable.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CCommutationTable.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cplatformservices.cpp(41): warning C4312: “类型强制转换”: 从“uint”转换到更大的“HWND”
+d:\datastructureqt\2023\no.13\common\commonui\cplatformservices.cpp(66): warning C4312: “类型强制转换”: 从“uint”转换到更大的“HWND”
+d:\datastructureqt\2023\no.13\common\commonui\cplatformservices.cpp(70): warning C4189: “result”: 局部变量已初始化但不引用
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changePos”: 未引用的形参 (编译源文件 CImportExportUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CImportExportUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “yc”: 未引用的形参 (编译源文件 CImportExportUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “xc”: 未引用的形参 (编译源文件 CImportExportUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “newRect”: 未引用的形参 (编译源文件 CImportExportUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CImportExportUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changePos”: 未引用的形参 (编译源文件 gvgraph\CGVGraphLayoutUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changeSize”: 未引用的形参 (编译源文件 gvgraph\CGVGraphLayoutUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “yc”: 未引用的形参 (编译源文件 gvgraph\CGVGraphLayoutUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “xc”: 未引用的形参 (编译源文件 gvgraph\CGVGraphLayoutUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “newRect”: 未引用的形参 (编译源文件 gvgraph\CGVGraphLayoutUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “oldRect”: 未引用的形参 (编译源文件 gvgraph\CGVGraphLayoutUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changePos”: 未引用的形参 (编译源文件 CAttributesEditorUI.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CAttributesEditorUI.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “yc”: 未引用的形参 (编译源文件 CAttributesEditorUI.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “xc”: 未引用的形参 (编译源文件 CAttributesEditorUI.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “newRect”: 未引用的形参 (编译源文件 CAttributesEditorUI.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CAttributesEditorUI.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changePos”: 未引用的形参 (编译源文件 CClassAttributesEditorUI.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CClassAttributesEditorUI.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “yc”: 未引用的形参 (编译源文件 CClassAttributesEditorUI.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “xc”: 未引用的形参 (编译源文件 CClassAttributesEditorUI.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “newRect”: 未引用的形参 (编译源文件 CClassAttributesEditorUI.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CClassAttributesEditorUI.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.cpp(95): warning C4100: “args”: 未引用的形参
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.cpp(530): warning C4100: “title”: 未引用的形参
+  CNodeEdgePropertiesUI.cpp
+  CNodeEditorUIController.cpp
+  CNodePortEditorDialog.cpp
+  CNodesFactorDialog.cpp
+  CPropertyEditorUIBase.cpp
+  CQuickHelpUI.cpp
+  CSceneMenuUIController.cpp
+  CSceneOptionsDialog.cpp
+  CSearchDialog.cpp
+  highlighter.cpp
+  QListNode.cpp
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changePos”: 未引用的形参 (编译源文件 CNodeEditorUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CNodeEditorUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “yc”: 未引用的形参 (编译源文件 CNodeEditorUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “xc”: 未引用的形参 (编译源文件 CNodeEditorUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “newRect”: 未引用的形参 (编译源文件 CNodeEditorUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CNodeEditorUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changePos”: 未引用的形参 (编译源文件 CNodesFactorDialog.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CNodesFactorDialog.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “yc”: 未引用的形参 (编译源文件 CNodesFactorDialog.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “xc”: 未引用的形参 (编译源文件 CNodesFactorDialog.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changePos”: 未引用的形参 (编译源文件 CNodeEdgePropertiesUI.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “newRect”: 未引用的形参 (编译源文件 CNodesFactorDialog.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CNodeEdgePropertiesUI.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CNodesFactorDialog.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “yc”: 未引用的形参 (编译源文件 CNodeEdgePropertiesUI.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “xc”: 未引用的形参 (编译源文件 CNodeEdgePropertiesUI.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “newRect”: 未引用的形参 (编译源文件 CNodeEdgePropertiesUI.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CNodeEdgePropertiesUI.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changePos”: 未引用的形参 (编译源文件 CNodePortEditorDialog.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CNodePortEditorDialog.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “yc”: 未引用的形参 (编译源文件 CNodePortEditorDialog.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “xc”: 未引用的形参 (编译源文件 CNodePortEditorDialog.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “newRect”: 未引用的形参 (编译源文件 CNodePortEditorDialog.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CNodePortEditorDialog.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(40): warning C4100: “changePos”: 未引用的形参 (编译源文件 CNodeEdgePropertiesUI.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(40): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CNodeEdgePropertiesUI.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(39): warning C4100: “yc”: 未引用的形参 (编译源文件 CNodeEdgePropertiesUI.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(39): warning C4100: “xc”: 未引用的形参 (编译源文件 CNodeEdgePropertiesUI.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(38): warning C4100: “newRect”: 未引用的形参 (编译源文件 CNodeEdgePropertiesUI.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(38): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CNodeEdgePropertiesUI.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changePos”: 未引用的形参 (编译源文件 CSceneMenuUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CSceneMenuUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “yc”: 未引用的形参 (编译源文件 CSceneMenuUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “xc”: 未引用的形参 (编译源文件 CSceneMenuUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “newRect”: 未引用的形参 (编译源文件 CSceneMenuUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CSceneMenuUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changePos”: 未引用的形参 (编译源文件 CSearchDialog.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CSearchDialog.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “yc”: 未引用的形参 (编译源文件 CSearchDialog.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “xc”: 未引用的形参 (编译源文件 CSearchDialog.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “newRect”: 未引用的形参 (编译源文件 CSearchDialog.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CSearchDialog.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(97): warning C4100: “docType”: 未引用的形参 (编译源文件 CNodeEditorUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(101): warning C4100: “docType”: 未引用的形参 (编译源文件 CNodeEditorUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(101): warning C4100: “fileName”: 未引用的形参 (编译源文件 CNodeEditorUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(104): warning C4100: “filter”: 未引用的形参 (编译源文件 CNodeEditorUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(104): warning C4100: “title”: 未引用的形参 (编译源文件 CNodeEditorUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(106): warning C4100: “docType”: 未引用的形参 (编译源文件 CNodeEditorUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(106): warning C4100: “selectedFilter”: 未引用的形参 (编译源文件 CNodeEditorUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(106): warning C4100: “fileName”: 未引用的形参 (编译源文件 CNodeEditorUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cnodeeditoruicontroller.cpp(981): warning C4100: “currentZoom”: 未引用的形参
+  qrc_appbase.cpp
+  qrc_commonui.cpp
+  moc_highlighter.cpp
+  moc_CCreateTreeDialog.cpp
+  moc_CCSVImportDialog.cpp
+  moc_CDOTExportDialog.cpp
+  moc_CImageExportDialog.cpp
+  moc_CImportExportUIController.cpp
+  moc_CMainWindow.cpp
+  moc_CAttributesEditorUI.cpp
+  moc_CClassAttributesEditorUI.cpp
+  moc_CColorSchemesUIController.cpp
+  moc_CCommutationTable.cpp
+  moc_CExtListInputDialog.cpp
+  moc_CGVGraphLayoutUIController.cpp
+  moc_CNewAttributeDialog.cpp
+  moc_CNodeEdgePropertiesUI.cpp
+  moc_CNodeEditorUIController.cpp
+  moc_CNodePortEditorDialog.cpp
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(97): warning C4100: “docType”: 未引用的形参 (编译源文件 Debug\moc_CMainWindow.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(101): warning C4100: “docType”: 未引用的形参 (编译源文件 Debug\moc_CMainWindow.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(101): warning C4100: “fileName”: 未引用的形参 (编译源文件 Debug\moc_CMainWindow.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(104): warning C4100: “filter”: 未引用的形参 (编译源文件 Debug\moc_CMainWindow.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(104): warning C4100: “title”: 未引用的形参 (编译源文件 Debug\moc_CMainWindow.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(106): warning C4100: “docType”: 未引用的形参 (编译源文件 Debug\moc_CMainWindow.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(106): warning C4100: “selectedFilter”: 未引用的形参 (编译源文件 Debug\moc_CMainWindow.cpp)
+d:\datastructureqt\2023\no.13\common\commonui\cmainwindow.h(106): warning C4100: “fileName”: 未引用的形参 (编译源文件 Debug\moc_CMainWindow.cpp)
+  moc_CNodesFactorDialog.cpp
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changePos”: 未引用的形参 (编译源文件 Debug\moc_CNodeEdgePropertiesUI.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changeSize”: 未引用的形参 (编译源文件 Debug\moc_CNodeEdgePropertiesUI.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “yc”: 未引用的形参 (编译源文件 Debug\moc_CNodeEdgePropertiesUI.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “xc”: 未引用的形参 (编译源文件 Debug\moc_CNodeEdgePropertiesUI.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “newRect”: 未引用的形参 (编译源文件 Debug\moc_CNodeEdgePropertiesUI.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “oldRect”: 未引用的形参 (编译源文件 Debug\moc_CNodeEdgePropertiesUI.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changePos”: 未引用的形参 (编译源文件 Debug\moc_CNodeEditorUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changeSize”: 未引用的形参 (编译源文件 Debug\moc_CNodeEditorUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “yc”: 未引用的形参 (编译源文件 Debug\moc_CNodeEditorUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “xc”: 未引用的形参 (编译源文件 Debug\moc_CNodeEditorUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “newRect”: 未引用的形参 (编译源文件 Debug\moc_CNodeEditorUIController.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “oldRect”: 未引用的形参 (编译源文件 Debug\moc_CNodeEditorUIController.cpp)
+  moc_CPropertyEditorUIBase.cpp
+  moc_CQuickHelpUI.cpp
+  moc_CSceneMenuUIController.cpp
+  moc_CSceneOptionsDialog.cpp
+  moc_CSearchDialog.cpp
+appmoduels.lib(CircleQueue.obj) : warning LNK4006: "public: __cdecl CircleQueue::CircleQueue(void)" (??0CircleQueue@@QEAA@XZ) 已在 appui.lib(CircleQueue.obj) 中定义；已忽略第二个定义
+appmoduels.lib(CircleQueue.obj) : warning LNK4006: "public: __cdecl CircleQueue::~CircleQueue(void)" (??1CircleQueue@@QEAA@XZ) 已在 appui.lib(CircleQueue.obj) 中定义；已忽略第二个定义
+appmoduels.lib(CircleQueue.obj) : warning LNK4006: "public: class CircleQueuenode * __cdecl CircleQueue::at(int)" (?at@CircleQueue@@QEAAPEAVCircleQueuenode@@H@Z) 已在 appui.lib(CircleQueue.obj) 中定义；已忽略第二个定义
+appmoduels.lib(CircleQueue.obj) : warning LNK4006: "public: void __cdecl CircleQueue::InitCircleQueue(void)" (?InitCircleQueue@CircleQueue@@QEAAXXZ) 已在 appui.lib(CircleQueue.obj) 中定义；已忽略第二个定义
+appmoduels.lib(CircleQueue.obj) : warning LNK4006: "public: void __cdecl CircleQueue::CleanQueue(void)" (?CleanQueue@CircleQueue@@QEAAXXZ) 已在 appui.lib(CircleQueue.obj) 中定义；已忽略第二个定义
+appmoduels.lib(CircleQueue.obj) : warning LNK4006: "public: bool __cdecl CircleQueue::QueueHead(class CircleQueuenode *)" (?QueueHead@CircleQueue@@QEAA_NPEAVCircleQueuenode@@@Z) 已在 appui.lib(CircleQueue.obj) 中定义；已忽略第二个定义
+appmoduels.lib(CircleQueue.obj) : warning LNK4006: "public: bool __cdecl CircleQueue::EmptyQueue(void)" (?EmptyQueue@CircleQueue@@QEAA_NXZ) 已在 appui.lib(CircleQueue.obj) 中定义；已忽略第二个定义
+appmoduels.lib(CircleQueue.obj) : warning LNK4006: "public: bool __cdecl CircleQueue::FullQueue(void)" (?FullQueue@CircleQueue@@QEAA_NXZ) 已在 appui.lib(CircleQueue.obj) 中定义；已忽略第二个定义
+appmoduels.lib(CircleQueue.obj) : warning LNK4006: "public: bool __cdecl CircleQueue::EnQueue(class CircleQueuenode *)" (?EnQueue@CircleQueue@@QEAA_NPEAVCircleQueuenode@@@Z) 已在 appui.lib(CircleQueue.obj) 中定义；已忽略第二个定义
+appmoduels.lib(CircleQueue.obj) : warning LNK4006: "public: bool __cdecl CircleQueue::DeQueue(class CircleQueuenode *)" (?DeQueue@CircleQueue@@QEAA_NPEAVCircleQueuenode@@@Z) 已在 appui.lib(CircleQueue.obj) 中定义；已忽略第二个定义
+appmoduels.lib(CircleQueue.obj) : warning LNK4006: "public: int __cdecl CircleQueue::QueueLength(void)" (?QueueLength@CircleQueue@@QEAAHXZ) 已在 appui.lib(CircleQueue.obj) 中定义；已忽略第二个定义
+appmoduels.lib(CircleQueue.obj) : warning LNK4006: "public: int __cdecl CircleQueue::getQueuefront(void)" (?getQueuefront@CircleQueue@@QEAAHXZ) 已在 appui.lib(CircleQueue.obj) 中定义；已忽略第二个定义
+appmoduels.lib(CircleQueue.obj) : warning LNK4006: "public: int __cdecl CircleQueue::getQueuerear(void)" (?getQueuerear@CircleQueue@@QEAAHXZ) 已在 appui.lib(CircleQueue.obj) 中定义；已忽略第二个定义
+appmoduels.lib(CircleQueue.obj) : warning LNK4221: 此对象文件未定义任何之前未定义的公共符号，因此任何耗用此库的链接操作都不会使用此文件
+appmoduels.lib(CircleQueuenode.obj) : warning LNK4006: "public: __cdecl CircleQueuenode::CircleQueuenode(void)" (??0CircleQueuenode@@QEAA@XZ) 已在 appui.lib(CircleQueuenode.obj) 中定义；已忽略第二个定义
+appmoduels.lib(CircleQueuenode.obj) : warning LNK4006: "public: virtual __cdecl CircleQueuenode::~CircleQueuenode(void)" (??1CircleQueuenode@@UEAA@XZ) 已在 appui.lib(CircleQueuenode.obj) 中定义；已忽略第二个定义
+appmoduels.lib(CircleQueuenode.obj) : warning LNK4221: 此对象文件未定义任何之前未定义的公共符号，因此任何耗用此库的链接操作都不会使用此文件
+  commonui.vcxproj -> D:\DataStructureQt\2023\No.13\common\commonui\..\..\lib.debug\commonui.lib

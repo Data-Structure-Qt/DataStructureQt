@@ -1,0 +1,291 @@
+﻿  Reading Qt configuration (D:/Qt/5.14.0/msvc2017_64/bin/qmake)
+  Generate moc_predefs.h
+  Moc'ing QuickSort.h...
+  Moc'ing BubbleSort.h...
+  Moc'ing SortObejct.h...
+  Moc'ing SortCreator.h...
+  Moc'ing SelectionSort.h...
+  Moc'ing CNodeEditorScene.h...
+  Moc'ing CTransformRect.h...
+  Moc'ing CTextLabelEdit.h...
+  Moc'ing CNodeSceneActions.h...
+  Moc'ing CEditorView.h...
+  Moc'ing CEditorScene.h...
+  Moc'ing CControlPoint.h...
+  BubbleSort.cpp
+  CAttribute.cpp
+  CControlPoint.cpp
+  CDiffUndoManager.cpp
+  CDirectEdge.cpp
+  CEdge.cpp
+  CEditorScene.cpp
+  CEditorSceneActions.cpp
+  CEditorScene_p.cpp
+  CEditorView.cpp
+  CFileSerializerCSV.cpp
+  CFileSerializerDOT.cpp
+  CFileSerializerGEXF.cpp
+  CFileSerializerGraphML.cpp
+  CFileSerializerPlainDOT.cpp
+  CFileSerializerXGR.cpp
+  CFormatDOT.cpp
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changePos”: 未引用的形参 (编译源文件 CDirectEdge.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CDirectEdge.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “yc”: 未引用的形参 (编译源文件 CDirectEdge.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “xc”: 未引用的形参 (编译源文件 CDirectEdge.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “newRect”: 未引用的形参 (编译源文件 CDirectEdge.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CDirectEdge.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(40): warning C4100: “changePos”: 未引用的形参 (编译源文件 CDirectEdge.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(40): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CDirectEdge.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(39): warning C4100: “yc”: 未引用的形参 (编译源文件 CDirectEdge.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(39): warning C4100: “xc”: 未引用的形参 (编译源文件 CDirectEdge.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(38): warning C4100: “newRect”: 未引用的形参 (编译源文件 CDirectEdge.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(38): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CDirectEdge.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\isceneeditcontroller.h(35): warning C4100: “keyEvent”: 未引用的形参 (编译源文件 CEditorScene.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\isceneeditcontroller.h(35): warning C4100: “scene”: 未引用的形参 (编译源文件 CEditorScene.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\isceneeditcontroller.h(36): warning C4100: “keyEvent”: 未引用的形参 (编译源文件 CEditorScene.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\isceneeditcontroller.h(36): warning C4100: “scene”: 未引用的形参 (编译源文件 CEditorScene.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changePos”: 未引用的形参 (编译源文件 CEditorScene.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CEditorScene.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “yc”: 未引用的形参 (编译源文件 CEditorScene.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “xc”: 未引用的形参 (编译源文件 CEditorScene.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “newRect”: 未引用的形参 (编译源文件 CEditorScene.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CEditorScene.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changePos”: 未引用的形参 (编译源文件 CEdge.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CEdge.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “yc”: 未引用的形参 (编译源文件 CEdge.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “xc”: 未引用的形参 (编译源文件 CEdge.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “newRect”: 未引用的形参 (编译源文件 CEdge.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CEdge.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\isceneeditcontroller.h(35): warning C4100: “keyEvent”: 未引用的形参 (编译源文件 CEditorScene_p.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\isceneeditcontroller.h(35): warning C4100: “scene”: 未引用的形参 (编译源文件 CEditorScene_p.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\isceneeditcontroller.h(36): warning C4100: “keyEvent”: 未引用的形参 (编译源文件 CEditorScene_p.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\isceneeditcontroller.h(36): warning C4100: “scene”: 未引用的形参 (编译源文件 CEditorScene_p.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changePos”: 未引用的形参 (编译源文件 CFileSerializerGEXF.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CFileSerializerGEXF.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “yc”: 未引用的形参 (编译源文件 CFileSerializerGEXF.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “xc”: 未引用的形参 (编译源文件 CFileSerializerGEXF.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “newRect”: 未引用的形参 (编译源文件 CFileSerializerGEXF.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CFileSerializerGEXF.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changePos”: 未引用的形参 (编译源文件 CEditorSceneActions.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CEditorSceneActions.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(40): warning C4100: “changePos”: 未引用的形参 (编译源文件 CFileSerializerGEXF.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “yc”: 未引用的形参 (编译源文件 CEditorSceneActions.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(40): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CFileSerializerGEXF.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “xc”: 未引用的形参 (编译源文件 CEditorSceneActions.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(39): warning C4100: “yc”: 未引用的形参 (编译源文件 CFileSerializerGEXF.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “newRect”: 未引用的形参 (编译源文件 CEditorSceneActions.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(39): warning C4100: “xc”: 未引用的形参 (编译源文件 CFileSerializerGEXF.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CEditorSceneActions.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(38): warning C4100: “newRect”: 未引用的形参 (编译源文件 CFileSerializerGEXF.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(38): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CFileSerializerGEXF.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changePos”: 未引用的形参 (编译源文件 CFileSerializerDOT.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CFileSerializerDOT.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “yc”: 未引用的形参 (编译源文件 CFileSerializerDOT.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “xc”: 未引用的形参 (编译源文件 CFileSerializerDOT.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “newRect”: 未引用的形参 (编译源文件 CFileSerializerDOT.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CFileSerializerDOT.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(40): warning C4100: “changePos”: 未引用的形参 (编译源文件 CFileSerializerDOT.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(40): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CFileSerializerDOT.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(39): warning C4100: “yc”: 未引用的形参 (编译源文件 CFileSerializerDOT.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(39): warning C4100: “xc”: 未引用的形参 (编译源文件 CFileSerializerDOT.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(38): warning C4100: “newRect”: 未引用的形参 (编译源文件 CFileSerializerDOT.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(38): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CFileSerializerDOT.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cfileserializerdot.cpp(24): warning C4100: “lastError”: 未引用的形参
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changePos”: 未引用的形参 (编译源文件 CEditorScene_p.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CEditorScene_p.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “yc”: 未引用的形参 (编译源文件 CEditorScene_p.cpp)
+  CFormatGraphML.cpp
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “xc”: 未引用的形参 (编译源文件 CEditorScene_p.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “newRect”: 未引用的形参 (编译源文件 CEditorScene_p.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CEditorScene_p.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changePos”: 未引用的形参 (编译源文件 CFileSerializerGraphML.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CFileSerializerGraphML.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “yc”: 未引用的形参 (编译源文件 CFileSerializerGraphML.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “xc”: 未引用的形参 (编译源文件 CFileSerializerGraphML.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “newRect”: 未引用的形参 (编译源文件 CFileSerializerGraphML.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CFileSerializerGraphML.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changePos”: 未引用的形参 (编译源文件 CFileSerializerCSV.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CFileSerializerCSV.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “yc”: 未引用的形参 (编译源文件 CFileSerializerCSV.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “xc”: 未引用的形参 (编译源文件 CFileSerializerCSV.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “newRect”: 未引用的形参 (编译源文件 CFileSerializerCSV.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CFileSerializerCSV.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(40): warning C4100: “changePos”: 未引用的形参 (编译源文件 CFileSerializerGraphML.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(40): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CFileSerializerGraphML.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(39): warning C4100: “yc”: 未引用的形参 (编译源文件 CFileSerializerGraphML.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(39): warning C4100: “xc”: 未引用的形参 (编译源文件 CFileSerializerGraphML.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(38): warning C4100: “newRect”: 未引用的形参 (编译源文件 CFileSerializerGraphML.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(38): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CFileSerializerGraphML.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(40): warning C4100: “changePos”: 未引用的形参 (编译源文件 CFileSerializerCSV.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(40): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CFileSerializerCSV.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(39): warning C4100: “yc”: 未引用的形参 (编译源文件 CFileSerializerCSV.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(39): warning C4100: “xc”: 未引用的形参 (编译源文件 CFileSerializerCSV.cpp)
+  CFormatPlainDOT.cpp
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(38): warning C4100: “newRect”: 未引用的形参 (编译源文件 CFileSerializerCSV.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(38): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CFileSerializerCSV.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changePos”: 未引用的形参 (编译源文件 CControlPoint.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CControlPoint.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “yc”: 未引用的形参 (编译源文件 CControlPoint.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “xc”: 未引用的形参 (编译源文件 CControlPoint.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “newRect”: 未引用的形参 (编译源文件 CControlPoint.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CControlPoint.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cfileserializercsv.cpp(24): warning C4100: “lastError”: 未引用的形参
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changePos”: 未引用的形参 (编译源文件 CFileSerializerPlainDOT.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CFileSerializerPlainDOT.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “yc”: 未引用的形参 (编译源文件 CFileSerializerPlainDOT.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “xc”: 未引用的形参 (编译源文件 CFileSerializerPlainDOT.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “newRect”: 未引用的形参 (编译源文件 CFileSerializerPlainDOT.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CFileSerializerPlainDOT.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(40): warning C4100: “changePos”: 未引用的形参 (编译源文件 CFileSerializerPlainDOT.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(40): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CFileSerializerPlainDOT.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(39): warning C4100: “yc”: 未引用的形参 (编译源文件 CFileSerializerPlainDOT.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(39): warning C4100: “xc”: 未引用的形参 (编译源文件 CFileSerializerPlainDOT.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(38): warning C4100: “newRect”: 未引用的形参 (编译源文件 CFileSerializerPlainDOT.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(38): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CFileSerializerPlainDOT.cpp)
+  CGraphBase.cpp
+  CGraphInterface.cpp
+d:\datastructureqt\2023\no.13\common\commonmoduels\ceditorscene.cpp(1214): warning C4100: “reason”: 未引用的形参
+d:\datastructureqt\2023\no.13\common\commonmoduels\ceditorscene.cpp(1214): warning C4100: “oldFocusItem”: 未引用的形参
+d:\datastructureqt\2023\no.13\common\commonmoduels\ceditorscene.cpp(1214): warning C4100: “newFocusItem”: 未引用的形参
+d:\datastructureqt\2023\no.13\common\commonmoduels\ceditorscene.cpp(1835): warning C4100: “mouseEvent”: 未引用的形参
+  CImageExport.cpp
+d:\datastructureqt\2023\no.13\common\commonmoduels\ceditorscene.cpp(2147): warning C4189: “isAlt”: 局部变量已初始化但不引用
+  CItem.cpp
+  CNode.cpp
+  CNodeEditorScene.cpp
+  CNodePort.cpp
+  CNodeSceneActions.cpp
+  CPDFExport.cpp
+  CPolyEdge.cpp
+  CSimpleUndoManager.cpp
+d:\datastructureqt\2023\no.13\common\commonmoduels\cformatdot.cpp(125): warning C4100: “lastError”: 未引用的形参
+d:\datastructureqt\2023\no.13\common\commonmoduels\cformatdot.cpp(125): warning C4100: “g”: 未引用的形参
+d:\datastructureqt\2023\no.13\common\commonmoduels\cformatdot.cpp(125): warning C4100: “fileName”: 未引用的形参
+d:\datastructureqt\2023\no.13\common\commonmoduels\cformatdot.cpp(277): warning C4100: “lastError”: 未引用的形参
+d:\datastructureqt\2023\no.13\common\commonmoduels\cformatdot.cpp(277): warning C4100: “graph”: 未引用的形参
+d:\datastructureqt\2023\no.13\common\commonmoduels\cformatdot.cpp(277): warning C4100: “fileName”: 未引用的形参
+  CSVGExport.cpp
+  CTextLabelEdit.cpp
+  CTransformRect.cpp
+d:\datastructureqt\2023\no.13\common\commonmoduels\cformatplaindot.cpp(281): warning C4100: “lastError”: 未引用的形参
+d:\datastructureqt\2023\no.13\common\commonmoduels\cformatplaindot.cpp(281): warning C4100: “g”: 未引用的形参
+d:\datastructureqt\2023\no.13\common\commonmoduels\cformatplaindot.cpp(281): warning C4100: “fileName”: 未引用的形参
+  CUtils.cpp
+  QuickSort.cpp
+  SelectionSort.cpp
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changePos”: 未引用的形参 (编译源文件 CGraphInterface.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CGraphInterface.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “yc”: 未引用的形参 (编译源文件 CGraphInterface.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “xc”: 未引用的形参 (编译源文件 CGraphInterface.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “newRect”: 未引用的形参 (编译源文件 CGraphInterface.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CGraphInterface.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(40): warning C4100: “changePos”: 未引用的形参 (编译源文件 CGraphInterface.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(40): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CGraphInterface.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(39): warning C4100: “yc”: 未引用的形参 (编译源文件 CGraphInterface.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(39): warning C4100: “xc”: 未引用的形参 (编译源文件 CGraphInterface.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(38): warning C4100: “newRect”: 未引用的形参 (编译源文件 CGraphInterface.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(38): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CGraphInterface.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changePos”: 未引用的形参 (编译源文件 CItem.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CItem.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “yc”: 未引用的形参 (编译源文件 CItem.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “xc”: 未引用的形参 (编译源文件 CItem.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “newRect”: 未引用的形参 (编译源文件 CItem.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CItem.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changePos”: 未引用的形参 (编译源文件 CNodeEditorScene.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CNodeEditorScene.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “yc”: 未引用的形参 (编译源文件 CNodeEditorScene.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “xc”: 未引用的形参 (编译源文件 CNodeEditorScene.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “newRect”: 未引用的形参 (编译源文件 CNodeEditorScene.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CNodeEditorScene.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(40): warning C4100: “changePos”: 未引用的形参 (编译源文件 CNodeEditorScene.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(40): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CNodeEditorScene.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(39): warning C4100: “yc”: 未引用的形参 (编译源文件 CNodeEditorScene.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(39): warning C4100: “xc”: 未引用的形参 (编译源文件 CNodeEditorScene.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(38): warning C4100: “newRect”: 未引用的形参 (编译源文件 CNodeEditorScene.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(38): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CNodeEditorScene.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changePos”: 未引用的形参 (编译源文件 CNodeSceneActions.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CNodeSceneActions.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “yc”: 未引用的形参 (编译源文件 CNodeSceneActions.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “xc”: 未引用的形参 (编译源文件 CNodeSceneActions.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “newRect”: 未引用的形参 (编译源文件 CNodeSceneActions.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CNodeSceneActions.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changePos”: 未引用的形参 (编译源文件 CPolyEdge.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CPolyEdge.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “yc”: 未引用的形参 (编译源文件 CPolyEdge.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changePos”: 未引用的形参 (编译源文件 CNodePort.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “xc”: 未引用的形参 (编译源文件 CPolyEdge.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CNodePort.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “newRect”: 未引用的形参 (编译源文件 CPolyEdge.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “yc”: 未引用的形参 (编译源文件 CNodePort.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CPolyEdge.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “xc”: 未引用的形参 (编译源文件 CNodePort.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “newRect”: 未引用的形参 (编译源文件 CNodePort.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CNodePort.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(40): warning C4100: “changePos”: 未引用的形参 (编译源文件 CPolyEdge.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(40): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CPolyEdge.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(39): warning C4100: “yc”: 未引用的形参 (编译源文件 CPolyEdge.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(39): warning C4100: “xc”: 未引用的形参 (编译源文件 CPolyEdge.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(38): warning C4100: “newRect”: 未引用的形参 (编译源文件 CPolyEdge.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(38): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CPolyEdge.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changePos”: 未引用的形参 (编译源文件 CNode.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\isceneeditcontroller.h(35): warning C4100: “keyEvent”: 未引用的形参 (编译源文件 CNodeEditorScene.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CNode.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\isceneeditcontroller.h(35): warning C4100: “scene”: 未引用的形参 (编译源文件 CNodeEditorScene.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “yc”: 未引用的形参 (编译源文件 CNode.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\isceneeditcontroller.h(36): warning C4100: “keyEvent”: 未引用的形参 (编译源文件 CNodeEditorScene.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “xc”: 未引用的形参 (编译源文件 CNode.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\isceneeditcontroller.h(36): warning C4100: “scene”: 未引用的形参 (编译源文件 CNodeEditorScene.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “newRect”: 未引用的形参 (编译源文件 CNode.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CNode.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(40): warning C4100: “changePos”: 未引用的形参 (编译源文件 CNode.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(40): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CNode.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(39): warning C4100: “yc”: 未引用的形参 (编译源文件 CNode.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(39): warning C4100: “xc”: 未引用的形参 (编译源文件 CNode.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(38): warning C4100: “newRect”: 未引用的形参 (编译源文件 CNode.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cdirectedge.h(38): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CNode.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\cnodeeditorscene.cpp(613): warning C4189: “item”: 局部变量已初始化但不引用
+d:\datastructureqt\2023\no.13\common\commonmoduels\cnodeeditorscene.cpp(1592): warning C4100: “interval”: 未引用的形参
+  SortCreator.cpp
+d:\datastructureqt\2023\no.13\common\commonmoduels\isceneeditcontroller.h(35): warning C4100: “keyEvent”: 未引用的形参 (编译源文件 CTransformRect.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\isceneeditcontroller.h(35): warning C4100: “scene”: 未引用的形参 (编译源文件 CTransformRect.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\isceneeditcontroller.h(36): warning C4100: “keyEvent”: 未引用的形参 (编译源文件 CTransformRect.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\isceneeditcontroller.h(36): warning C4100: “scene”: 未引用的形参 (编译源文件 CTransformRect.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changePos”: 未引用的形参 (编译源文件 CTextLabelEdit.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CTextLabelEdit.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “yc”: 未引用的形参 (编译源文件 CTextLabelEdit.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “xc”: 未引用的形参 (编译源文件 CTextLabelEdit.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “newRect”: 未引用的形参 (编译源文件 CTextLabelEdit.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CTextLabelEdit.cpp)
+  SortObejct.cpp
+d:\datastructureqt\2023\no.13\common\commonmoduels\ctextlabeledit.cpp(43): warning C4100: “scene”: 未引用的形参
+d:\datastructureqt\2023\no.13\common\commonmoduels\ctextlabeledit.cpp(49): warning C4100: “scene”: 未引用的形参
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changePos”: 未引用的形参 (编译源文件 CTransformRect.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changeSize”: 未引用的形参 (编译源文件 CTransformRect.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “yc”: 未引用的形参 (编译源文件 CTransformRect.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “xc”: 未引用的形参 (编译源文件 CTransformRect.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “newRect”: 未引用的形参 (编译源文件 CTransformRect.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “oldRect”: 未引用的形参 (编译源文件 CTransformRect.cpp)
+  moc_QuickSort.cpp
+  moc_BubbleSort.cpp
+  moc_SortObejct.cpp
+  moc_SortCreator.cpp
+  moc_SelectionSort.cpp
+  moc_CNodeEditorScene.cpp
+  moc_CTransformRect.cpp
+  moc_CTextLabelEdit.cpp
+  moc_CNodeSceneActions.cpp
+  moc_CEditorView.cpp
+  moc_CEditorScene.cpp
+  moc_CControlPoint.cpp
+d:\datastructureqt\2023\no.13\common\commonmoduels\isceneeditcontroller.h(35): warning C4100: “keyEvent”: 未引用的形参 (编译源文件 Debug\moc_CTransformRect.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\isceneeditcontroller.h(35): warning C4100: “scene”: 未引用的形参 (编译源文件 Debug\moc_CTransformRect.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\isceneeditcontroller.h(36): warning C4100: “keyEvent”: 未引用的形参 (编译源文件 Debug\moc_CTransformRect.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\isceneeditcontroller.h(36): warning C4100: “scene”: 未引用的形参 (编译源文件 Debug\moc_CTransformRect.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changePos”: 未引用的形参 (编译源文件 Debug\moc_CNodeEditorScene.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(119): warning C4100: “changeSize”: 未引用的形参 (编译源文件 Debug\moc_CNodeEditorScene.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “yc”: 未引用的形参 (编译源文件 Debug\moc_CNodeEditorScene.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(118): warning C4100: “xc”: 未引用的形参 (编译源文件 Debug\moc_CNodeEditorScene.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “newRect”: 未引用的形参 (编译源文件 Debug\moc_CNodeEditorScene.cpp)
+d:\datastructureqt\2023\no.13\common\commonmoduels\citem.h(117): warning C4100: “oldRect”: 未引用的形参 (编译源文件 Debug\moc_CNodeEditorScene.cpp)
+  commonmoduels.vcxproj -> D:\DataStructureQt\2023\No.13\common\commonmoduels\..\..\lib.debug\commonmoduels.lib
