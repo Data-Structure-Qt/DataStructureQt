@@ -54,14 +54,13 @@ void GraphUI::on_leafNode_btn_clicked() {
   // 在画板中获取所有边和顶点
   QList<CNode *> nodes = m_scene->getItems<CNode>();
   QList<CEdge *> edges = m_scene->getItems<CEdge>();
-
+	
   // 标记边的属性
   for (auto edge : edges) {
     edge->setLabelText(QString::fromStdString(std::string("")));
     edge->showLabel(true);
     edge->setAttribute("direction", "directed");
   }
-
   {
     char count = 'A';
     // 标记节点的文字
@@ -70,12 +69,19 @@ void GraphUI::on_leafNode_btn_clicked() {
       //设置文字显示到中央
       node->setSize(70, 70);
       node->setLabelText(QString::fromStdString(std::string(1, count)));
-      node->setLabelPosition(node->x() / 4096 - 10, node->y() / 4096 - 10);
+      node->setLabelPosition(node->x() / 4096 - 15, node->y() / 4096 - 35);
       node->showLabel(true);
       //显示标签
 
-			count = (count + 1 > 'Z') ? 'A' : count + 1; 
+      count = (count + 1 > 'Z') ? 'A' : count + 1;
     }
+  }
+
+  for (auto node : nodes) {
+    node->setAttribute("color", "#3399ff");
+  }
+  for (auto edge : edges) {
+    edge->setAttribute("color", "#a0a0a4");
   }
 
   // 创建图
@@ -180,7 +186,7 @@ void GraphUI::on_reset_btn_clicked() {
       //设置文字显示到中央
       node->setSize(70, 70);
       node->setLabelText(QString::fromStdString(std::string(1, count)));
-      node->setLabelPosition(node->x() / 4096 - 10, node->y() / 4096 - 10);
+      node->setLabelPosition(node->x() / 4096 - 15, node->y() / 4096 - 35);
       node->showLabel(true);
       //显示标签
 
