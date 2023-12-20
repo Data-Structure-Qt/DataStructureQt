@@ -1,2 +1,4 @@
 ﻿  Generate moc_predefs.h
+appui.lib(Graph.obj) : warning LNK4221: 此对象文件未定义任何之前未定义的公共符号，因此任何耗用此库的链接操作都不会使用此文件
+appmoduels.lib(Graph.obj) : warning LNK4221: 此对象文件未定义任何之前未定义的公共符号，因此任何耗用此库的链接操作都不会使用此文件
   commonui.vcxproj -> C:\Users\28190\source\repos\07graph\common\commonui\..\..\lib.debug\commonui.lib

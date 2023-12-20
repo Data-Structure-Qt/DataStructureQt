@@ -1,6 +1,9 @@
-# .vs folder
-2023/**/.vs/
+/build/
 
-# debug files
-2023/**/x64/
-2023/**/lib.debug/
+.vs/
+bin/
+obj/
+Debug/
+debug/
+lib.debug/
+Release/
