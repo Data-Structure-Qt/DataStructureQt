@@ -1,0 +1,6 @@
+# .vs folder
+2023/*/.vs/
+
+# debug files
+2023/*/x64/
+2023/*/lib.debug/
