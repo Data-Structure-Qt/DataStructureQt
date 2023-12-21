@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWidgetClass</class>
+ <widget class="QWidget" name="MainWidgetClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWidget</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QLineEdit {
+    background-color: #f2f2f2;  /* 背景颜色 */
+    border: 2px solid #e0e0e0;  /* 边框样式 */
+    border-radius: 5px;  /* 边框圆角 */
+    padding: 5px;  /* 内边距 */
+    selection-background-color: #c0c0c0;  /* 选中文本的背景颜色 */
+}
+
+QPushButton {
+    background-color: #f2f2f2;  /* 背景颜色 */
+    border: 2px solid #e0e0e0;  /* 边框样式 */
+    border-radius: 5px;  /* 边框圆角 */
+    padding: 5px 10px;  /* 内边距 */
+    color: #333;  /* 文本颜色 */
+}
+QPushButton:hover {
+    background-color: #e0e0e0;  /* 鼠标悬停时的背景颜色 */
+}
+QPushButton:pressed {
+    background-color: #c0c0c0;  /* 按下时的背景颜色 */
+}
+</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,0">
+   <item>
+    <widget class="BTreeWidget" name="widget" native="true"/>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QLineEdit" name="editNum"/>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPushButton" name="btnDelete">
+         <property name="text">
+          <string>删除</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnAdd">
+         <property name="text">
+          <string>添加</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnRandom">
+         <property name="text">
+          <string>随机添加</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>BTreeWidget</class>
+   <extends>QWidget</extends>
+   <header>BTreeWidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
