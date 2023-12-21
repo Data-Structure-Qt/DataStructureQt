@@ -54,23 +54,34 @@ void GraphUI::on_leafNode_btn_clicked() {
   // 在画板中获取所有边和顶点
   QList<CNode *> nodes = m_scene->getItems<CNode>();
   QList<CEdge *> edges = m_scene->getItems<CEdge>();
-
+	
   // 标记边的属性
   for (auto edge : edges) {
-    edge->setLabelText(edge->getId());
+    edge->setLabelText(QString::fromStdString(std::string("")));
     edge->showLabel(true);
     edge->setAttribute("direction", "directed");
   }
+  {
+    char count = 'A';
+    // 标记节点的文字
+    for (auto node : nodes) {
+      //获取 ID 作为节点标签文字
+      //设置文字显示到中央
+      node->setSize(70, 70);
+      node->setLabelText(QString::fromStdString(std::string(1, count)));
+      node->setLabelPosition(node->x() / 4096 - 15, node->y() / 4096 - 35);
+      node->showLabel(true);
+      //显示标签
 
-  // 标记节点的文字
+      count = (count + 1 > 'Z') ? 'A' : count + 1;
+    }
+  }
+
   for (auto node : nodes) {
-    //获取 ID 作为节点标签文字
-    //设置文字显示到中央
-    node->setSize(70, 70);
-    node->setLabelText(node->getId());
-    node->setLabelPosition(node->x() / 4096 - 10, node->y() / 4096 - 10);
-    node->showLabel(true);
-    //显示标签
+    node->setAttribute("color", "#3399ff");
+  }
+  for (auto edge : edges) {
+    edge->setAttribute("color", "#a0a0a4");
   }
 
   // 创建图
@@ -145,11 +156,11 @@ void GraphUI::on_leafNode_btn_clicked() {
 // 获取叶子节点
 void GraphUI::getLeafNode(MGraph g) {
   for (const CGraphAdjointList &vertex : g.adjointList) {
-		// 如果该节点有孩子节点则跳过
+    // 如果该节点有孩子节点则跳过
     if (vertex.firstEdage != NULL) {
       continue;
     }
-		// 如果没有孩子节点（出度为0），判定为叶子节点，标记为红色
+    // 如果没有孩子节点（出度为0），判定为叶子节点，标记为红色
     qDebug() << QString::fromStdString(vertex.data) << " ";
     NodeChangeColor(QString::fromStdString(vertex.data));
   }
@@ -160,23 +171,27 @@ void GraphUI::on_reset_btn_clicked() {
   QList<CEdge *> edges = m_scene->getItems<CEdge>();
   qDebug("Node number:%d", nodes.count());
   qDebug("Edges number:%d", edges.count());
+  // 标记边的属性
   for (auto edge : edges) {
-    qDebug() << "frist node: " + edge->firstNode()->getId() +
-                    "last node: " + edge->lastNode()->getId();
-    edge->setLabelText(edge->getId());
+    edge->setLabelText(QString::fromStdString(std::string("")));
     edge->showLabel(true);
-    //显示标签
-    // edge->setAttribute("direction", "directed");
+    edge->setAttribute("direction", "directed");
   }
-  for (auto node : nodes) {
-    qDebug() << " node: " + node->getId();
-    //获取 ID 作文节点标签文字
-    //设置文字显示到中央
-    node->setSize(70, 70);
-    node->setLabelText(node->getId());
-    node->setLabelPosition(node->x() / 4096 - 10, node->y() / 4096 - 10);
-    node->showLabel(true);
-    //显示标签
+
+  {
+    char count = 'A';
+    // 标记节点的文字
+    for (auto node : nodes) {
+      //获取 ID 作为节点标签文字
+      //设置文字显示到中央
+      node->setSize(70, 70);
+      node->setLabelText(QString::fromStdString(std::string(1, count)));
+      node->setLabelPosition(node->x() / 4096 - 15, node->y() / 4096 - 35);
+      node->showLabel(true);
+      //显示标签
+
+      count = (count + 1 > 'Z') ? 'A' : count + 1;
+    }
   }
   for (auto node : nodes) {
     node->setAttribute("color", "#3399ff");
