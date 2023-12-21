@@ -42,72 +42,72 @@ void GraphUI::setCNodeEditorUIController(CNodeEditorUIController*
 	m_nodeEditorUIController = nodeEditorUIController;
 	setEnabled(m_nodeEditorUIController);
 }
-void GraphUI::on_bfs_btn_clicked()
-{
-	m_nodeEditorUIController->clickButtonDisabled();
-	QList<CNode*> nodes = m_scene->getItems<CNode>();
-	QList<CEdge*> edges = m_scene->getItems<CEdge>();
-	for (auto edge : edges)
-	{
-		qDebug() << "frist node: " + edge->firstNode()->getId() + "last node: " +
-			edge->lastNode()->getId();
-		edge->setLabelText(edge->getId());
-		edge->showLabel(true);
-		edge->setAttribute("direction", "directed");
-	}
-	for (auto node : nodes)
-	{
-		qDebug() << " node: " + node->getId();
-		//获取 ID 作为节点标签文字
-		//设置文字显示到中央
-		node->setSize(70, 70);
-		node->setLabelText(node->getId());
-		node->setLabelPosition(node->x() / 4096 - 10, node->y() / 4096 - 10);
-		node->showLabel(true);
-		//显示标签
-	}
-	onlytotaltime = 0;
-	MGraph g;
-	createGraph(g);
-	//print(g);
-	qDebug() << "*********** BFSTraverse *************";
-	BFSTraverse(g);
-	qDebug() << "*********** destroyGraph *************";
-	destroyGraph(g);
-	m_scene->deselectAll();//取消全选
-	for (int i = 1; i <= onlytotaltime; i++)
-	{
-		animationview(i);
-	}
-	m_nodeEditorUIController->clickButtonEnabled();
-}
-void GraphUI::on_dfs_btn_clicked()
-{
-	m_nodeEditorUIController->clickButtonDisabled();
-	//获取屏幕目前的边和点
-	QList<CNode*> nodes = m_scene->getItems<CNode>();
-	QList<CEdge*> edges = m_scene->getItems<CEdge>();
-	for (auto edge : edges)//显示边标签
-	{
-		edge->setLabelText(edge->getId());
-		edge->showLabel(true);
-		edge->setAttribute("direction", "directed");
-	}
-	for (auto node : nodes)//显示节点标签
-	{
-		node->setSize(70, 70);
-		node->setLabelText(node->getId());
-		node->setLabelPosition(node->x() / 4096 - 10, node->y() / 4096 - 10);
-		node->showLabel(true);//显示标签
-	}
-	onlytotaltime = 0;
-	MGraph g; //新建图
-	createGraph(g); //依据屏幕边与节点创建图
-	DFSTraverse(g); //深度优先遍历图
-	destroyGraph(g); //销毁图
-	m_scene->deselectAll();//取消节点全选
-	m_nodeEditorUIController->clickButtonEnabled();
-}
+//void GraphUI::on_bfs_btn_clicked()
+//{
+//	m_nodeEditorUIController->clickButtonDisabled();
+//	QList<CNode*> nodes = m_scene->getItems<CNode>();
+//	QList<CEdge*> edges = m_scene->getItems<CEdge>();
+//	for (auto edge : edges)
+//	{
+//		qDebug() << "frist node: " + edge->firstNode()->getId() + "last node: " +
+//			edge->lastNode()->getId();
+//		edge->setLabelText(edge->getId());
+//		edge->showLabel(true);
+//		edge->setAttribute("direction", "directed");
+//	}
+//	for (auto node : nodes)
+//	{
+//		qDebug() << " node: " + node->getId();
+//		//获取 ID 作为节点标签文字
+//		//设置文字显示到中央
+//		node->setSize(70, 70);
+//		node->setLabelText(node->getId());
+//		node->setLabelPosition(node->x() / 4096 - 10, node->y() / 4096 - 10);
+//		node->showLabel(true);
+//		//显示标签
+//	}
+//	onlytotaltime = 0;
+//	MGraph g;
+//	createGraph(g);
+//	//print(g);
+//	qDebug() << "*********** BFSTraverse *************";
+//	BFSTraverse(g);
+//	qDebug() << "*********** destroyGraph *************";
+//	destroyGraph(g);
+//	m_scene->deselectAll();//取消全选
+//	for (int i = 1; i <= onlytotaltime; i++)
+//	{
+//		animationview(i);
+//	}
+//	m_nodeEditorUIController->clickButtonEnabled();
+//}
+//void GraphUI::on_dfs_btn_clicked()
+//{
+//	m_nodeEditorUIController->clickButtonDisabled();
+//	//获取屏幕目前的边和点
+//	QList<CNode*> nodes = m_scene->getItems<CNode>();
+//	QList<CEdge*> edges = m_scene->getItems<CEdge>();
+//	for (auto edge : edges)//显示边标签
+//	{
+//		edge->setLabelText(edge->getId());
+//		edge->showLabel(true);
+//		edge->setAttribute("direction", "directed");
+//	}
+//	for (auto node : nodes)//显示节点标签
+//	{
+//		node->setSize(70, 70);
+//		node->setLabelText(node->getId());
+//		node->setLabelPosition(node->x() / 4096 - 10, node->y() / 4096 - 10);
+//		node->showLabel(true);//显示标签
+//	}
+//	onlytotaltime = 0;
+//	MGraph g; //新建图
+//	createGraph(g); //依据屏幕边与节点创建图
+//	DFSTraverse(g); //深度优先遍历图
+//	destroyGraph(g); //销毁图
+//	m_scene->deselectAll();//取消节点全选
+//	m_nodeEditorUIController->clickButtonEnabled();
+//}
 void GraphUI::on_reset_btn_clicked()
 {
 	QList<CNode*> nodes = m_scene->getItems<CNode>();
@@ -118,21 +118,23 @@ void GraphUI::on_reset_btn_clicked()
 	{
 		qDebug() << "frist node: " + edge->firstNode()->getId() + "last node: " +
 			edge->lastNode()->getId();
-		edge->setLabelText(edge->getId());
+		edge->setLabelText(QString::fromStdString(std::string("")));
 		edge->showLabel(true);
+		edge->setAttribute("direction", "directed");
 		//显示标签
 		//edge->setAttribute("direction", "directed");
 	}
-	for (auto node : nodes)
 	{
-		qDebug() << " node: " + node->getId();
-		//获取 ID 作文节点标签文字
-		//设置文字显示到中央
-		node->setSize(70, 70);
-		node->setLabelText(node->getId());
-		node->setLabelPosition(node->x() / 4096 - 10, node->y() / 4096 - 10);
-		node->showLabel(true);
-		//显示标签
+		char count = 'A';
+		for (auto node : nodes)//显示节点标签
+		{
+			node->setSize(70, 70);
+			node->setLabelText(QString::fromStdString(std::string(1, count)));
+			node->setLabelPosition(node->x() / 4096 - 15, node->y() / 4096 - 35);
+			node->showLabel(true);//显示标签
+
+			count = (count + 1 > 'Z') ? 'A' : count + 1;
+		}
 	}
 	for (auto node : nodes)
 	{
@@ -215,7 +217,7 @@ void GraphUI::BFSTraverse(MGraph g) {
 			//节点改变颜色
 			nodeChangeColor(QString::fromStdString(g.adjointList[i].data));
 			// 记 录 时 间 +1 nodeChangeColor 节 点ID = QString::fromStdString(g.adjointList[i].data);
-				animationRecord(1,QString::fromStdString(g.adjointList[i].data), NULL);
+			animationRecord(1, QString::fromStdString(g.adjointList[i].data), NULL);
 			bfsQueue.push(i);
 			while (!bfsQueue.empty()) {
 				int queueValue;
@@ -229,13 +231,13 @@ void GraphUI::BFSTraverse(MGraph g) {
 						EdgeChangeColor(QString::fromStdString(g.adjointList[queueValue].data),
 							QString::fromStdString(g.adjointList[node->adjointVertex].data));
 						// 记 录 时 间 +1 EdgeChangeColor 节 点						ID = QString::fromStdString(g.adjointList[i].data);
-							animationRecord(2,
-								QString::fromStdString(g.adjointList[queueValue].data),
-								QString::fromStdString(g.adjointList[node->adjointVertex].data));
+						animationRecord(2,
+							QString::fromStdString(g.adjointList[queueValue].data),
+							QString::fromStdString(g.adjointList[node->adjointVertex].data));
 						nodeChangeColor(QString::fromStdString(g.adjointList[node->adjointVertex].data));
 						// 记 录 时 间 +1 nodeChangeColor 节 点						ID = QString::fromStdString(g.adjointList[i].data);
-							animationRecord(1,
-								QString::fromStdString(g.adjointList[node->adjointVertex].data), NULL);
+						animationRecord(1,
+							QString::fromStdString(g.adjointList[node->adjointVertex].data), NULL);
 						qDebug() <<
 							QString::fromStdString(g.adjointList[node->adjointVertex].data) << " ";
 					}
@@ -321,18 +323,18 @@ void GraphUI::DFS(MGraph g, int index) {
 	//输出节点
 	qDebug() << QString::fromStdString(g.adjointList[index].data);
 	nodeChangeColor(QString::fromStdString(g.adjointList[index].data));
-	animationRecord(1, QString::fromStdString(g.adjointList[index].data),
-		NULL);
+	//animationRecord(1, QString::fromStdString(g.adjointList[index].data),
+		//NULL);
 	node = g.adjointList[index].firstEdage;
 	while (node) {
 		m_quickHelp->dfs_code(1);
-		animationRecord(NULL, NULL, NULL, 1, 1);
+		//animationRecord(NULL, NULL, NULL, 1, 1);
 		if (!Mvisited[node->adjointVertex]) {
 			EdgeChangeColor(QString::fromStdString(g.adjointList[index].data),
 				QString::fromStdString(g.adjointList[node->adjointVertex].data));
 			m_quickHelp->dfs_code(2);
-			animationRecord(2, QString::fromStdString(g.adjointList[index].data),
-				QString::fromStdString(g.adjointList[node->adjointVertex].data), 1, 2);
+			//animationRecord(2, QString::fromStdString(g.adjointList[index].data),
+				//QString::fromStdString(g.adjointList[node->adjointVertex].data), 1, 2);
 			DFS(g, node->adjointVertex);
 		}
 		node = node->next;
@@ -350,7 +352,7 @@ void GraphUI::DFSTraverse(MGraph g) {
 		}
 		else {
 			m_quickHelp->dfs_code(3);
-			animationRecord(NULL, NULL, NULL, 1, 3);
+			//animationRecord(NULL, NULL, NULL, 1, 3);
 		}
 	}
 }
@@ -366,58 +368,58 @@ void GraphUI::destroyGraph(MGraph &g) {
 		g.adjointList[i].firstEdage = NULL;
 	}
 }
-void GraphUI::on_dijkstra_btn_clicked()
-{
-	m_nodeEditorUIController->clickButtonDisabled();
-	// 数组都从下标 1 开始
-	int dist[maxnum]; // 当前点到源点的最短路径长度
-	int prev[maxnum]; //当前点的前一个结点
-	int c[maxnum][maxnum]; // 记录图的两点间路径长度
-	int n, line; // 定义图的结点数和路径数
-	QList<CNode*> nodes = m_scene->getItems<CNode>();
-	QList<CEdge*> edges = m_scene->getItems<CEdge>();
-	for (auto edge : edges)//显示边标签
-	{
-		edge->setLabelText(edge->getId());
-		edge->showLabel(true);
-		edge->setAttribute("direction", "directed");
-	}
-	for (auto node : nodes)//显示点标签
-	{
-		node->setSize(70, 70);
-		node->setLabelText(node->getId());
-		node->setLabelPosition(node->x() / 4096 - 10, node->y() / 4096 - 10);
-		node->showLabel(true);
-	}
-	onlytotaltime = 0;
-	n = nodes.count();//传入节点数量
-	line = edges.count();//传入边的数量
-	int p, q, len; // 输入 p, q 两点及其路径长度
-	for (int i = 1; i <= n; ++i)
-		for (int j = 1; j <= n; ++j)
-			c[i][j] = maxint;
-	for (auto edge : edges)
-	{
-		QByteArray u_byte = edge->firstNode()->getId().toUtf8();
-		p = int(u_byte.at(0)) - 64;
-		QByteArray v_byte = edge->lastNode()->getId().toUtf8();
-		q = int(v_byte.at(0)) - 64;
-		len = edge->getId().toInt();
-		if (len < c[p][q]) // 有重边
-		{
-			c[p][q] = len; // p 指向 q
-			c[q][p] = len; // q 指向 p
-		}
-	}
-	for (int i = 1; i <= n; ++i)
-		dist[i] = maxint;
-	MDijkstra(n, 1, dist, prev, c);
-	for (int i = 2; i <= n; i++)//暂时只能从标记为 A 的节点开始
-	{
-		searchPath(prev, 1, follow[i]);
-	}
-	m_nodeEditorUIController->clickButtonEnabled();
-}
+//void GraphUI::on_dijkstra_btn_clicked()
+//{
+//	m_nodeEditorUIController->clickButtonDisabled();
+//	// 数组都从下标 1 开始
+//	int dist[maxnum]; // 当前点到源点的最短路径长度
+//	int prev[maxnum]; //当前点的前一个结点
+//	int c[maxnum][maxnum]; // 记录图的两点间路径长度
+//	int n, line; // 定义图的结点数和路径数
+//	QList<CNode*> nodes = m_scene->getItems<CNode>();
+//	QList<CEdge*> edges = m_scene->getItems<CEdge>();
+//	for (auto edge : edges)//显示边标签
+//	{
+//		edge->setLabelText(edge->getId());
+//		edge->showLabel(true);
+//		edge->setAttribute("direction", "directed");
+//	}
+//	for (auto node : nodes)//显示点标签
+//	{
+//		node->setSize(70, 70);
+//		node->setLabelText(node->getId());
+//		node->setLabelPosition(node->x() / 4096 - 10, node->y() / 4096 - 10);
+//		node->showLabel(true);
+//	}
+//	onlytotaltime = 0;
+//	n = nodes.count();//传入节点数量
+//	line = edges.count();//传入边的数量
+//	int p, q, len; // 输入 p, q 两点及其路径长度
+//	for (int i = 1; i <= n; ++i)
+//		for (int j = 1; j <= n; ++j)
+//			c[i][j] = maxint;
+//	for (auto edge : edges)
+//	{
+//		QByteArray u_byte = edge->firstNode()->getId().toUtf8();
+//		p = int(u_byte.at(0)) - 64;
+//		QByteArray v_byte = edge->lastNode()->getId().toUtf8();
+//		q = int(v_byte.at(0)) - 64;
+//		len = edge->getId().toInt();
+//		if (len < c[p][q]) // 有重边
+//		{
+//			c[p][q] = len; // p 指向 q
+//			c[q][p] = len; // q 指向 p
+//		}
+//	}
+//	for (int i = 1; i <= n; ++i)
+//		dist[i] = maxint;
+//	MDijkstra(n, 1, dist, prev, c);
+//	for (int i = 2; i <= n; i++)//暂时只能从标记为 A 的节点开始
+//	{
+//		searchPath(prev, 1, follow[i]);
+//	}
+//	m_nodeEditorUIController->clickButtonEnabled();
+//}
 void GraphUI::MDijkstra(int n, int v, int *dist, int *prev, int
 	c[maxnum][maxnum])
 {
@@ -658,12 +660,12 @@ void GraphUI::PrintGraph(AMLGraph G)
 			if (p->ivex == i) //判断相等才能知道连接上的是 ivex 还是 jvex;
 			{
 				//cout << G.adjmulist[p->ivex].data << "---" << p->weight << "---" << G.adjmulist[p->jvex].data << endl;
-					p = p->ilink;
+				p = p->ilink;
 			}
 			else
 			{
 				//cout << G.adjmulist[p->jvex].data << "---" << p->weight << "---" << G.adjmulist[p->ivex].data << endl;
-					p = p->jlink;
+				p = p->jlink;
 			}
 		}
 	}
@@ -737,16 +739,16 @@ void GraphUI::MiniSpanTree_PRIM(AMLGraph G) {
 		}
 	}
 }
-void GraphUI::on_prim_btn_clicked() //注意：prim 算法需要设置边的权值
-{
-	m_nodeEditorUIController->clickButtonDisabled();
-	AMLGraph g;
-	CreateGraph(&g);
-	PrintGraph(g);
-	onlytotaltime = 0;
-	MiniSpanTree_PRIM(g);
-	m_nodeEditorUIController->clickButtonEnabled();
-}
+//void GraphUI::on_prim_btn_clicked() //注意：prim 算法需要设置边的权值
+//{
+//	m_nodeEditorUIController->clickButtonDisabled();
+//	AMLGraph g;
+//	CreateGraph(&g);
+//	PrintGraph(g);
+//	onlytotaltime = 0;
+//	MiniSpanTree_PRIM(g);
+//	m_nodeEditorUIController->clickButtonEnabled();
+//}
 //Kruskal 算法
 int GraphUI::FindSet(vector<int> uset, int i) {
 	return uset[i] == i ? i : FindSet(uset, uset[i]);
@@ -797,7 +799,7 @@ void GraphUI::MiniSpanTree_Kruskal(AMLGraph G) {
 		if (e1 != e2) {
 			//cout << G.adjmulist[edg[i].u].data << "---" << edg[i].weight << "---" << G.adjmulist[edg[i].v].data << endl;
 				//输出边
-				QList<CEdge*> edges = m_scene->getItems<CEdge>();
+			QList<CEdge*> edges = m_scene->getItems<CEdge>();
 			for (auto edge : edges)
 			{ //
 				if (edge->getId() == QString::number(edg[i].weight) &&
@@ -827,15 +829,15 @@ void GraphUI::MiniSpanTree_Kruskal(AMLGraph G) {
 		}
 	}
 }
-void GraphUI::on_kruskal_btn_clicked()
-{
-	m_nodeEditorUIController->clickButtonDisabled();
-	AMLGraph g;
-	CreateGraph(&g);
-	onlytotaltime = 0;
-	MiniSpanTree_Kruskal(g);
-	m_nodeEditorUIController->clickButtonEnabled();
-}
+//void GraphUI::on_kruskal_btn_clicked()
+//{
+//	m_nodeEditorUIController->clickButtonDisabled();
+//	AMLGraph g;
+//	CreateGraph(&g);
+//	onlytotaltime = 0;
+//	MiniSpanTree_Kruskal(g);
+//	m_nodeEditorUIController->clickButtonEnabled();
+//}
 int GraphUI::topoCreate(topoNode topoadj[], int n, int m)//邻接表建表函数，n代表定点数，m 代表边数
 {
 	topoNode *p;
@@ -940,47 +942,47 @@ void GraphUI::topoSort(topoNode topoadj[], int n)
 	qDebug() << endl;
 	if (count < n)qDebug() << "have circle" << endl;
 }
-void GraphUI::on_topologicalSorting_btn_clicked()
-{
-	m_nodeEditorUIController->clickButtonDisabled();
-	int n;
-	int m;
-	//cout << "请输入顶点数及边数:";
-	QList<CNode*> nodes = m_scene->getItems<CNode>();
-	QList<CEdge*> edges = m_scene->getItems<CEdge>();
-	for (auto edge : edges)
-	{
-		qDebug() << "frist node: " + edge->firstNode()->getId() + "last node: " +
-			edge->lastNode()->getId();
-		edge->setLabelText(edge->getId());
-		edge->showLabel(true);
-		//显示标签
-		edge->setAttribute("direction", "directed");
-	}
-	for (auto node : nodes)
-	{
-		qDebug() << " node: " + node->getId();
-		//获取 ID 作文节点标签文字
-		//设置文字显示到中央
-		node->setSize(70, 70);
-		node->setLabelText(node->getId());
-		node->setLabelPosition(node->x() / 4096 - 10, node->y() / 4096 - 10);
-		node->showLabel(true);
-		//显示标签
-	}
-	onlytotaltime = 0;
-	n = nodes.count();//传入节点数量
-	// 输入路径数
-	m = edges.count();//传入边的数量
-	topoCreate(topoadj, n, m);
-	//cout << "输入的邻接表为:" << endl;
-	topoPrint(n);
-	//cout << "拓扑排序结果为:" << endl;
-	topoSort(topoadj, n);
-	//system("pause");
-	//return 0;
-	m_nodeEditorUIController->clickButtonEnabled();
-}
+//void GraphUI::on_topologicalSorting_btn_clicked()
+//{
+//	m_nodeEditorUIController->clickButtonDisabled();
+//	int n;
+//	int m;
+//	//cout << "请输入顶点数及边数:";
+//	QList<CNode*> nodes = m_scene->getItems<CNode>();
+//	QList<CEdge*> edges = m_scene->getItems<CEdge>();
+//	for (auto edge : edges)
+//	{
+//		qDebug() << "frist node: " + edge->firstNode()->getId() + "last node: " +
+//			edge->lastNode()->getId();
+//		edge->setLabelText(edge->getId());
+//		edge->showLabel(true);
+//		//显示标签
+//		edge->setAttribute("direction", "directed");
+//	}
+//	for (auto node : nodes)
+//	{
+//		qDebug() << " node: " + node->getId();
+//		//获取 ID 作文节点标签文字
+//		//设置文字显示到中央
+//		node->setSize(70, 70);
+//		node->setLabelText(node->getId());
+//		node->setLabelPosition(node->x() / 4096 - 10, node->y() / 4096 - 10);
+//		node->showLabel(true);
+//		//显示标签
+//	}
+//	onlytotaltime = 0;
+//	n = nodes.count();//传入节点数量
+//	// 输入路径数
+//	m = edges.count();//传入边的数量
+//	topoCreate(topoadj, n, m);
+//	//cout << "输入的邻接表为:" << endl;
+//	topoPrint(n);
+//	//cout << "拓扑排序结果为:" << endl;
+//	topoSort(topoadj, n);
+//	//system("pause");
+//	//return 0;
+//	m_nodeEditorUIController->clickButtonEnabled();
+//}
 void GraphUI::goToBeginButton()
 {
 	on_reset_btn_clicked();
@@ -1073,10 +1075,10 @@ void GraphUI::animationDrawWithoutSuspand(int totaltime)
 void GraphUI::sleepTime(int time)
 {
 	QTime dieTime = QTime::currentTime().addMSecs(time);//获取自定义休眠时间
-		while (QTime::currentTime() < dieTime)
-		{
-			QCoreApplication::processEvents(QEventLoop::AllEvents, 100); // 开 启新线程，处理 qt 界面事件
-		}
+	while (QTime::currentTime() < dieTime)
+	{
+		QCoreApplication::processEvents(QEventLoop::AllEvents, 100); // 开 启新线程，处理 qt 界面事件
+	}
 }
 void GraphUI::setCEditorView(CEditorView* editorView)
 {
@@ -1117,10 +1119,10 @@ void GraphUI::animationview(int currenttime)
 	qDebug() << "animation[currenttime].para2" <<
 		animation[currenttime].para2;
 }
-void GraphUI::on_outPut_btn_clicked()
-{
-	qDebug() << "OutPut Button had clicked";
-}
+//void GraphUI::on_outPut_btn_clicked()
+//{
+//	qDebug() << "OutPut Button had clicked";
+//}
 
 
 void GraphUI::First(MGraph g, int index) {
@@ -1129,18 +1131,18 @@ void GraphUI::First(MGraph g, int index) {
 	//输出节点
 	qDebug() << QString::fromStdString(g.adjointList[index].data);
 	nodeChangeColor(QString::fromStdString(g.adjointList[index].data));
-	animationRecord(1, QString::fromStdString(g.adjointList[index].data),
-		NULL);
+	//animationRecord(1, QString::fromStdString(g.adjointList[index].data),
+		//NULL);
 	node = g.adjointList[index].firstEdage;
 	while (node) {
 		m_quickHelp->dfs_code(1);
-		animationRecord(NULL, NULL, NULL, 1, 1);
+		//animationRecord(NULL, NULL, NULL, 1, 1);
 		if (!Mvisited[node->adjointVertex]) {
 			EdgeChangeColor(QString::fromStdString(g.adjointList[index].data),
 				QString::fromStdString(g.adjointList[node->adjointVertex].data));
 			m_quickHelp->dfs_code(2);
-			animationRecord(2, QString::fromStdString(g.adjointList[index].data),
-				QString::fromStdString(g.adjointList[node->adjointVertex].data), 1, 2);
+			//animationRecord(2, QString::fromStdString(g.adjointList[index].data),
+				//QString::fromStdString(g.adjointList[node->adjointVertex].data), 1, 2);
 			First(g, node->adjointVertex);
 		}
 		node = node->next;
@@ -1153,14 +1155,14 @@ void GraphUI::Last(MGraph g, int index) {
 
 	node = g.adjointList[index].firstEdage;
 	while (node) {
-		m_quickHelp->dfs_code(1);
-		animationRecord(NULL, NULL, NULL, 1, 1);
+		m_quickHelp->last_code(1);
+		//animationRecord(NULL, NULL, NULL, 1, 1);
 		if (!Mvisited[node->adjointVertex]) {
 			EdgeChangeColor(QString::fromStdString(g.adjointList[index].data),
 				QString::fromStdString(g.adjointList[node->adjointVertex].data));
-			m_quickHelp->dfs_code(2);
-			animationRecord(2, QString::fromStdString(g.adjointList[index].data),
-				QString::fromStdString(g.adjointList[node->adjointVertex].data), 1, 2);
+			m_quickHelp->last_code(2);
+			//animationRecord(2, QString::fromStdString(g.adjointList[index].data),
+				//QString::fromStdString(g.adjointList[node->adjointVertex].data), 1, 2);
 			Last(g, node->adjointVertex);
 		}
 		node = node->next;
@@ -1169,8 +1171,8 @@ void GraphUI::Last(MGraph g, int index) {
 	//输出节点
 	qDebug() << QString::fromStdString(g.adjointList[index].data);
 	nodeChangeColor(QString::fromStdString(g.adjointList[index].data));
-	animationRecord(1, QString::fromStdString(g.adjointList[index].data),
-		NULL);
+	//animationRecord(1, QString::fromStdString(g.adjointList[index].data),
+		//NULL);
 
 }
 
@@ -1185,8 +1187,8 @@ void GraphUI::LastTraverse(MGraph g) {
 			Last(g, i);
 		}
 		else {
-			m_quickHelp->dfs_code(3);
-			animationRecord(NULL, NULL, NULL, 1, 3);
+			m_quickHelp->last_code(3);
+			//animationRecord(NULL, NULL, NULL, 1, 3);
 		}
 	}
 }
@@ -1199,18 +1201,25 @@ void GraphUI::on_first_btn_clicked()
 	QList<CEdge*> edges = m_scene->getItems<CEdge>();
 	for (auto edge : edges)//显示边标签
 	{
-		edge->setLabelText(edge->getId());
+		edge->setLabelText(QString::fromStdString(std::string("")));
 		edge->showLabel(true);
 		edge->setAttribute("direction", "directed");
 	}
-	for (auto node : nodes)//显示节点标签
+
 	{
-		node->setSize(70, 70);
-		node->setLabelText(node->getId());
-		node->setLabelPosition(node->x() / 4096 - 10, node->y() / 4096 - 10);
-		node->showLabel(true);//显示标签
+		char  count = 'A';
+		for (auto node : nodes)//显示节点标签
+		{
+			node->setSize(70, 70);
+			node->setLabelText(QString::fromStdString(std::string(1, count)));
+			node->setLabelPosition(node->x() / 4096 - 15, node->y() / 4096 - 35);
+			node->showLabel(true);//显示标签
+
+			count = (count + 1 > 'Z') ? 'A' : count + 1;
+		}
 	}
-	onlytotaltime = 0;
+
+	//onlytotaltime = 0;
 	MGraph g; //新建图
 	createGraph(g); //依据屏幕边与节点创建图
 	DFSTraverse(g); //深度优先遍历图
@@ -1225,22 +1234,29 @@ void GraphUI::on_last_btn_clicked()
 	//获取屏幕目前的边和点
 	QList<CNode*> nodes = m_scene->getItems<CNode>();
 	QList<CEdge*> edges = m_scene->getItems<CEdge>();
+
 	for (auto edge : edges)//显示边标签
 	{
-		edge->setLabelText(edge->getId());
+		edge->setLabelText(QString::fromStdString(std::string("")));
 		edge->showLabel(true);
 		edge->setAttribute("direction", "directed");
 	}
-	for (auto node : nodes)//显示节点标签
 	{
-		node->setSize(70, 70);
-		node->setLabelText(node->getId());
-		node->setLabelPosition(node->x() / 4096 - 10, node->y() / 4096 - 10);
-		node->showLabel(true);//显示标签
+		char  count = 'A';
+		for (auto node : nodes)//显示节点标签
+		{
+			node->setSize(70, 70);
+			node->setLabelText(QString::fromStdString(std::string(1, count)));
+			node->setLabelPosition(node->x() / 4096 - 15, node->y() / 4096 - 35);
+			node->showLabel(true);//显示标签
+
+			count = (count + 1 > 'Z') ? 'A' : count + 1;
+		}
 	}
 	onlytotaltime = 0;
 	MGraph g; //新建图
 	createGraph(g); //依据屏幕边与节点创建图
+	
 	LastTraverse(g); //深度优先遍历图
 	destroyGraph(g); //销毁图
 	m_scene->deselectAll();//取消节点全选

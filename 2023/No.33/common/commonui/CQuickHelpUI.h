@@ -20,6 +20,8 @@ public:
 
 	void dfs_code(int act);
 
+	void last_code(int act);
+
 	void dij_code(int act);
 
 	void sleepTime(int time);

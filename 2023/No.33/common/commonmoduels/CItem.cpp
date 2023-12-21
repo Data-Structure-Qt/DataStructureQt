@@ -319,8 +319,15 @@ void CItem::updateLabelDecoration()
 
 void CItem::setLabelText(const QString& text)
 {
-	if (m_labelItem)
+	if (m_labelItem) {
+		QFont f("Cascadia Code", 10, QFont::Bold);
+		f.setPointSize(25);
+		m_labelItem->setFont(f);
+
+		const QBrush colorBrush(QColor(242, 200, 60, 255));
+		m_labelItem->setBrush(colorBrush);
 		m_labelItem->setText(text);
+	}
 }
 //ÐÞ¸Ä±êÇ©Î»ÖÃ
 void CItem::setLabelPosition(double posx, double posy)
