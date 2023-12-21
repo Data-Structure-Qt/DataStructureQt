@@ -86,14 +86,14 @@ public:
 	void animationview(int currenttime);
 	void playButton();
 private slots:
-	void on_bfs_btn_clicked();
-	void on_dfs_btn_clicked();
+	//void on_bfs_btn_clicked();
+	//void on_dfs_btn_clicked();
 	void on_reset_btn_clicked();
-	void on_dijkstra_btn_clicked();
-	void on_prim_btn_clicked();
-	void on_kruskal_btn_clicked();
-	void on_topologicalSorting_btn_clicked();
-	void on_outPut_btn_clicked();
+	//void on_dijkstra_btn_clicked();
+	//void on_prim_btn_clicked();
+	//void on_kruskal_btn_clicked();
+	//void on_topologicalSorting_btn_clicked();
+	//void on_outPut_btn_clicked();
 
 
 	void on_first_btn_clicked();
