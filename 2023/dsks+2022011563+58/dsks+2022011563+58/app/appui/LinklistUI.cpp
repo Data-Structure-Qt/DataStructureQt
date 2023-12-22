@@ -147,6 +147,20 @@ void LinklistUI::setScene(CNodeEditorScene* scene)
 	setEnabled(m_scene);
 	if (m_scene)
 		onSceneAttached(m_scene);
+
+	m_scene->clear();
+	for (int i = 0; i < mytable.table.size(); i++)
+	{
+		int j = 0;
+		m_scene->insertnode(j++, i, -1);
+		auto node = mytable.table[i];
+		while (node != nullptr)
+		{
+			m_scene->insertnode(j, i, node->value);
+			node = node->next;
+			j++;
+		}
+	}
 }
 void LinklistUI::onSceneAttached(CEditorScene* scene)
 {
