@@ -145,6 +145,7 @@ void GraphUI::on_leafNode_btn_clicked() {
 
   // 获取并标记叶子节点
   getLeafNode(g);
+
   // 销毁当前图
   destroyGraph(g);
   //取消全选
@@ -155,14 +156,16 @@ void GraphUI::on_leafNode_btn_clicked() {
 
 // 获取叶子节点
 void GraphUI::getLeafNode(MGraph g) {
-  for (const CGraphAdjointList &vertex : g.adjointList) {
+	m_quickHelp->leaf_code(0);
+  for (int i = 0; i < g.numVertex; ++i) {
     // 如果该节点有孩子节点则跳过
-    if (vertex.firstEdage != NULL) {
+    if (g.adjointList[i].firstEdage != NULL) {
+      m_quickHelp->leaf_code(1);
       continue;
     }
     // 如果没有孩子节点（出度为0），判定为叶子节点，标记为红色
-    qDebug() << QString::fromStdString(vertex.data) << " ";
-    NodeChangeColor(QString::fromStdString(vertex.data));
+    NodeChangeColor(QString::fromStdString(g.adjointList[i].data));
+    m_quickHelp->leaf_code(2);
   }
 }
 

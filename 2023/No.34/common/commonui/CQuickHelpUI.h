@@ -13,7 +13,8 @@ class CQuickHelpUI : public QWidget
 
 public:
 	CQuickHelpUI(QWidget *parent = 0);
-	~CQuickHelpUI();
+  ~CQuickHelpUI();
+  void leaf_code(int act);
 	void Setuitext(int);
 
 	void btree_search_code(int act);
