@@ -29,6 +29,7 @@ private slots:
 	void on_headdelete_btn_clicked();//双端队列前端出队功能
 	void on_taildelete_btn_clicked();//双端队列尾端出队功能
 	void on_tong_btn_clicked();//桶排序功能
+	void on_tongxian_btn_clicked();//显示桶关系桶排序功能
 	int Max(int i,int j);
 	int Min(int i,int j);
 protected:

@@ -68,7 +68,7 @@ void CQuickHelpUI::deleteButton_code()
 }
 void CQuickHelpUI::tongButton_code()//Í°ÅÅÐò´úÂë×·×Ù
 {
-	ui->Viewer->setText("int* arr = new int[n];\nfor (int i = 0; i < DequeueList.size(); ++i)\n{\nQString tmp = (*DequeueList.at(i)).m_StrName;\nbool ok2;\nint x_i = tmp.toUInt(&ok2);\nif (!ok2)\nreturn;\narr[i] = x_i;\n}\nint* b = new int[max + 1];\nfor (int i = 0; i <= max; i++)\n{\nb[i] = 0;\n}\nfor (int i = 0; i < n; i++) \n{\nb[arr[i]]++;\n}\nint index = 0;\nfor (int i = 0; i <= max; i++) \n{\nwhile (b[i] > 0) {\narr[index++] = i;\nb[i]--;\n}\n");
+	ui->Viewer->setText("if empty, do nothing\nfind max,find min\nsize=(max-min)/n+1\ncount=(max-min)/size+1\nDivide buckets into buckets with the number of counts\nFill the elements into buckets according to the intervals\nLink the elements in the bucket to get the final sorting result");
 }
 
 

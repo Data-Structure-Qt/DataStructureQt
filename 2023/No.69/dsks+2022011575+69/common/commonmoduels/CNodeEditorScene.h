@@ -47,6 +47,10 @@ public:
 	void drawText(int location);
 	void drawResult(int location);//打印“桶排序结果”
 	void drawTong(int location);//打印“桶排序过程”
+	void drawTongguanxi(int location);//打印“桶排序过程”
+	void drawTongpaixu(int location);//打印“桶排序过程”
+	void drawTongxian(int temp,int i,int count);//显示元素关系线段
+	void drawxian(int temp, int i,int j);//元素位置链接
 	void insertfindnode(int location, int data);
 	void modifynode(int location, int data);
 	void deletenode(int location);
@@ -54,7 +58,7 @@ public:
 	void clearScreen();
 	void tong(int i,int location, int data);//桶排序屏幕实现
 	void kongtong(int i, int location, int data);//空桶
-	void tongsize(int i,int location);//桶区间
+	void kongtongyi(int i, int location, int data);//空桶上移
 
 	EditMode getEditMode() const {
 		return m_editMode;

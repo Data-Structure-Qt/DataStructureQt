@@ -5,6 +5,8 @@
 #include <QTextStream>
 #include <QTime>
 #include <QMessageBox>
+#include<stdio.h>
+#include<windows.h>
 DequeueUI::DequeueUI(QWidget *parent) :
 	QWidget(parent),
 	ui(new Ui::DequeueUI),
@@ -297,7 +299,7 @@ int DequeueUI::Min(int i, int j)
 }
 void DequeueUI::on_tong_btn_clicked()//桶排序功能
 {
-	//m_scene->clearScreen();//清屏
+	m_scene->clearScreen();//清屏
 	m_quickHelp->tongButton_code();//显示代码 显示部分为tongButton_code()
 	QList<CNode*> nodes = m_scene->getSelectedNodes();
 	QString data = ui->dataEdit->text();
@@ -369,7 +371,7 @@ void DequeueUI::on_tong_btn_clicked()//桶排序功能
 		}
 	}//arr为桶排序后的数组
 
-
+	m_scene->drawTongpaixu(3);//打印“桶排序”
 	m_scene->drawTong(7);//打印“桶排序过程”
 	for (int i = 0; i < count; i++)//绘制桶
 	{
@@ -380,23 +382,16 @@ void DequeueUI::on_tong_btn_clicked()//桶排序功能
 			if (arr[j] >= min && arr[j] < min + size)
 			{
 				m_scene->tong(i,temp, arr[j]);//void CNodeEditorScene::tong(int i, int location, int data)//桶排序屏幕实现 i表示第几桶
-				temp ++ ;
+				temp ++ ;//temp表示桶内有几个元素
 			}
 		}
 		if (temp == 0)
 		{
-			m_scene->kongtong(i, temp, 0);
+			m_scene->kongtong(i, temp, 0);//设置空桶，默认空桶内的元素为‘0’
 		}
 		/*m_scene->tongsize(i,temp);*/
 		min += size;
-	}
-
-
-
-
-
-	
-	
+	}//展示桶
 	for (int i = 0; i < DequeueList.size(); ++i)
 	{
 		m_scene->tongResult(i, arr[i]);//屏幕显示桶排序结果
@@ -407,3 +402,111 @@ void DequeueUI::on_tong_btn_clicked()//桶排序功能
 	delete[]b;
 	b = NULL;
 }
+
+
+void DequeueUI::on_tongxian_btn_clicked()//显示桶间关系功能
+{
+	m_scene->clearScreen();//清屏
+	m_scene->drawTongguanxi(7);
+	m_quickHelp->tongButton_code();//显示代码 显示部分为tongButton_code()
+	QList<CNode*> nodes = m_scene->getSelectedNodes();
+	QString data = ui->dataEdit->text();
+	QStringList temp = data.split(",");
+	for (int i = 0; i < temp.size(); ++i)
+	{
+		Dequeuenode* node = new Dequeuenode();
+		node->m_StrName = temp.at(i);
+		if (DequeueList.size() < 8)
+		{//添加进队列
+			DequeueList.tailenqueue(node);
+		}
+	}
+	int max, min, n, size, count;//命名最大值max，最小值min，数据个数n，桶大小size，桶个数count
+	n = DequeueList.size();
+	QString tmp = (*DequeueList.at(0)).m_StrName;
+	bool OK1;
+	int x = tmp.toUInt(&OK1);
+	if (!OK1)
+		return;
+	min = x;//初始化min max
+	max = x;
+	for (int i = 0; i < DequeueList.size(); ++i)
+	{
+		QString tmp = (*DequeueList.at(i)).m_StrName;
+		bool flag;
+		int x = tmp.toUInt(&flag);
+		if (!flag)
+			return;
+		max = Max(max, x);//找出序列中的max,min
+		min = Min(min, x);
+	}
+	size = (max - min) / n + 1;
+	count = (max - min) / size + 1;
+
+
+	//m_scene->tongResult(0, size);//检查参数值
+
+	//int arr[8];
+	int* arr = new int[n];//实现桶排序
+	for (int i = 0; i < DequeueList.size(); ++i)
+	{
+		QString tmp = (*DequeueList.at(i)).m_StrName;
+		bool ok2;
+		int x_i = tmp.toUInt(&ok2);
+		if (!ok2)
+			return;
+		arr[i] = x_i;
+	}
+	//创建桶数组
+   /*int b[max+1];*/
+	int* b = new int[max + 1];
+	for (int i = 0; i <= max; i++)
+	{
+		b[i] = 0;
+	}
+	// 将数据放入桶中
+	for (int i = 0; i < n; i++)
+	{
+		b[arr[i]]++;
+	}
+	// 将桶中的数据按顺序放回原数组
+	int index = 0;
+	for (int i = 0; i <= max; i++)
+	{
+		while (b[i] > 0) {
+			arr[index++] = i;
+			b[i]--;
+		}
+	}//arr为桶排序后的数组
+	m_scene->drawTong(7);//打印“桶排序过程”
+	for (int i = 0; i < count; i++)//绘制桶
+	{
+		int temp;
+		temp = 0;
+		for (int j = 0; j < count; j++)
+		{
+			if (arr[j] >= min && arr[j] < min + size)
+			{
+				m_scene->tong(i, temp, arr[j]);//void CNodeEditorScene::tong(int i, int location, int data)//桶排序屏幕实现 i表示第几桶
+				temp++;//temp表示桶内有几个元素
+				m_scene->drawxian(temp,i,j);//显示桶元素关系
+			}
+		}
+		m_scene->drawTongxian(temp, i, count);//桶内链接
+		if (temp == 0)
+		{
+			m_scene->kongtongyi(i, temp, 0);//设置空桶，默认空桶内的元素为‘0’，将空桶上移
+		}
+		min += size;
+	}//展示桶
+	for (int i = 0; i < DequeueList.size(); ++i)
+	{
+		m_scene->tongResult(i, arr[i]);//屏幕显示桶排序结果
+	}
+	delete[]arr;
+	arr = NULL;
+	delete[]b;
+	b = NULL;
+
+}
+//11,38,8,34,27,19,26,13

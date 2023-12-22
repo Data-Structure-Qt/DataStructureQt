@@ -686,6 +686,54 @@ void CNodeEditorScene::drawTong(int location)//打印“桶排序过程”
 	//原始数据(-300 - 50, -20, -300 + 50 * (location)-25 - 25 + 100, -20)
 	addItem(lineItem1);
 }
+void CNodeEditorScene::drawTongguanxi(int location)
+{
+	// 正方形  长度25一格 正负40格 
+	//绘制文字
+	QGraphicsTextItem *pItem = new QGraphicsTextItem();
+	pItem->setPlainText(QString::fromLocal8Bit("桶间元素关系"));  // 纯文本
+	pItem->setDefaultTextColor(QColor(0, 0, 0));  // 文本色
+	pItem->setPos(QPointF(-125, -450));
+	//位置 x ,y<0的情况下： |y|越大越靠上，|x|越大越靠左 x=-125 居中 
+	//x<0靠左 y<0靠右
+	QFont font = pItem->font();
+	font.setPixelSize(50);  // 像素大小 每一格大小25左右
+	pItem->setFont(font);
+	addItem(pItem);
+
+	QGraphicsLineItem *lineItem1 = new QGraphicsLineItem();
+	QPen pen1 = lineItem1->pen();//画笔 绘制外框
+	pen1.setColor(QColor(0,0,255));//外边框的颜色 
+	pen1.setWidth(5);
+	lineItem1->setPen(pen1);
+	lineItem1->setLine(-125 - 50, -375, -175 + 50 * (location)-25 - 25 + 100,-375);//(a,b,c,d) a->x b=d为直线且->y  c->线段终点
+	//location=7   
+	//原始数据(-300 - 50, -20, -300 + 50 * (location)-25 - 25 + 100, -20)
+	addItem(lineItem1);
+}
+void CNodeEditorScene::drawTongpaixu(int location)
+{
+	QGraphicsTextItem *pItem = new QGraphicsTextItem();
+	pItem->setPlainText(QString::fromLocal8Bit("桶排序"));  // 纯文本
+	pItem->setDefaultTextColor(QColor(0, 0, 0));  // 文本色
+	pItem->setPos(QPointF(-75, -450));
+	//位置 x ,y<0的情况下： |y|越大越靠上，|x|越大越靠左 x=-125 居中 
+	//x<0靠左 y<0靠右
+	QFont font = pItem->font();
+	font.setPixelSize(50);  // 像素大小 每一格大小25左右
+	pItem->setFont(font);
+	addItem(pItem);
+
+	QGraphicsLineItem *lineItem1 = new QGraphicsLineItem();
+	QPen pen1 = lineItem1->pen();//画笔 绘制外框
+	pen1.setColor(QColor(0, 0, 255));//外边框的颜色 
+	pen1.setWidth(5);
+	lineItem1->setPen(pen1);
+	lineItem1->setLine(-75 - 50, -375, -175 + 50 * (location)-25 - 25 + 200, -375);//(a,b,c,d) a->x b=d为直线且->y  c->线段终点
+	//location=7   
+	//原始数据(-300 - 50, -20, -300 + 50 * (location)-25 - 25 + 100, -20)
+	addItem(lineItem1);
+}
 void CNodeEditorScene::insertnode(int location, int data)
 {
 	if (location == 0)
@@ -789,6 +837,7 @@ void CNodeEditorScene::tongResult(int location, int data)//屏幕显示桶排序结果
 	//orgin = orgin + addnext;
 	flag = true;
 }
+
 void CNodeEditorScene::tong(int i, int location, int data)//桶排序屏幕实现 i表示第几桶
 {
 	if (location == 0)
@@ -820,6 +869,37 @@ void CNodeEditorScene::tong(int i, int location, int data)//桶排序屏幕实现 i表示
 	//orgin = orgin + addnext;
 	flag = true;
 }
+void CNodeEditorScene::drawTongxian(int temp,int i,int count)
+{
+	////绘制线段
+	QGraphicsLineItem *lineItem1 = new QGraphicsLineItem();
+	QPen pen1 = lineItem1->pen();//画笔 绘制外框
+	pen1.setColor(QColor(255, 0, 0));//外边框的颜色 
+	pen1.setWidth(5);
+	lineItem1->setPen(pen1);
+	if (i< count-1)
+	{
+		lineItem1->setLine(-525 + i * 175+temp*50,0, -525 + (i+1) * 175,0);//(a,b,c,d) a->x b=d为直线且->y  c->线段终点
+		//location=7   
+		//原始数据(-300 - 50, -20, -300 + 50 * (location)-25 - 25 + 100, -20)
+	}
+	addItem(lineItem1);
+}
+
+void CNodeEditorScene::drawxian(int temp, int i,int j)//显示元素关系
+{
+	////绘制线段
+	QGraphicsLineItem *lineItem1 = new QGraphicsLineItem();
+	QPen pen1 = lineItem1->pen();//画笔 绘制外框
+	pen1.setColor(QColor(0,0,255));//外边框的颜色 
+	pen1.setWidth(5);
+	lineItem1->setPen(pen1);
+	lineItem1->setLine(-550 + i * 175 + temp * 50, 25, -175+50*j, 300);//(a,b,c,d) a->x b=d为直线且->y  c->线段终点
+	//location=7   
+	//原始数据(-300 - 50, -20, -300 + 50 * (location)-25 - 25 + 100, -20)
+	addItem(lineItem1);
+}
+
 void CNodeEditorScene::kongtong(int i, int location, int data)//空桶
 {
 	if (location == 0)
@@ -851,26 +931,38 @@ void CNodeEditorScene::kongtong(int i, int location, int data)//空桶
 	//orgin = orgin + addnext;
 	flag = true;
 }
-void CNodeEditorScene::tongsize(int i,int location)//划分桶
-{
-	//绘制线段
-	QGraphicsLineItem *lineItem1 = new QGraphicsLineItem();
-	QPen pen1 = lineItem1->pen();//画笔 绘制外框
-	pen1.setColor(QColor(100, 149, 237));//外边框的颜色 
-	pen1.setWidth(5);
-	lineItem1->setPen(pen1);
-	lineItem1->setLine(-450+i*100,25,-450+i*100+location*50,25);//(a,b,c,d) a->x b=d为直线且->y  c->线段终点
-	//location=7   
-	//原始数据(-300 - 50, -20, -300 + 50 * (location)-25 - 25 + 100, -20)
-	addItem(lineItem1);
-}
-void CNodeEditorScene::changeNodeColor(int location)
-{
-	QPointF modify(location * 150 - 450, -50);
-	QGraphicsItem *hoverItem = getItemAt(getSnapped(modify));
-	CItem *item = dynamic_cast<CItem*>(hoverItem);
-}
 
+void CNodeEditorScene::kongtongyi(int i, int location, int data)//显示关系时 空桶上移
+{
+	if (location == 0)
+	{
+		org.setX(-500 + i * 175);//第一个矩形中心的位置
+		org.setY(-50);
+		//orgin.setX(-300)
+		//orgin.setY(-50)
+		flag = false;
+	}
+	qDebug("%d", data);
+	QPointF addnext(125, 0);
+	auto node1 = createNewNode(getSnapped(org));//绘制矩形
+	node1->setSelected(false);
+	QGraphicsItem *hoverItem = getItemAt(getSnapped(org));
+	CItem *item = dynamic_cast<CItem*>(hoverItem);
+	onActionEditLabel(item, data);
+	if (flag)
+	{
+		//auto node = createNewNode(getSnapped(orgin - addnext));//绘制矩形
+		//createNewConnection(node, node1);//绘制箭头
+		//createNewConnection(node1, node);//绘制箭头（双链表）
+	}
+	QPointF next(50, 0);
+	org = org + next;
+	//auto node2 = createNewNode(getSnapped(orgin));//绘制矩形
+	//node2->setSelected(false);
+	addUndoState();
+	//orgin = orgin + addnext;
+	flag = true;
+}
 
 
 void CNodeEditorScene::modifynode(int location, int data)
