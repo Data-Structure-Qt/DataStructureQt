@@ -1,6 +1,0 @@
-﻿  Generate moc_predefs.h
-  CQuickHelpUI.cpp
-d:\先根后根遍历graph\07graph\common\commonui\cquickhelpui.cpp(237): warning C4100: “i”: 未引用的形参
-appui.lib(Graph.obj) : warning LNK4221: 此对象文件未定义任何之前未定义的公共符号，因此任何耗用此库的链接操作都不会使用此文件
-appmoduels.lib(Graph.obj) : warning LNK4221: 此对象文件未定义任何之前未定义的公共符号，因此任何耗用此库的链接操作都不会使用此文件
-  commonui.vcxproj -> D:\先根后根遍历graph\07graph\common\commonui\..\..\lib.debug\commonui.lib
