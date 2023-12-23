@@ -1,4 +1,0 @@
-﻿  Reading Qt configuration (C:/Qt/Qt5.14.0/5.14.0/msvc2017_64/bin/qmake)
-  Graph.cpp
-c:\users\28190\source\repos\07graph\app\appmoduels\graph.h(37): warning C4091: “typedef ”: 没有声明变量时忽略“Animation”的左侧
-  appmoduels.vcxproj -> C:\Users\28190\source\repos\07graph\app\appmoduels\..\..\lib.debug\appmoduels.lib
