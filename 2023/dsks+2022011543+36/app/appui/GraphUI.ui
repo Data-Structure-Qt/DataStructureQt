@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GraphUI</class>
+ <widget class="QWidget" name="GraphUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>712</width>
+    <height>472</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QPushButton" name="ResetpushButton">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>90</y>
+     <width>213</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>重置</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>40</y>
+     <width>211</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>树的最长路径</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>ResetpushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>GraphUI</receiver>
+   <slot>on_reset_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>85</x>
+     <y>190</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>132</x>
+     <y>186</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>GraphUI</receiver>
+   <slot>on_thelongestroad_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>197</x>
+     <y>15</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>263</x>
+     <y>28</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>on_bfs_btn_clicked()</slot>
+  <slot>on_dfs_btn_clicked()</slot>
+  <slot>on_dijkstra_btn_clicked()</slot>
+  <slot>on_reset_btn_clicked()</slot>
+  <slot>on_prim_btn_clicked()</slot>
+  <slot>on_kruskal_btn_clicked()</slot>
+  <slot>on_topologicalSorting_btn_clicked()</slot>
+  <slot>on_outPut_btn_clicked()</slot>
+  <slot>on_longestPath_btn_clicked()</slot>
+  <slot>on_thelongestroad_btn_clicked()</slot>
+ </slots>
+</ui>
