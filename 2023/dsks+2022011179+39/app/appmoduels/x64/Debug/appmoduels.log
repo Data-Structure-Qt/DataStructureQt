@@ -1,0 +1,5 @@
+﻿  Reading Qt configuration (D:/Qt/5.14.0/msvc2017_64/bin/qmake)
+  Dequeue.cpp
+  Dequeuenode.cpp
+d:\桌面\visualdatastructure\05dequeue\app\appmoduels\dequeue.cpp(81): warning C4715: “Dequeue::gethead”: 不是所有的控件路径都返回值
+  appmoduels.vcxproj -> D:\桌面\VisualDataStructure\05dequeue\app\appmoduels\..\..\lib.debug\appmoduels.lib
