@@ -1,0 +1,6 @@
+﻿  “C:\Qt\Qt5.14.0\5.14.0\msvc2017_64\bin\uic.exe“ -o ".\GeneratedFiles\ui_paintui.h” “C:\Users\Lee\source\repos\Paint01\Paint01\paintui.ui" 
+   C:\Users\Lee\source\repos\Paint01\Paint01\paintui.ui: Warning: Z-order assignment: 'horizontalLayoutWidget' is not a valid widget.
+  main.cpp
+  paintui.cpp
+  moc_paintui.cpp
+  Paint01.vcxproj -> C:\Users\Lee\source\repos\Paint01\x64\Debug\Paint01.exe
