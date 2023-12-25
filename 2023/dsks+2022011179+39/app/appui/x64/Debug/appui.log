@@ -1,0 +1,5 @@
+﻿  uic ..\..\标准页面文件\DequeueUI.ui
+  moc DequeueUI.h
+  DequeueUI.cpp
+  moc_DequeueUI.cpp
+  appui.vcxproj -> D:\桌面\VisualDataStructure\05dequeue\app\appui\..\..\lib.debug\appui.lib
