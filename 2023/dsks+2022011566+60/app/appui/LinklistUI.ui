@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LinklistUI</class>
+ <widget class="QWidget" name="LinklistUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1389</width>
+    <height>975</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>LinklistUI</string>
+  </property>
+  <widget class="QGroupBox" name="groupebox1">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>20</y>
+     <width>741</width>
+     <height>271</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>741</width>
+     <height>81</height>
+    </size>
+   </property>
+   <property name="title">
+    <string>三路归并排序</string>
+   </property>
+   <widget class="QLabel" name="label_1">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>40</y>
+      <width>421</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>请输入数据，用“，”隔开</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="createButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>170</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>创建</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cleanButton">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>170</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>清空</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="dataEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>481</width>
+      <height>41</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="sortButton">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>170</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>排序</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>sortButton</sender>
+   <signal>clicked()</signal>
+   <receiver>LinklistUI</receiver>
+   <slot>on_three_way_merge_sort()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>453</x>
+     <y>197</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>769</x>
+     <y>330</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>createButton</sender>
+   <signal>clicked()</signal>
+   <receiver>LinklistUI</receiver>
+   <slot>on_create_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>89</x>
+     <y>193</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>779</x>
+     <y>17</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cleanButton</sender>
+   <signal>clicked()</signal>
+   <receiver>LinklistUI</receiver>
+   <slot>on_clean_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>250</x>
+     <y>191</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>780</x>
+     <y>54</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>on_create_btn_clicked()</slot>
+  <slot>on_clean_btn_clicked()</slot>
+  <slot>on_headinsert_btn_clicked()</slot>
+  <slot>on_tailinsert_btn_clicked()</slot>
+  <slot>on_locationinsert_btn_clicked()</slot>
+  <slot>on_headdelete_btn_clicked()</slot>
+  <slot>on_taildelete_btn_clicked()</slot>
+  <slot>on_locationdelete_btn_clicked()</slot>
+  <slot>on_search_btn_clicked()</slot>
+  <slot>on_three_way_merge_sort()</slot>
+ </slots>
+</ui>
