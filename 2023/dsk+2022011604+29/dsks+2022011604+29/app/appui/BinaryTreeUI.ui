@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BinaryTreeUI</class>
+ <widget class="QWidget" name="BinaryTreeUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>406</width>
+    <height>498</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">alternate-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>30</y>
+     <width>381</width>
+     <height>311</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 170, 255);
+font: 11pt &quot;方正粗黑宋简体&quot;;</string>
+   </property>
+   <property name="title">
+    <string> 通过中序和层序排序生成二叉树</string>
+   </property>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>200</y>
+      <width>137</width>
+      <height>38</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>清空</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>38</y>
+      <width>301</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 127);
+font: 9pt &quot;华文隶书&quot;;</string>
+    </property>
+    <property name="text">
+     <string>中序遍历序列，中间不加逗号</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="inorderSeqEdit">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>80</y>
+      <width>301</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 87 9pt &quot;Arial Black&quot;;
+background-color: rgb(255, 255, 255);</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>120</y>
+      <width>301</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 127);
+font: 9pt &quot;华文隶书&quot;;</string>
+    </property>
+    <property name="text">
+     <string>层序遍历序列，中间不加逗号</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="layerorderSeqEdit">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>155</y>
+      <width>301</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+font: 87 9pt &quot;Arial Black&quot;;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="recoverTreeButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>202</y>
+      <width>150</width>
+      <height>38</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 127);
+border-color: rgb(255, 170, 0);</string>
+    </property>
+    <property name="text">
+     <string> 绘制二叉树图</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>BinaryTreeUI</receiver>
+   <slot>on_binarytree_delete_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>234</x>
+     <y>252</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>190</x>
+     <y>364</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>recoverTreeButton</sender>
+   <signal>clicked()</signal>
+   <receiver>BinaryTreeUI</receiver>
+   <slot>on_drawTree_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>69</x>
+     <y>258</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>185</x>
+     <y>422</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>on_binarytree_create_btn_clicked()</slot>
+  <slot>on_binarytree_delete_btn_clicked()</slot>
+  <slot>on_binarytree_node_delete_btn_clicked()</slot>
+  <slot>on_binarytree_SimulationTree_creat_btn_clicked()</slot>
+  <slot>on_bigroottree_create_btn_clicked()</slot>
+  <slot>on_bigroottree_insert_btn_clicked()</slot>
+  <slot>on_bigroottree_remove_btn_clicked()</slot>
+  <slot>on_Btree_create_btn_clicked()</slot>
+  <slot>on_Btree_insert_btn_clicked()</slot>
+  <slot>on_Btree_remove_btn_clicked()</slot>
+  <slot>on_Btree_destroy_btn_clicked()</slot>
+  <slot>on_binarytree_node_search_btn_clicked()</slot>
+  <slot>on_Btree_search_btn_clicked()</slot>
+  <slot>on_recoverTree_btn_clicked()</slot>
+  <slot>on_drawTree_btn_clicked()</slot>
+ </slots>
+</ui>
