@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GraphUI</class>
+ <widget class="QWidget" name="GraphUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>335</width>
+    <height>210</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>GraphUI</string>
+  </property>
+  <widget class="QSplitter" name="splitter">
+   <property name="geometry">
+    <rect>
+     <x>21</x>
+     <y>22</y>
+     <width>291</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <widget class="QPushButton" name="leafNodeButton">
+    <property name="text">
+     <string>获取叶子节点</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ResetpushButton">
+    <property name="text">
+     <string>重置</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>ResetpushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>GraphUI</receiver>
+   <slot>on_reset_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>185</x>
+     <y>267</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>294</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leafNodeButton</sender>
+   <signal>clicked()</signal>
+   <receiver>GraphUI</receiver>
+   <slot>on_leafNode_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>354</x>
+     <y>170</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>181</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>on_bfs_btn_clicked()</slot>
+  <slot>on_dfs_btn_clicked()</slot>
+  <slot>on_prim_btn_clicked()</slot>
+  <slot>on_kruskal_btn_clicked()</slot>
+  <slot>on_dijkstra_btn_clicked()</slot>
+  <slot>on_topologicalSorting_btn_clicked()</slot>
+  <slot>on_outPut_btn_clicked()</slot>
+  <slot>on_reset_btn_clicked()</slot>
+  <slot>on_leafNode_btn_clicked()</slot>
+ </slots>
+</ui>

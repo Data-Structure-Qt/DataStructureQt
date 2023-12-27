@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GraphUI</class>
+ <widget class="QWidget" name="GraphUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>289</width>
+    <height>216</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QPushButton" name="BFSpushButton">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>60</y>
+     <width>241</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>层序遍历</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ResetpushButton">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>130</y>
+     <width>241</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>重置</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>BFSpushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>GraphUI</receiver>
+   <slot>on_leveltraversal_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>76</x>
+     <y>57</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>139</x>
+     <y>50</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ResetpushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>GraphUI</receiver>
+   <slot>on_reset_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>85</x>
+     <y>190</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>132</x>
+     <y>251</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>on_bfs_btn_clicked()</slot>
+  <slot>on_dfs_btn_clicked()</slot>
+  <slot>on_dijkstra_btn_clicked()</slot>
+  <slot>on_reset_btn_clicked()</slot>
+  <slot>on_prim_btn_clicked()</slot>
+  <slot>on_kruskal_btn_clicked()</slot>
+  <slot>on_topologicalSorting_btn_clicked()</slot>
+  <slot>on_outPut_btn_clicked()</slot>
+  <slot>on_leveltraversal_btn_clicked()</slot>
+ </slots>
+</ui>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BinaryTreeUI</class>
+ <widget class="QWidget" name="BinaryTreeUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>421</width>
+    <height>319</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QSplitter" name="splitter">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>20</y>
+     <width>321</width>
+     <height>251</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <widget class="QLabel" name="label_3">
+    <property name="text">
+     <string>中序遍历</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="inorderSeqEdit"/>
+   <widget class="QLabel" name="label_4">
+    <property name="text">
+     <string>后序遍历</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="postorderSeqEdit">
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="recoverTreeButton">
+    <property name="maximumSize">
+     <size>
+      <width>321</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>生成二叉树</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>recoverTreeButton</sender>
+   <signal>clicked()</signal>
+   <receiver>BinaryTreeUI</receiver>
+   <slot>on_recoverTree_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>305</x>
+     <y>352</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>372</x>
+     <y>383</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>on_binarytree_create_btn_clicked()</slot>
+  <slot>on_binarytree_delete_btn_clicked()</slot>
+  <slot>on_binarytree_node_delete_btn_clicked()</slot>
+  <slot>on_binarytree_SimulationTree_creat_btn_clicked()</slot>
+  <slot>on_bigroottree_create_btn_clicked()</slot>
+  <slot>on_bigroottree_insert_btn_clicked()</slot>
+  <slot>on_bigroottree_remove_btn_clicked()</slot>
+  <slot>on_Btree_create_btn_clicked()</slot>
+  <slot>on_Btree_insert_btn_clicked()</slot>
+  <slot>on_Btree_remove_btn_clicked()</slot>
+  <slot>on_Btree_destroy_btn_clicked()</slot>
+  <slot>on_binarytree_node_search_btn_clicked()</slot>
+  <slot>on_Btree_search_btn_clicked()</slot>
+  <slot>on_recoverTree_btn_clicked()</slot>
+ </slots>
+</ui>

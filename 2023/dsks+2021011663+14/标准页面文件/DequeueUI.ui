@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DequeueUI</class>
+ <widget class="QWidget" name="DequeueUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>733</width>
+    <height>538</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>9</y>
+     <width>311</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>双端队列</string>
+   </property>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>15</y>
+      <width>291</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;请输入数据，用“,”隔开&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cleanButton">
+    <property name="geometry">
+     <rect>
+      <x>156</x>
+      <y>68</y>
+      <width>146</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>清空</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="createButton">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>68</y>
+      <width>146</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>创建</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="dataEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>33</y>
+      <width>291</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>100</y>
+      <width>291</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;数据&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="insertEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>116</y>
+      <width>291</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="headinsertButton">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>150</y>
+      <width>72</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>前端入队</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="tailinsertButton">
+    <property name="geometry">
+     <rect>
+      <x>156</x>
+      <y>150</y>
+      <width>72</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>尾端入队</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="taildeleteButton">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>150</y>
+      <width>72</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>尾端出队</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="headdeleteButton">
+    <property name="geometry">
+     <rect>
+      <x>82</x>
+      <y>150</y>
+      <width>72</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>前端出队</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>cleanButton</tabstop>
+  <tabstop>dataEdit</tabstop>
+  <tabstop>createButton</tabstop>
+  <tabstop>headdeleteButton</tabstop>
+  <tabstop>taildeleteButton</tabstop>
+  <tabstop>insertEdit</tabstop>
+  <tabstop>headinsertButton</tabstop>
+  <tabstop>tailinsertButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>cleanButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DequeueUI</receiver>
+   <slot>on_clean_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>391</x>
+     <y>176</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>443</x>
+     <y>182</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>headinsertButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DequeueUI</receiver>
+   <slot>on_headinsert_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>278</x>
+     <y>269</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>443</x>
+     <y>252</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tailinsertButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DequeueUI</receiver>
+   <slot>on_tailinsert_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>347</x>
+     <y>275</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>443</x>
+     <y>285</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>headdeleteButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DequeueUI</receiver>
+   <slot>on_headdelete_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>240</x>
+     <y>277</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>441</x>
+     <y>349</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>taildeleteButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DequeueUI</receiver>
+   <slot>on_taildelete_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>330</x>
+     <y>277</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>443</x>
+     <y>401</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>createButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DequeueUI</receiver>
+   <slot>on_create_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>120</x>
+     <y>93</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>554</x>
+     <y>60</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>on_clean_btn_clicked()</slot>
+  <slot>on_create_btn_clicked()</slot>
+  <slot>on_delete_btn_clicked()</slot>
+  <slot>on_headinsert_btn_clicked()</slot>
+  <slot>on_tailinsert_btn_clicked()</slot>
+  <slot>on_locationinsert_btn_clicked()</slot>
+  <slot>on_headdelete_btn_clicked()</slot>
+  <slot>on_taildelete_btn_clicked()</slot>
+  <slot>on_locationdelete_btn_clicked()</slot>
+  <slot>on_search_btn_clicked()</slot>
+  <slot>text()</slot>
+ </slots>
+</ui>

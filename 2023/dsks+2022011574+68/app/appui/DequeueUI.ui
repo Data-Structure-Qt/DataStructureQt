@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DequeueUI</class>
+ <widget class="QWidget" name="DequeueUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>733</width>
+    <height>538</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>20</y>
+     <width>311</width>
+     <height>431</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>希尔排序</string>
+   </property>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>15</y>
+      <width>291</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;请输入关键字序列，用“,”隔开&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cleanButton">
+    <property name="geometry">
+     <rect>
+      <x>156</x>
+      <y>68</y>
+      <width>146</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>清空</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="createButton">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>68</y>
+      <width>146</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>创建</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="dataEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>33</y>
+      <width>291</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="shellsortButton">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>130</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>希尔排序</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="gap9">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>200</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>增量为9</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>150</y>
+      <width>251</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>点击以下按钮以获得每一趟的排序结果</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="gap4">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>200</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>增量为4</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="gap2">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>240</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>增量为2</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="gap1">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>240</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>增量为1</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>101</y>
+      <width>251</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>cleanButton</tabstop>
+  <tabstop>dataEdit</tabstop>
+  <tabstop>createButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>cleanButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DequeueUI</receiver>
+   <slot>on_clean_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>391</x>
+     <y>176</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>443</x>
+     <y>182</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>createButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DequeueUI</receiver>
+   <slot>on_create_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>120</x>
+     <y>93</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>554</x>
+     <y>60</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>shellsortButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DequeueUI</receiver>
+   <slot>on_shellsort_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>51</x>
+     <y>218</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>62</x>
+     <y>307</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>gap9</sender>
+   <signal>clicked()</signal>
+   <receiver>DequeueUI</receiver>
+   <slot>on_shellsortshow9_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>67</x>
+     <y>329</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>76</x>
+     <y>481</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>gap4</sender>
+   <signal>clicked()</signal>
+   <receiver>DequeueUI</receiver>
+   <slot>on_shellsortshow4_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>171</x>
+     <y>302</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>163</x>
+     <y>491</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>gap2</sender>
+   <signal>clicked()</signal>
+   <receiver>DequeueUI</receiver>
+   <slot>on_shellsortshow2_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>223</x>
+     <y>300</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>216</x>
+     <y>493</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>gap1</sender>
+   <signal>clicked()</signal>
+   <receiver>DequeueUI</receiver>
+   <slot>on_shellsortshow1_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>306</x>
+     <y>300</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>498</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>on_clean_btn_clicked()</slot>
+  <slot>on_create_btn_clicked()</slot>
+  <slot>on_delete_btn_clicked()</slot>
+  <slot>on_headinsert_btn_clicked()</slot>
+  <slot>on_tailinsert_btn_clicked()</slot>
+  <slot>on_locationinsert_btn_clicked()</slot>
+  <slot>on_headdelete_btn_clicked()</slot>
+  <slot>on_taildelete_btn_clicked()</slot>
+  <slot>on_locationdelete_btn_clicked()</slot>
+  <slot>on_search_btn_clicked()</slot>
+  <slot>text()</slot>
+  <slot>on_shellsort_btn_clicked()</slot>
+  <slot>on_shellsortshow9_btn_clicked()</slot>
+  <slot>on_shellsortshow4_btn_clicked()</slot>
+  <slot>on_shellsortshow2_btn_clicked()</slot>
+  <slot>on_shellsortshow1_btn_clicked()</slot>
+ </slots>
+</ui>

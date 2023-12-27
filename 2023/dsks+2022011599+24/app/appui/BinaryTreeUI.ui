@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BinaryTreeUI</class>
+ <widget class="QWidget" name="BinaryTreeUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1288</width>
+    <height>878</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>170</y>
+     <width>1021</width>
+     <height>531</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>平衡二叉树</string>
+   </property>
+   <widget class="QPushButton" name="Button_InsertBiTreeNode">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>创建</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Button_SearchBiTreeNode">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>152</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>搜索</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Button_CleanBiTreeNode">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>70</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>清空</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Button_DeleteBiTreeNode">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>150</y>
+      <width>171</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>删除</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="BinaryTreeDataEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>120</y>
+      <width>341</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="BinaryTreeDataEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>34</y>
+      <width>341</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>12</y>
+      <width>341</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>请输入数据，用“,”隔开</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>100</y>
+      <width>341</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>节点数据</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>190</y>
+      <width>321</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>将第 k 个节点标记为红色</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Button_FindBiTreeNode">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>240</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>标记</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Button_TreeDataedit_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>210</y>
+      <width>151</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>Button_CleanBiTreeNode</sender>
+   <signal>clicked()</signal>
+   <receiver>BinaryTreeUI</receiver>
+   <slot>on_binarytree_delete_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>270</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>357</x>
+     <y>121</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Button_DeleteBiTreeNode</sender>
+   <signal>clicked()</signal>
+   <receiver>BinaryTreeUI</receiver>
+   <slot>on_binarytree_node_delete_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>362</x>
+     <y>339</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>322</x>
+     <y>202</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Button_InsertBiTreeNode</sender>
+   <signal>clicked()</signal>
+   <receiver>BinaryTreeUI</receiver>
+   <slot>on_binarytree_create_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>270</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>442</x>
+     <y>178</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Button_SearchBiTreeNode</sender>
+   <signal>clicked()</signal>
+   <receiver>BinaryTreeUI</receiver>
+   <slot>on_binarytree_node_search_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>336</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>455</x>
+     <y>201</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Button_FindBiTreeNode</sender>
+   <signal>clicked()</signal>
+   <receiver>BinaryTreeUI</receiver>
+   <slot>on_binarytree_node_find_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>203</x>
+     <y>483</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>64</x>
+     <y>523</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>on_binarytree_create_btn_clicked()</slot>
+  <slot>on_binarytree_delete_btn_clicked()</slot>
+  <slot>on_binarytree_node_delete_btn_clicked()</slot>
+  <slot>on_binarytree_SimulationTree_creat_btn_clicked()</slot>
+  <slot>on_bigroottree_create_btn_clicked()</slot>
+  <slot>on_bigroottree_insert_btn_clicked()</slot>
+  <slot>on_bigroottree_remove_btn_clicked()</slot>
+  <slot>on_Btree_create_btn_clicked()</slot>
+  <slot>on_Btree_insert_btn_clicked()</slot>
+  <slot>on_Btree_remove_btn_clicked()</slot>
+  <slot>on_Btree_destroy_btn_clicked()</slot>
+  <slot>on_binarytree_node_search_btn_clicked()</slot>
+  <slot>on_Btree_search_btn_clicked()</slot>
+  <slot>on_binarytree_node_find_btn_clicked()</slot>
+ </slots>
+</ui>

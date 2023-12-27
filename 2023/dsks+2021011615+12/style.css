@@ -1,0 +1,36 @@
+/* style.css */
+#stackContainer {
+  display: flex;
+  border: 1px solid black;
+  height: 50px;
+  overflow: hidden;
+}
+
+.stackElement {
+  border: 1px solid black;
+  flex-grow: 1;
+  text-align: center;
+  line-height: 50px;
+}
+
+.stackPointer1,
+.stackPointer2 {
+  font-weight: bold;
+}
+
+.stackPointer1 {
+  background-color: lightblue;
+}
+
+.stackPointer2 {
+  background-color: lightgreen;
+}
+
+button {
+  margin: 5px;
+  padding: 5px;
+}
+
+#stackStatus {
+  margin-top: 10px;
+}

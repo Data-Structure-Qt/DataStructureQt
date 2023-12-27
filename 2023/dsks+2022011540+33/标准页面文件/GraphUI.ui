@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GraphUI</class>
+ <widget class="QWidget" name="GraphUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>268</width>
+    <height>139</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QPushButton" name="ResetpushButton">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>80</y>
+     <width>213</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>重置</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>40</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>先根遍历</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>40</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>后根遍历</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>ResetpushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>GraphUI</receiver>
+   <slot>on_reset_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>85</x>
+     <y>230</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>132</x>
+     <y>251</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>GraphUI</receiver>
+   <slot>on_first_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>43</x>
+     <y>179</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>77</x>
+     <y>315</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>GraphUI</receiver>
+   <slot>on_last_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>199</x>
+     <y>182</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>321</x>
+     <y>283</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>on_bfs_btn_clicked()</slot>
+  <slot>on_dfs_btn_clicked()</slot>
+  <slot>on_dijkstra_btn_clicked()</slot>
+  <slot>on_reset_btn_clicked()</slot>
+  <slot>on_prim_btn_clicked()</slot>
+  <slot>on_kruskal_btn_clicked()</slot>
+  <slot>on_topologicalSorting_btn_clicked()</slot>
+  <slot>on_outPut_btn_clicked()</slot>
+  <slot>on_first_btn_clicked()</slot>
+  <slot>on_last_btn_clicked()</slot>
+ </slots>
+</ui>
