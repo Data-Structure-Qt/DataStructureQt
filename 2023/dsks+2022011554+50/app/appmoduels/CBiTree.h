@@ -108,4 +108,7 @@ public:
 	void TreePrint(CBiTreeNode* root);
 	//≤„–Ú±È¿˙
 	void InOrder(CBiTreeNode* root, string &In);
+
+	CBiTreeNode* createFibonacciBinaryTree(const vector<int>& data);
+	CBiTreeNode* createFibonacciBinaryTreeHelper(const vector<int>& data, int start, int end, int depth);
 };

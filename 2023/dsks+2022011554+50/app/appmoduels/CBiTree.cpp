@@ -247,7 +247,7 @@ void CFibonacciTree::GenerateFibTree(CBiTreeNode* node, int k, int val)
 	}
 
 	int keyR = node->key + fibls[k - 2];
-	if (key > 1 && keyR != root->key && keyR <= keyls.back()) //范围内的值才会显示
+	if (key > 1 && keyR != root->key/* && keyR <= keyls.back()*/) //范围内的值才会显示
 	{
 		if (keyR != node->parent->key || node->parent == nullptr)
 		{
@@ -305,7 +305,7 @@ void CFibonacciTree::FibTreeMinusM(int m, CBiTreeNode* node)
 	{
 		node->right->key -= m;
 		FibTreeMinusM(m, node->right);
-		if (node->right->key < 1)
+		if (node->right->key < 1 || node->right->key > keyls.back())
 			node->right = nullptr;
 	}
 }
@@ -313,10 +313,11 @@ void CFibonacciTree::FibTreeMinusM(int m, CBiTreeNode* node)
 void CFibonacciTree::FibLookUpArithmetic(int val)
 {
 	int ksum1 = 0;
-	if (LookUpFibAndIsFib(val + 1, ksum1))
+	if (LookUpFibAndIsFib(val, ksum1))
 	{
 		int k = ksum1 - 1;
 		InitGenerateFibTree(k, val);
+		FibTreeMinusM(0, root);
 	}
 	else
 	{
@@ -519,6 +520,32 @@ void CFibonacciTree::TreePrint(CBiTreeNode* root)
 	}
 }
 
+
+CBiTreeNode* CFibonacciTree::createFibonacciBinaryTree(const vector<int>& data) {
+	if (data.empty()) {
+		return NULL;
+	}
+	return createFibonacciBinaryTreeHelper(data, 0, data.size() - 1, 1);
+}
+
+CBiTreeNode* CFibonacciTree::createFibonacciBinaryTreeHelper(const vector<int>& data, int start, int end, int depth) {
+	if (start > end) {
+		return NULL;
+	}
+	int mid = (start + end) / 2;
+	CBiTreeNode* node = new CBiTreeNode(data[mid], NULL, NULL);
+	node->height = depth;
+	node->left = createFibonacciBinaryTreeHelper(data, start, mid - 1, depth + 1);
+	node->right = createFibonacciBinaryTreeHelper(data, mid + 1, end, depth + 1);
+
+	if (node->left)
+		node->left->parent = node;
+	if (node->right)
+		node->right->parent = node;
+
+	return node;
+}
+
 //生成二叉树
 bool CFibonacciTree::makeTree(QString dataArray)
 {
@@ -535,6 +562,7 @@ bool CFibonacciTree::makeTree(QString dataArray)
 		keyls.push_back(x);//存为数组
 	}
 
+	//root = createFibonacciBinaryTree(keyls);
 	FibCalc(30);
 	FibLookUpArithmetic(keyls.back());
 
