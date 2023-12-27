@@ -11,18 +11,18 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Dequeuenode.cpp">
+    <ClCompile Include="CircleQueue.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Dequeue.cpp">
+    <ClCompile Include="CircleQueuenode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Dequeuenode.h">
+    <ClInclude Include="CircleQueue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Dequeue.h">
+    <ClInclude Include="CircleQueuenode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

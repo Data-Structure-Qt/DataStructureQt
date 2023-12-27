@@ -66,8 +66,8 @@
     <IgnoreImportLibrary>true</IgnoreImportLibrary>
   </PropertyGroup>
   <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <QtInstall>5.14.0_msvc2017_64</QtInstall>
-    <QtModules>core;xml;opengl;network;gui;svg;widgets;printsupport</QtModules>
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;xml;opengl;network;gui;svg;widgets;printsupport;concurrent</QtModules>
   </PropertyGroup>
   <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <QtInstall>msvc2017_64</QtInstall>
@@ -184,6 +184,8 @@
     <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
+    <QtMoc Include="QuickSort.h" />
+    <QtMoc Include="BubbleSort.h" />
     <ClInclude Include="CAttribute.h" />
     <ClInclude Include="CDiffUndoManager.h" />
     <ClInclude Include="CDirectEdge.h" />
@@ -205,6 +207,9 @@
     <ClInclude Include="CImageExport.h" />
     <ClInclude Include="CItem.h" />
     <ClInclude Include="CNode.h" />
+    <QtMoc Include="SortObejct.h" />
+    <QtMoc Include="SortCreator.h" />
+    <QtMoc Include="SelectionSort.h" />
     <QtMoc Include="CNodeEditorScene.h" />
     <ClInclude Include="CNodePort.h" />
     <ClInclude Include="CPDFExport.h" />
@@ -230,6 +235,7 @@
     <QtMoc Include="CControlPoint.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BubbleSort.cpp" />
     <ClCompile Include="CAttribute.cpp" />
     <ClCompile Include="CControlPoint.cpp" />
     <ClCompile Include="CDiffUndoManager.cpp" />
@@ -263,6 +269,10 @@
     <ClCompile Include="CTextLabelEdit.cpp" />
     <ClCompile Include="CTransformRect.cpp" />
     <ClCompile Include="CUtils.cpp" />
+    <ClCompile Include="QuickSort.cpp" />
+    <ClCompile Include="SelectionSort.cpp" />
+    <ClCompile Include="SortCreator.cpp" />
+    <ClCompile Include="SortObejct.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

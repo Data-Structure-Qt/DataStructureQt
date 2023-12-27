@@ -57,7 +57,7 @@ CEditorScene::CEditorScene(QObject *parent):
     m_isFontAntialiased(true)
 {
     m_gridSize = 25;
-    m_gridEnabled = false; //0222
+    m_gridEnabled = true; //0222
     m_gridSnap = true;
     m_gridPen = QPen(Qt::gray, 0, Qt::DotLine);
 

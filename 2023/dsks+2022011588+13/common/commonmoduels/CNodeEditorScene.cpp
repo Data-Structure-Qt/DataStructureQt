@@ -17,8 +17,10 @@
 #include <QKeyEvent>
 #include <QApplication>
 #include <QDebug>
+#include <QTimeLine> 
 #include <QElapsedTimer>
-
+#include <QGraphicsItemAnimation>
+#include "SortCreator.h"
 
 CNodeEditorScene::CNodeEditorScene(QObject *parent) :
 	Super(parent),
@@ -307,8 +309,8 @@ void CNodeEditorScene::initialize()
 	}
 
 
-	// default node attr 初始化节点颜色
-	CAttribute nodeAttr("color", "Color", QColor(135, 206, 235), ATTR_FIXED);
+	// default node attr
+	CAttribute nodeAttr("color", "Color", QColor(Qt::magenta), ATTR_FIXED);
 	setClassAttribute("node", nodeAttr);
 
 	CAttribute shapeAttr("shape", "Shape", "square", ATTR_FIXED);
@@ -523,20 +525,6 @@ CNode* CNodeEditorScene::createNewNode() const
 	return new CNode;
 }
 
-CNode* CNodeEditorScene::createSearchNode() const
-{
-	if (m_nodesFactory)
-	{
-		auto node = dynamic_cast<CNode*>(m_nodesFactory->searchtag());
-		Q_ASSERT(node);
-		node->copyDataFrom(m_nodesFactory);
-		return node;
-	}
-
-	// here default
-	return new CNode;
-}
-
 
 CNode* CNodeEditorScene::createNewNode(const QPointF& pos)
 {
@@ -546,37 +534,29 @@ CNode* CNodeEditorScene::createNewNode(const QPointF& pos)
 	return node;
 }
 
-CNode* CNodeEditorScene::createSearchNode(const QPointF& pos)
-{
-	auto node = createSearchNode();
-	addItem(node);
-	node->setPos(pos);
-	return node;
-}
-
 
 CEdge* CNodeEditorScene::createNewConnection() const
 {
-	if (m_edgesFactory)//若可创建一条边（可能采用软件体系结构的工厂模式）
+	if (m_edgesFactory)
 	{
-		auto edge = dynamic_cast<CEdge*>(m_edgesFactory->create());//则采用工厂模式创建一条边
+		auto edge = dynamic_cast<CEdge*>(m_edgesFactory->create());
 		Q_ASSERT(edge);
 		edge->copyDataFrom(m_edgesFactory);
-		return edge;//并返回一条边
+		return edge;
 	}
 
 	// here default
-	return new CDirectEdge();//否则处理异常
+	return new CDirectEdge();
 }
 
 
 CEdge* CNodeEditorScene::createNewConnection(CNode* startNode, CNode* endNode)
 {
-	auto edge = createNewConnection();//创建一条边
-	addItem(edge);					  //将边加入Item
-	edge->setFirstNode(startNode);	  //边设置开始节点
-	edge->setLastNode(endNode);		  //边设置结束节点
-	return edge;					  //返回边
+	auto edge = createNewConnection();
+	addItem(edge);
+	edge->setFirstNode(startNode);
+	edge->setLastNode(endNode);
+	return edge;
 }
 
 
@@ -590,45 +570,7 @@ void CNodeEditorScene::setEdgesFactory(CEdge* edgeFactory)
 {
 	m_edgesFactory = edgeFactory;
 }
-void CNodeEditorScene::drawText(int location)
-{
-	//绘制文字
-	QGraphicsTextItem *pItem = new QGraphicsTextItem();
-	pItem->setPlainText(QString::fromLocal8Bit("前端"));  // 纯文本
-	pItem->setDefaultTextColor(QColor(0, 0, 0));  // 文本色
-	pItem->setPos(QPointF(-300 - 25, -130));//位置
-	QFont font = pItem->font();
-	font.setPixelSize(20);  // 像素大小
-	pItem->setFont(font);
-	addItem(pItem);
 
-	//绘制文字
-	QGraphicsTextItem *pItem1 = new QGraphicsTextItem();
-	pItem1->setPlainText(QString::fromLocal8Bit("后端"));  // 纯文本
-	pItem1->setDefaultTextColor(QColor(0, 0, 0));  // 文本色
-	pItem1->setPos(QPointF(-300 + 50 * (location)-25, -130));//位置
-	QFont font1 = pItem1->font();
-	font1.setPixelSize(20);  // 像素大小
-	pItem1->setFont(font1);
-	addItem(pItem1);
-
-	//绘制线段
-	QGraphicsLineItem *lineItem = new QGraphicsLineItem();
-	QPen pen = lineItem->pen();//画笔 绘制外框
-	pen.setColor(QColor(100, 149, 237));//外边框的颜色
-	pen.setWidth(5);
-	lineItem->setPen(pen);
-	lineItem->setLine(-300 - 50, -80, -300 + 50 * (location)-25 + 100 - 25, -80);
-	addItem(lineItem);
-	//绘制线段
-	QGraphicsLineItem *lineItem1 = new QGraphicsLineItem();
-	QPen pen1 = lineItem1->pen();//画笔 绘制外框
-	pen1.setColor(QColor(100, 149, 237));//外边框的颜色
-	pen1.setWidth(5);
-	lineItem1->setPen(pen1);
-	lineItem1->setLine(-300 - 50, -20, -300 + 50 * (location)-25 - 25 + 100, -20);
-	addItem(lineItem1);
-}
 void CNodeEditorScene::insertnode(int location, int data)
 {
 	if (location == 0)
@@ -639,64 +581,27 @@ void CNodeEditorScene::insertnode(int location, int data)
 	}
 	qDebug("%d", data);
 	QPointF addnext(100, 0);
+
 	auto node1 = createNewNode(getSnapped(orgin));//绘制矩形
-	node1->setSelected(false);
+	node1->setSelected(true);
+
 	QGraphicsItem *hoverItem = getItemAt(getSnapped(orgin));
 	CItem *item = dynamic_cast<CItem*>(hoverItem);
 	onActionEditLabel(item, data);
+
 	if (flag)
 	{
-		//auto node = createNewNode(getSnapped(orgin - addnext));//绘制矩形
-		//createNewConnection(node, node1);//绘制箭头
-		//createNewConnection(node1, node);//绘制箭头（双链表）
+		auto node = createNewNode(getSnapped(orgin - addnext));//绘制矩形
+
+		createNewConnection(node, node1);//绘制箭头
 	}
 	QPointF next(50, 0);
 	orgin = orgin + next;
-	//auto node2 = createNewNode(getSnapped(orgin));//绘制矩形
-	//node2->setSelected(false);
+	auto node2 = createNewNode(getSnapped(orgin));//绘制矩形
+	node2->setSelected(true);
+
 	addUndoState();
-	//orgin = orgin + addnext;
-	flag = true;
-}
-void CNodeEditorScene::insertfindnode(int location, int data)
-{
-	if (location == 0) {
-		orgin.setX(-300);
-		orgin.setY(-50);
-		flag = false;
-	}
-	QPointF addnext(100, 0);
-	auto node1 = createSearchNode(getSnapped(orgin));//绘制矩形
-	node1->setSelected(false);
-	QGraphicsItem *hoverItem = getItemAt(getSnapped(orgin));
-	CItem *item = dynamic_cast<CItem*>(hoverItem);
-	onActionEditLabel(item, data);
-	if (flag) {
-		//auto node = createSearchNode(getSnapped(orgin - addnext));//绘制矩形
-		//createNewConnection(node, node1);//绘制箭头
-	}
-	int px = orgin.x();
-	int py = orgin.y();
-
-	QPointF next(50, 0);
-	orgin = orgin + next;
-	auto node2 = createSearchNode(getSnapped(orgin));//绘制矩形
-
-	QGraphicsRectItem  *pItem = new QGraphicsRectItem();
-	// 设置画笔、画刷
-	QPen pen = pItem->pen();
-	pen.setWidth(1);
-	pen.setColor(Qt::black);
-	pItem->setPen(pen);
-	pItem->setBrush(QBrush(QColor(255, 0, 0)));
-
-	// 矩形区域 起点：(50, 50) 宽：100 高：100
-	pItem->setRect(QRectF(px - 50, py - 12, 25, 25));
-
-	addItem(pItem);
-	node2->setSelected(false);
-	addUndoState();
-	//orgin = orgin + addnext;
+	orgin = orgin + addnext;
 	flag = true;
 }
 
@@ -706,6 +611,7 @@ void CNodeEditorScene::changeNodeColor(int location)
 	QPointF modify(location * 150 - 450, -50);
 	QGraphicsItem *hoverItem = getItemAt(getSnapped(modify));
 	CItem *item = dynamic_cast<CItem*>(hoverItem);
+
 }
 
 
@@ -738,6 +644,7 @@ void CNodeEditorScene::deletenode(int location)
 }
 
 // events
+
 void CNodeEditorScene::mouseReleaseEvent(QGraphicsSceneMouseEvent *mouseEvent)
 {
 	if (m_cancelled)
@@ -896,6 +803,8 @@ void CNodeEditorScene::keyPressEvent(QKeyEvent *keyEvent)
 		keyEvent->accept();
 		return;
 	}
+
+
 	if (keyEvent->key() == Qt::Key_Left && isCtrl)
 	{
 		auto &edges = getSelectedEdges();
@@ -904,14 +813,19 @@ void CNodeEditorScene::keyPressEvent(QKeyEvent *keyEvent)
 			keyEvent->accept();
 			return;
 		}
+
 		for (auto &edge : edges)
 		{
 			edge->setAttribute(attr_weight, edge->getWeight() / 1.1);
 		}
+
 		addUndoState();
+
 		keyEvent->accept();
 		return;
 	}
+
+
 	// cancel label edit
 	if (keyEvent->key() == Qt::Key_Escape)
 	{
@@ -1322,13 +1236,367 @@ QObject* CNodeEditorScene::createActions()
 	return new CNodeSceneActions(this);
 }
 
-//清屏函数
-void  CNodeEditorScene::clearScreen()
+
+
+
+
+/*
+一般的冒泡排序写法
+template<typename T>
+void bubble_sort(T arr[], int len)
 {
-	QRectF Rect(-2000, -2000, 4000, 4000);//删除-1000 -1000 1000 1000 方块内的所有图形
+	int i, j;
+	for (i = 0; i < len - 1; i++)
+		for (j = 0; j < len - 1 - i; j++)
+			if (arr[j] > arr[j + 1])
+			{
+				std::swap(arr[j],arr[j+1]);
+			}
+}
+*/
+
+void CNodeEditorScene::dataDraw(double x, double  y, double  w, double h, int arr)
+{
+	QGraphicsRectItem *rectItem = new QGraphicsRectItem;//绘制矩形
+	QPen pen = rectItem->pen();//画笔 绘制外框
+	//pen.setWidth(w);//宽
+	pen.setColor(Qt::green);//外边框的颜色
+	rectItem->setPen(pen);
+	rectItem->setBrush(QBrush(QColor(0, 160, 230)));//填充颜色
+	rectItem->setRect(QRectF(x, y, w, h));
+	//rectItem->setPos(QPointF(x, -200));//位置
+	addItem(rectItem);
+
+	//绘制文字
+	QGraphicsTextItem *pItem = new QGraphicsTextItem();
+	pItem->setPlainText(QString::number(arr));  // 纯文本
+	pItem->setDefaultTextColor(QColor(0, 160, 230));  // 文本色
+	pItem->setPos(QPointF(x, 350));//位置
+	QFont font = pItem->font();
+	font.setPixelSize(w / 2);  // 像素大小
+	pItem->setFont(font);
+	addItem(pItem);
+
+}
+
+void CNodeEditorScene::dataDraw(double x, double  y, double  w, double h, int arr, int flag)
+{
+	QGraphicsRectItem *rectItem = new QGraphicsRectItem;//绘制矩形
+	QPen pen = rectItem->pen();//画笔 绘制外框
+	//pen.setWidth(w);//宽
+	pen.setColor(Qt::green);//外边框的颜色
+	rectItem->setPen(pen);
+	if (flag == 1)
+	{
+		rectItem->setBrush(QBrush(QColor(220, 0, 0)));//填充颜色
+	}
+	else if (flag == 2)
+	{
+		rectItem->setBrush(QBrush(QColor(225, 225, 0)));//填充颜色
+	}
+	else if (flag == 3)
+	{
+		rectItem->setBrush(QBrush(QColor(255, 102, 51)));//填充颜色
+	}
+	rectItem->setRect(QRectF(x, y, w, h));
+	//rectItem->setPos(QPointF(x, -200));//位置
+	addItem(rectItem);
+
+	//绘制文字
+	QGraphicsTextItem *pItem = new QGraphicsTextItem();
+	pItem->setPlainText(QString::number(arr));  // 纯文本
+	pItem->setDefaultTextColor(QColor(0, 160, 230));  // 文本色
+	pItem->setPos(QPointF(x, 350));//位置
+	QFont font = pItem->font();
+	font.setPixelSize(w / 2);  // 像素大小
+	pItem->setFont(font);
+	addItem(pItem);
+
+}
+void CNodeEditorScene::headarrowDraw(int num)
+{
+	arrowLine(200 * cos((62.5 - num * 45)*3.1415 / 180), -200 * sin((62.5 - num * 45)*3.1415 / 180), 250 * cos((62.5 - num * 45)*3.1415 / 180), -250 * sin((62.5 - num * 45)*3.1415 / 180));
+
+	QGraphicsTextItem *pItem = new QGraphicsTextItem();
+	pItem->setPlainText(QString::fromLocal8Bit("尾指针"));  // 纯文本
+	pItem->setDefaultTextColor(QColor(0, 160, 230));  // 文本色
+	pItem->setPos(QPointF(280 * cos((62.5 - num * 45)*3.1415 / 180) - 20, -280 * sin((62.5 - num * 45)*3.1415 / 180) - 20));//位置
+	QFont font = pItem->font();
+	font.setPixelSize(20);  // 像素大小
+	pItem->setFont(font);
+	addItem(pItem);
+
+}
+void CNodeEditorScene::tailarrowDraw(int num)
+{
+	arrowLine(200 * cos((72.5 - num * 45)*3.1415 / 180), -200 * sin((72.5 - num * 45)*3.1415 / 180), 250 * cos((72.5 - num * 45)*3.1415 / 180), -250 * sin((72.5 - num * 45)*3.1415 / 180));
+	QGraphicsTextItem *pItem = new QGraphicsTextItem();
+	pItem->setPlainText(QString::fromLocal8Bit("头指针"));  // 纯文本
+	pItem->setDefaultTextColor(QColor(0, 160, 230));  // 文本色
+	pItem->setPos(QPointF(280 * cos((72.5 - num * 45)*3.1415 / 180) - 20, -280 * sin((72.5 - num * 45)*3.1415 / 180) - 20));//位置
+	QFont font = pItem->font();
+	font.setPixelSize(20);  // 像素大小
+	pItem->setFont(font);
+	addItem(pItem);
+}
+
+void CNodeEditorScene::circleDataDraw(int data, int position)//数字 位置
+{
+	QGraphicsTextItem *pItem = new QGraphicsTextItem();
+	pItem->setPlainText(QString::number(data));  // 纯文本
+	pItem->setDefaultTextColor(QColor(0, 0, 0));  // 文本色
+	pItem->setPos(QPointF(150 * cos((67.5 - position * 45)*3.1415 / 180) - 20, -150 * sin((67.5 - position * 45)*3.1415 / 180) - 20));//位置
+	QFont font = pItem->font();
+	font.setPixelSize(40);  // 像素大小
+	pItem->setFont(font);
+	addItem(pItem);
+}
+
+void CNodeEditorScene::arrowLine(double head_x, double head_y, double tail_x, double tail_y)
+{
+	QGraphicsLineItem *lineItem = new QGraphicsLineItem();
+	QPen pen = lineItem->pen();//画笔 绘制外框
+	pen.setColor(QColor(100, 149, 237));//外边框的颜色
+	pen.setWidth(5);
+	lineItem->setPen(pen);
+	lineItem->setLine(head_x, head_y, tail_x, tail_y);
+	addItem(lineItem);
+}
+
+void CNodeEditorScene::circleDraw()
+{
+	// 定义一个 item
+	QGraphicsEllipseItem *pItem2 = new QGraphicsEllipseItem();
+	// 设置画笔、画刷
+	QPen pen2 = pItem2->pen();
+	pen2.setWidth(5);
+	pen2.setColor(QColor(135, 206, 235));
+	pItem2->setPen(pen2);
+	pItem2->setBrush(QBrush(QColor(135, 206, 235)));
+	// 矩形区域 起点：(50, 50) 宽：200 高：100
+	pItem2->setRect(QRectF(-200, -200, 400, 400));
+	pItem2->setStartAngle(0);  // 起始角度
+	pItem2->setSpanAngle(5760);// 跨角
+	addItem(pItem2);
+
+	// 定义一个 item
+	QGraphicsEllipseItem *pItem = new QGraphicsEllipseItem();
+	// 设置画笔、画刷
+	QPen pen = pItem->pen();
+	pen.setWidth(5);
+	pen.setColor(QColor(135, 206, 235));
+	pItem->setPen(pen);
+	pItem->setBrush(QBrush(QColor(255, 255, 255)));
+	// 矩形区域 起点：(50, 50) 宽：200 高：100
+	pItem->setRect(QRectF(-100, -100, 200, 200));
+	pItem->setStartAngle(0);  // 起始角度
+	pItem->setSpanAngle(5760);  // 跨角
+	addItem(pItem);
+
+	QGraphicsLineItem *lineItem1 = new QGraphicsLineItem();
+	QPen pen1 = lineItem1->pen();//画笔 绘制外框
+	pen1.setColor(QColor(100, 149, 237));//外边框的颜色
+	pen1.setWidth(5);
+	lineItem1->setPen(pen1);
+	lineItem1->setLine(0, -100, 0, -200);
+	addItem(lineItem1);
+
+	QGraphicsLineItem *lineItem2 = new QGraphicsLineItem();
+	QPen pen02 = lineItem2->pen();//画笔 绘制外框
+	pen02.setColor(QColor(100, 149, 237));//外边框的颜色
+	pen02.setWidth(5);
+	lineItem2->setPen(pen02);
+	lineItem2->setLine(0, 100, 0, 200);
+	addItem(lineItem2);
+
+	QGraphicsLineItem *lineItem3 = new QGraphicsLineItem();
+	QPen pen3 = lineItem3->pen();//画笔 绘制外框
+	pen3.setColor(QColor(100, 149, 237));//外边框的颜色
+	pen3.setWidth(5);
+	lineItem3->setPen(pen3);
+	lineItem3->setLine(100, 0, 200, 0);
+	addItem(lineItem3);
+
+	QGraphicsLineItem *lineItem4 = new QGraphicsLineItem();
+	QPen pen4 = lineItem4->pen();//画笔 绘制外框
+	pen4.setColor(QColor(100, 149, 237));//外边框的颜色
+	pen4.setWidth(5);
+	lineItem4->setPen(pen4);
+	lineItem4->setLine(-100, 0, -200, 0);
+	addItem(lineItem4);
+
+	QGraphicsLineItem *lineItem5 = new QGraphicsLineItem();
+	QPen pen5 = lineItem5->pen();//画笔 绘制外框
+	pen5.setColor(QColor(100, 149, 237));//外边框的颜色
+	pen5.setWidth(5);
+	lineItem5->setPen(pen5);
+	lineItem5->setLine(70.710678, 70.710678, 141.42135, 141.42135);
+	addItem(lineItem5);
+
+	QGraphicsLineItem *lineItem6 = new QGraphicsLineItem();
+	QPen pen6 = lineItem6->pen();//画笔 绘制外框
+	pen6.setColor(QColor(100, 149, 237));//外边框的颜色
+	pen6.setWidth(5);
+	lineItem6->setPen(pen6);
+	lineItem6->setLine(-70.710678, -70.710678, -141.42135, -141.42135);
+	addItem(lineItem6);
+
+	QGraphicsLineItem *lineItem7 = new QGraphicsLineItem();
+	QPen pen7 = lineItem7->pen();//画笔 绘制外框
+	pen7.setColor(QColor(100, 149, 237));//外边框的颜色
+	pen7.setWidth(5);
+	lineItem7->setPen(pen7);
+	lineItem7->setLine(70.710678, -70.710678, 141.42135, -141.42135);
+	addItem(lineItem7);
+
+	QGraphicsLineItem *lineItem8 = new QGraphicsLineItem();
+	QPen pen8 = lineItem8->pen();//画笔 绘制外框
+	pen8.setColor(QColor(100, 149, 237));//外边框的颜色
+	pen8.setWidth(5);
+	lineItem8->setPen(pen8);
+	lineItem8->setLine(-70.710678, 70.710678, -141.42135, 141.42135);
+	addItem(lineItem8);
+
+
+	QGraphicsTextItem *pItem1 = new QGraphicsTextItem();
+	pItem1->setPlainText(QString::number(0));  // 纯文本
+	pItem1->setDefaultTextColor(QColor(0, 160, 230));  // 文本色
+	pItem1->setPos(QPointF(80 * cos(67.5*3.1415 / 180) - 10, -80 * sin(67.5*3.1415 / 180) - 10));//位置
+	QFont font1 = pItem1->font();
+	font1.setPixelSize(20);  // 像素大小
+	pItem1->setFont(font1);
+	addItem(pItem1);
+	QGraphicsTextItem *pItem02 = new QGraphicsTextItem();
+	pItem02->setPlainText(QString::number(1));  // 纯文本
+	pItem02->setDefaultTextColor(QColor(0, 160, 230));  // 文本色
+	pItem02->setPos(QPointF(80 * cos(22.5*3.1415 / 180) - 10, -80 * sin(22.5*3.1415 / 180) - 10));//位置
+	QFont font2 = pItem1->font();
+	font2.setPixelSize(20);  // 像素大小
+	pItem02->setFont(font2);
+	addItem(pItem02);
+
+	QGraphicsTextItem *pItem3 = new QGraphicsTextItem();
+	pItem3->setPlainText(QString::number(2));  // 纯文本
+	pItem3->setDefaultTextColor(QColor(0, 160, 230));  // 文本色
+	pItem3->setPos(QPointF(80 * cos(-22.5*3.1415 / 180) - 10, -80 * sin(-22.5*3.1415 / 180) - 10));//位置
+	QFont font3 = pItem3->font();
+	font3.setPixelSize(20);  // 像素大小
+	pItem3->setFont(font3);
+	addItem(pItem3);
+	QGraphicsTextItem *pItem4 = new QGraphicsTextItem();
+	pItem4->setPlainText(QString::number(3));  // 纯文本
+	pItem4->setDefaultTextColor(QColor(0, 160, 230));  // 文本色
+	pItem4->setPos(QPointF(80 * cos(-67.5*3.1415 / 180) - 10, -80 * sin(-67.5*3.1415 / 180) - 10));//位置
+	QFont font4 = pItem4->font();
+	font4.setPixelSize(20);  // 像素大小
+	pItem4->setFont(font4);
+	addItem(pItem4);
+	QGraphicsTextItem *pItem5 = new QGraphicsTextItem();
+	pItem5->setPlainText(QString::number(4));  // 纯文本
+	pItem5->setDefaultTextColor(QColor(0, 160, 230));  // 文本色
+	pItem5->setPos(QPointF(80 * cos(-112.5*3.1415 / 180) - 10, -80 * sin(-112.5*3.1415 / 180) - 10));//位置
+	QFont font5 = pItem5->font();
+	font5.setPixelSize(20);  // 像素大小
+	pItem5->setFont(font5);
+	addItem(pItem5);
+	QGraphicsTextItem *pItem6 = new QGraphicsTextItem();
+	pItem6->setPlainText(QString::number(5));  // 纯文本
+	pItem6->setDefaultTextColor(QColor(0, 160, 230));  // 文本色
+	pItem6->setPos(QPointF(80 * cos(-157.5*3.1415 / 180) - 10, -80 * sin(-157.5*3.1415 / 180) - 10));//位置
+	QFont font6 = pItem6->font();
+	font6.setPixelSize(20);  // 像素大小
+	pItem6->setFont(font6);
+	addItem(pItem6);
+	QGraphicsTextItem *pItem7 = new QGraphicsTextItem();
+	pItem7->setPlainText(QString::number(6));  // 纯文本
+	pItem7->setDefaultTextColor(QColor(0, 160, 230));  // 文本色
+	pItem7->setPos(QPointF(80 * cos(157.5*3.1415 / 180) - 10, -80 * sin(157.5*3.1415 / 180) - 10));//位置
+	QFont font7 = pItem7->font();
+	font7.setPixelSize(20);  // 像素大小
+	pItem7->setFont(font7);
+	addItem(pItem7);
+	QGraphicsTextItem *pItem8 = new QGraphicsTextItem();
+	pItem8->setPlainText(QString::number(7));  // 纯文本
+	pItem8->setDefaultTextColor(QColor(0, 160, 230));  // 文本色
+	pItem8->setPos(QPointF(80 * cos(112.5*3.1415 / 180) - 10, -80 * sin(112.5*3.1415 / 180) - 10));//位置
+	QFont font8 = pItem8->font();
+	font8.setPixelSize(20);  // 像素大小
+	pItem8->setFont(font8);
+	addItem(pItem8);
+}
+
+
+
+
+//
+//////重建重复数据函数
+//void CNodeEditorScene::dataReset(int currentIndex, int count)  //排序方案号，随机数个数
+//{
+//
+//
+//	QGraphicsRectItem *rectItem = new QGraphicsRectItem;//绘制矩形
+//	QPen pen2 = rectItem->pen();//画笔 绘制外框
+//	pen2.setWidth(2);
+//	pen2.setColor(Qt::green);//外边框的颜色
+//	rectItem->setPen(pen2);
+//	rectItem->setBrush(QBrush(QColor(0, 160, 230)));//填充颜色
+//	rectItem->setRect(QRectF(0, 0, 20, 100));
+//	QTimeLine *timer = new QTimeLine(500);//时间线
+//	timer->setFrameRange(0, 100);//移动帧数
+//	QGraphicsItemAnimation *animation = new QGraphicsItemAnimation;//动画
+//	animation->setItem(rectItem);//加入小球
+//	animation->setTimeLine(timer);//加入时间线
+//
+//	for (int i = 0; i <= 200; ++i)//循环设置位置
+//		animation->setPosAt(i / 200.0, QPointF(i,0));
+//	addItem(rectItem);
+//	timer->start();
+//
+//	qDebug()<<"  "<<endl;
+//
+//
+//	QGraphicsRectItem *rectItem2 = new QGraphicsRectItem;//绘制矩形
+//	QPen pen3 = rectItem2->pen();//画笔 绘制外框
+//	pen3.setWidth(2);
+//	pen3.setColor(Qt::green);//外边框的颜色
+//	rectItem2->setPen(pen3);
+//	rectItem2->setBrush(QBrush(QColor(0, 160, 230)));//填充颜色
+//	rectItem2->setRect(QRectF(0, 0, 20, 100));
+//	rectItem2->setFlags(QGraphicsItem::ItemIsSelectable);
+//	rectItem2->setPos(QPointF(200, 200));
+//	addItem(rectItem2);
+//
+
+	//SortObejct *obj = SortCreator::createSortObject(currentIndex, this);
+
+	////重置数据，目前sortobj是一次性的
+	//if (_sortObj) {
+	//	_sortObj->deleteLater();
+	//	_sortObj = nullptr;
+	//}
+	//_sortObj = obj;
+	//if (_sortObj) {
+	//	connect(_sortObj, &SortObejct::sortUpdated, this, [this] {
+	//		update();
+	//	});
+	//	connect(_sortObj, &SortObejct::sortFinished, this, [this] {
+	//		update();
+	//		emit finished();
+	//	});
+	//	_sortObj->dataReset(count);
+	//}
+	//update();//填充好数据刷新
+	//}
+
+////重建开始排序函数
+void  CNodeEditorScene::startSort(int interval)
+{
+	QRectF Rect(-1000, -1000, 2000, 2000);//删除-1000 -1000 1000 1000 方块内的所有图形
 	QList<QGraphicsItem *> itemList = items(Rect);
 	for (auto i = 0; i < itemList.size(); i++) {
 		removeItem(itemList[i]);
-		//delete itemList[i];
+		delete itemList[i];
 	}
 }
+
+

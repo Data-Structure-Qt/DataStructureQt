@@ -11,12 +11,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Dequeue.cpp" />
-    <ClCompile Include="Dequeuenode.cpp" />
+    <ClCompile Include="CircleQueue.cpp" />
+    <ClCompile Include="CircleQueuenode.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Dequeue.h" />
-    <ClInclude Include="Dequeuenode.h" />
+    <ClInclude Include="CircleQueue.h" />
+    <ClInclude Include="CircleQueuenode.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{4B6682A9-0FCA-42F7-878E-0B1F0F64A0F9}</ProjectGuid>
@@ -39,7 +39,7 @@
     <Import Project="$(QtMsBuild)\qt_defaults.props" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
-    <QtInstall>5.14.0_msvc2017_64</QtInstall>
+    <QtInstall>msvc2017_64</QtInstall>
     <QtModules>core;opengl;gui;help;widgets;quickwidgets;openglextensions;</QtModules>
     <QtBuildConfig>debug</QtBuildConfig>
   </PropertyGroup>

@@ -150,6 +150,21 @@
     <QtMoc Include="CNodeEditorScene.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="SelectionSort.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="SortCreator.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="SortObejct.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="BubbleSort.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QuickSort.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CAttribute.cpp">
@@ -249,6 +264,21 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CNodeEditorScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectionSort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SortCreator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SortObejct.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BubbleSort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QuickSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -23,17 +23,17 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DequeueUI.cpp">
+    <ClCompile Include="CircleQueueUI.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="DequeueUI.h">
+    <QtMoc Include="CircleQueueUI.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
-    <QtUic Include="..\..\标准页面文件\DequeueUI.ui">
+    <QtUic Include="..\..\标准页面文件\CircleQueueUI.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>

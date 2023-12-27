@@ -9,7 +9,7 @@
 #include <commonmoduels/CNodeEditorScene.h>
 #include <slider2d.h>
 #include <CSceneOptionsDialog.h>
-#include <../../app/appui/DequeueUI.h>
+//#include <CircleQueueUI.h>
 
 class CMainWindow;
 
@@ -179,7 +179,6 @@ private:
 	class paintui* m_demoPanel = nullptr;
 	class painterDemo* m_painterDemo = nullptr;
 
-	class DequeueUI *m_linklistPanel = nullptr;
-
+	class CircleQueueUI* m_linklistPanel = nullptr;
 	class CSearchDialog *m_searchDialog = nullptr;
 };

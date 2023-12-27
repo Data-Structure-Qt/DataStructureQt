@@ -25,9 +25,9 @@ public:
 	void taildeleteButton_code();
 	void deleteButton_code();
 
-	void front_push_code(int act);
+	void push_code(int act);
 
-	void sleepTime(int time);
+	void pop_code(int act);
 
 private:
 	Ui::CQuickHelpUI *ui;

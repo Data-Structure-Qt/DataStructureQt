@@ -23,7 +23,7 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_CLinklistEditorUI
+class Ui_CircleQueueUI
 {
 public:
     QHBoxLayout *horizontalLayout_12;
@@ -78,16 +78,16 @@ public:
     QSpacerItem *verticalSpacer_5;
     QSpacerItem *verticalSpacer_4;
 
-    void setupUi(QWidget *CLinklistEditorUI)
+    void setupUi(QWidget *CircleQueueUI)
     {
-        if (CLinklistEditorUI->objectName().isEmpty())
-            CLinklistEditorUI->setObjectName(QString::fromUtf8("CLinklistEditorUI"));
-        CLinklistEditorUI->resize(765, 732);
-        horizontalLayout_12 = new QHBoxLayout(CLinklistEditorUI);
+        if (CircleQueueUI->objectName().isEmpty())
+            CircleQueueUI->setObjectName(QString::fromUtf8("CircleQueueUI"));
+        CircleQueueUI->resize(765, 732);
+        horizontalLayout_12 = new QHBoxLayout(CircleQueueUI);
         horizontalLayout_12->setObjectName(QString::fromUtf8("horizontalLayout_12"));
         verticalLayout_5 = new QVBoxLayout();
         verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
-        groupBox = new QGroupBox(CLinklistEditorUI);
+        groupBox = new QGroupBox(CircleQueueUI);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
         horizontalLayout_6 = new QHBoxLayout(groupBox);
         horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
@@ -131,7 +131,7 @@ public:
 
         verticalLayout_5->addWidget(groupBox);
 
-        groupBox_2 = new QGroupBox(CLinklistEditorUI);
+        groupBox_2 = new QGroupBox(CircleQueueUI);
         groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
         horizontalLayout_8 = new QHBoxLayout(groupBox_2);
         horizontalLayout_8->setObjectName(QString::fromUtf8("horizontalLayout_8"));
@@ -221,7 +221,7 @@ public:
 
         verticalLayout_5->addWidget(groupBox_2);
 
-        groupBox_3 = new QGroupBox(CLinklistEditorUI);
+        groupBox_3 = new QGroupBox(CircleQueueUI);
         groupBox_3->setObjectName(QString::fromUtf8("groupBox_3"));
         horizontalLayout_9 = new QHBoxLayout(groupBox_3);
         horizontalLayout_9->setObjectName(QString::fromUtf8("horizontalLayout_9"));
@@ -271,7 +271,7 @@ public:
 
         verticalLayout_5->addWidget(groupBox_3);
 
-        groupBox_4 = new QGroupBox(CLinklistEditorUI);
+        groupBox_4 = new QGroupBox(CircleQueueUI);
         groupBox_4->setObjectName(QString::fromUtf8("groupBox_4"));
         horizontalLayout_11 = new QHBoxLayout(groupBox_4);
         horizontalLayout_11->setObjectName(QString::fromUtf8("horizontalLayout_11"));
@@ -333,49 +333,49 @@ public:
         horizontalLayout_12->addLayout(verticalLayout_5);
 
 
-        retranslateUi(CLinklistEditorUI);
-        QObject::connect(createButton, SIGNAL(clicked()), CLinklistEditorUI, SLOT(on_create_btn_clicked()));
-        QObject::connect(cleanButton, SIGNAL(clicked()), CLinklistEditorUI, SLOT(on_clean_btn_clicked()));
-        QObject::connect(headinsertButton, SIGNAL(clicked()), CLinklistEditorUI, SLOT(on_headinsert_btn_clicked()));
-        QObject::connect(tailinsertButton, SIGNAL(clicked()), CLinklistEditorUI, SLOT(on_tailinsert_btn_clicked()));
-        QObject::connect(insertButton, SIGNAL(clicked()), CLinklistEditorUI, SLOT(on_locationinsert_btn_clicked()));
-        QObject::connect(headdeleteButton, SIGNAL(clicked()), CLinklistEditorUI, SLOT(on_headdelete_btn_clicked()));
-        QObject::connect(taildeleteButton, SIGNAL(clicked()), CLinklistEditorUI, SLOT(on_taildelete_btn_clicked()));
-        QObject::connect(deleteButton, SIGNAL(clicked()), CLinklistEditorUI, SLOT(on_locationdelete_btn_clicked()));
-        QObject::connect(searchButton, SIGNAL(clicked()), CLinklistEditorUI, SLOT(on_search_btn_clicked()));
+        retranslateUi(CircleQueueUI);
+        QObject::connect(createButton, SIGNAL(clicked()), CircleQueueUI, SLOT(on_create_btn_clicked()));
+        QObject::connect(cleanButton, SIGNAL(clicked()), CircleQueueUI, SLOT(on_clean_btn_clicked()));
+        QObject::connect(headinsertButton, SIGNAL(clicked()), CircleQueueUI, SLOT(on_headinsert_btn_clicked()));
+        QObject::connect(tailinsertButton, SIGNAL(clicked()), CircleQueueUI, SLOT(on_tailinsert_btn_clicked()));
+        QObject::connect(insertButton, SIGNAL(clicked()), CircleQueueUI, SLOT(on_locationinsert_btn_clicked()));
+        QObject::connect(headdeleteButton, SIGNAL(clicked()), CircleQueueUI, SLOT(on_headdelete_btn_clicked()));
+        QObject::connect(taildeleteButton, SIGNAL(clicked()), CircleQueueUI, SLOT(on_taildelete_btn_clicked()));
+        QObject::connect(deleteButton, SIGNAL(clicked()), CircleQueueUI, SLOT(on_locationdelete_btn_clicked()));
+        QObject::connect(searchButton, SIGNAL(clicked()), CircleQueueUI, SLOT(on_search_btn_clicked()));
 
-        QMetaObject::connectSlotsByName(CLinklistEditorUI);
+        QMetaObject::connectSlotsByName(CircleQueueUI);
     } // setupUi
 
-    void retranslateUi(QWidget *CLinklistEditorUI)
+    void retranslateUi(QWidget *CircleQueueUI)
     {
-        CLinklistEditorUI->setWindowTitle(QCoreApplication::translate("CLinklistEditorUI", "Form", nullptr));
-        groupBox->setTitle(QCoreApplication::translate("CLinklistEditorUI", "\345\210\233\345\273\272", nullptr));
-        label->setText(QCoreApplication::translate("CLinklistEditorUI", "\350\257\267\350\276\223\345\205\245\346\225\260\346\215\256\357\274\214\347\224\250\342\200\234\357\274\214\342\200\235\351\232\224\345\274\200", nullptr));
-        createButton->setText(QCoreApplication::translate("CLinklistEditorUI", "\345\210\233\345\273\272", nullptr));
-        cleanButton->setText(QCoreApplication::translate("CLinklistEditorUI", "\346\270\205\347\251\272", nullptr));
-        groupBox_2->setTitle(QCoreApplication::translate("CLinklistEditorUI", "\346\217\222\345\205\245", nullptr));
-        label_2->setText(QCoreApplication::translate("CLinklistEditorUI", "\346\225\260\346\215\256", nullptr));
-        headinsertButton->setText(QCoreApplication::translate("CLinklistEditorUI", "\345\244\264\351\203\250\346\217\222\345\205\245", nullptr));
-        tailinsertButton->setText(QCoreApplication::translate("CLinklistEditorUI", "\345\260\276\351\203\250\346\217\222\345\205\245", nullptr));
-        label_3->setText(QCoreApplication::translate("CLinklistEditorUI", "\346\225\260\346\215\256", nullptr));
-        label_4->setText(QCoreApplication::translate("CLinklistEditorUI", "\344\275\215\347\275\256", nullptr));
-        insertButton->setText(QCoreApplication::translate("CLinklistEditorUI", "\346\217\222\345\205\245", nullptr));
-        groupBox_3->setTitle(QCoreApplication::translate("CLinklistEditorUI", "\347\247\273\351\231\244", nullptr));
-        label_5->setText(QCoreApplication::translate("CLinklistEditorUI", "\344\275\215\347\275\256", nullptr));
-        headdeleteButton->setText(QCoreApplication::translate("CLinklistEditorUI", "\345\244\264\351\203\250\347\247\273\351\231\244", nullptr));
-        taildeleteButton->setText(QCoreApplication::translate("CLinklistEditorUI", "\345\260\276\351\203\250\347\247\273\351\231\244", nullptr));
-        deleteButton->setText(QCoreApplication::translate("CLinklistEditorUI", "\347\247\273\351\231\244", nullptr));
-        groupBox_4->setTitle(QCoreApplication::translate("CLinklistEditorUI", "\346\220\234\347\264\242", nullptr));
-        label_6->setText(QCoreApplication::translate("CLinklistEditorUI", "\346\225\260\346\215\256", nullptr));
-        label_7->setText(QCoreApplication::translate("CLinklistEditorUI", "\344\275\215\347\275\256", nullptr));
-        searchButton->setText(QCoreApplication::translate("CLinklistEditorUI", "\346\220\234\347\264\242", nullptr));
+        CircleQueueUI->setWindowTitle(QCoreApplication::translate("CircleQueueUI", "Form", nullptr));
+        groupBox->setTitle(QCoreApplication::translate("CircleQueueUI", "\345\210\233\345\273\272", nullptr));
+        label->setText(QCoreApplication::translate("CircleQueueUI", "\350\257\267\350\276\223\345\205\245\346\225\260\346\215\256\357\274\214\347\224\250\342\200\234\357\274\214\342\200\235\351\232\224\345\274\200", nullptr));
+        createButton->setText(QCoreApplication::translate("CircleQueueUI", "\345\210\233\345\273\272", nullptr));
+        cleanButton->setText(QCoreApplication::translate("CircleQueueUI", "\346\270\205\347\251\272", nullptr));
+        groupBox_2->setTitle(QCoreApplication::translate("CircleQueueUI", "\346\217\222\345\205\245", nullptr));
+        label_2->setText(QCoreApplication::translate("CircleQueueUI", "\346\225\260\346\215\256", nullptr));
+        headinsertButton->setText(QCoreApplication::translate("CircleQueueUI", "\345\244\264\351\203\250\346\217\222\345\205\245", nullptr));
+        tailinsertButton->setText(QCoreApplication::translate("CircleQueueUI", "\345\260\276\351\203\250\346\217\222\345\205\245", nullptr));
+        label_3->setText(QCoreApplication::translate("CircleQueueUI", "\346\225\260\346\215\256", nullptr));
+        label_4->setText(QCoreApplication::translate("CircleQueueUI", "\344\275\215\347\275\256", nullptr));
+        insertButton->setText(QCoreApplication::translate("CircleQueueUI", "\346\217\222\345\205\245", nullptr));
+        groupBox_3->setTitle(QCoreApplication::translate("CircleQueueUI", "\347\247\273\351\231\244", nullptr));
+        label_5->setText(QCoreApplication::translate("CircleQueueUI", "\344\275\215\347\275\256", nullptr));
+        headdeleteButton->setText(QCoreApplication::translate("CircleQueueUI", "\345\244\264\351\203\250\347\247\273\351\231\244", nullptr));
+        taildeleteButton->setText(QCoreApplication::translate("CircleQueueUI", "\345\260\276\351\203\250\347\247\273\351\231\244", nullptr));
+        deleteButton->setText(QCoreApplication::translate("CircleQueueUI", "\347\247\273\351\231\244", nullptr));
+        groupBox_4->setTitle(QCoreApplication::translate("CircleQueueUI", "\346\220\234\347\264\242", nullptr));
+        label_6->setText(QCoreApplication::translate("CircleQueueUI", "\346\225\260\346\215\256", nullptr));
+        label_7->setText(QCoreApplication::translate("CircleQueueUI", "\344\275\215\347\275\256", nullptr));
+        searchButton->setText(QCoreApplication::translate("CircleQueueUI", "\346\220\234\347\264\242", nullptr));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class CLinklistEditorUI: public Ui_CLinklistEditorUI {};
+    class CircleQueueUI: public Ui_CircleQueueUI {};
 } // namespace Ui
 
 QT_END_NAMESPACE

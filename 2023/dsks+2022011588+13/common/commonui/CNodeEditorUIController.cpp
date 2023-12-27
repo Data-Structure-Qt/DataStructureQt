@@ -7,7 +7,7 @@
 #include <CNodeEdgePropertiesUI.h>
 #include <CClassAttributesEditorUI.h>
 #include <CQuickHelpUI.h>
-#include <DequeueUI.h>
+#include <CircleQueueUI.h>
 #include <CExtListInputDialog.h>
 #include <CNodesFactorDialog.h>
 #include <CNodePortEditorDialog.h>
@@ -329,29 +329,29 @@ void CNodeEditorUIController::createMenus()
 
 
 	// add edit toolbar
-	/*QToolBar *editToolbar = m_parent->addToolBar(QString::fromLocal8Bit("编辑"));
+	QToolBar *editToolbar = m_parent->addToolBar(QString::fromLocal8Bit("编辑"));
 	editToolbar->setObjectName("editToolbar");
 	editToolbar->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
 
 	editToolbar->addAction(undoAction);
 	editToolbar->addAction(redoAction);
 
-	editToolbar->addSeparator();*/
+	editToolbar->addSeparator();
 
 	//editToolbar->addAction(m_editorScene->actions()->cutAction);
 	//editToolbar->addAction(m_editorScene->actions()->copyAction);
 	//editToolbar->addAction(m_editorScene->actions()->pasteAction);
 	//editToolbar->addAction(m_editorScene->actions()->delAction);
 
-	//editToolbar->addSeparator();
+	editToolbar->addSeparator();
 
-	//editToolbar->addAction(findAction);
+	editToolbar->addAction(findAction);
 
 
 	// add edit modes toolbar
-	/*QToolBar *editModesToolbar = m_parent->addToolBar(tr("Edit Modes"));
+	QToolBar *editModesToolbar = m_parent->addToolBar(tr("Edit Modes"));
 	editModesToolbar->setObjectName("editModesToolbar");
-	editModesToolbar->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);*/
+	editModesToolbar->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
 
 	//   editModesToolbar->addAction(modeDefaultAction);
 	//   editModesToolbar->addAction(modeNodesAction);
@@ -435,28 +435,28 @@ void CNodeEditorUIController::createMenus()
 	 //   zoomToolbar->addAction(fitZoomSelectedAction);
 		//zoomToolbar->addAction(fitZoomBackAction);
 
-	//goToBeginAction = m_viewMenu->addAction(QIcon(":/Icons/gotobegin"), QString::fromLocal8Bit("跳到开始"));			//重置
-	//goToBeginAction->setShortcut(QKeySequence::ZoomIn);
-	//connect(goToBeginAction, &QAction::triggered, this, &CNodeEditorUIController::onClickGoToBeginButton);
+	goToBeginAction = m_viewMenu->addAction(QIcon(":/Icons/gotobegin"), QString::fromLocal8Bit("跳到开始"));			//重置
+	goToBeginAction->setShortcut(QKeySequence::ZoomIn);
+	connect(goToBeginAction, &QAction::triggered, this, &CNodeEditorUIController::onClickGoToBeginButton);
 
-	//backAction = m_viewMenu->addAction(QIcon(":/Icons/back"), QString::fromLocal8Bit("后退一步"));         //从开始运行到上一步
-	//backAction->setShortcut(QKeySequence::ZoomOut);
-	//connect(backAction, &QAction::triggered, this, &CNodeEditorUIController::onClickStepBackButton);
+	backAction = m_viewMenu->addAction(QIcon(":/Icons/back"), QString::fromLocal8Bit("后退一步"));         //从开始运行到上一步
+	backAction->setShortcut(QKeySequence::ZoomOut);
+	connect(backAction, &QAction::triggered, this, &CNodeEditorUIController::onClickStepBackButton);
 
-	////resetZoomAction = m_viewMenu->addAction(QIcon(":/Icons/play"), QString::fromLocal8Bit("开始"));         //开始|暂停 运行 时间间隔为默认值
-	////connect(resetZoomAction, &QAction::triggered, this, &CNodeEditorUIController::onClickPlayButton);
+	//resetZoomAction = m_viewMenu->addAction(QIcon(":/Icons/play"), QString::fromLocal8Bit("开始"));         //开始|暂停 运行 时间间隔为默认值
+	//connect(resetZoomAction, &QAction::triggered, this, &CNodeEditorUIController::onClickPlayButton);
 
-	//fitZoomSelectedAction = m_viewMenu->addAction(QIcon(":/Icons/go"), QString::fromLocal8Bit("前进一步")); //向下运行一步
-	//connect(fitZoomSelectedAction, &QAction::triggered, this, &CNodeEditorUIController::onClickStepForwardButton);
+	fitZoomSelectedAction = m_viewMenu->addAction(QIcon(":/Icons/go"), QString::fromLocal8Bit("前进一步")); //向下运行一步
+	connect(fitZoomSelectedAction, &QAction::triggered, this, &CNodeEditorUIController::onClickStepForwardButton);
 
-	//fitZoomBackAction = m_viewMenu->addAction(QIcon(":/Icons/gotoend"), QString::fromLocal8Bit("跳到结束"));  //运行到结束
-	//connect(fitZoomBackAction, &QAction::triggered, this, &CNodeEditorUIController::onClickGoToEndButton);
+	fitZoomBackAction = m_viewMenu->addAction(QIcon(":/Icons/gotoend"), QString::fromLocal8Bit("跳到结束"));  //运行到结束
+	connect(fitZoomBackAction, &QAction::triggered, this, &CNodeEditorUIController::onClickGoToEndButton);
 
 
-	//// add zoom toolbar
-	//QToolBar *zoomToolbar = m_parent->addToolBar(tr("Zoom"));
-	//zoomToolbar->setObjectName("zoomToolbar");
-	//zoomToolbar->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
+	// add zoom toolbar
+	QToolBar *zoomToolbar = m_parent->addToolBar(tr("Zoom"));
+	zoomToolbar->setObjectName("zoomToolbar");
+	zoomToolbar->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
 	//zoomToolbar->addAction(goToBeginAction);
 	//zoomToolbar->addAction(backAction);
 	////zoomToolbar->addAction(resetZoomAction);
@@ -501,7 +501,7 @@ void CNodeEditorUIController::createPanels()
 	);*/
 	m_parent->createDockWindow(
 		"linklistDock", QString::fromLocal8Bit("控制面板"), Qt::LeftDockWidgetArea,
-		m_linklistPanel = new DequeueUI(m_parent)
+		m_linklistPanel = new CircleQueueUI(m_parent)
 	);
 	m_linklistPanel->setScene(m_editorScene);
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>CLinklistEditorUI</class>
- <widget class="QWidget" name="CLinklistEditorUI">
+ <class>CircleQueueUI</class>
+ <widget class="QWidget" name="CircleQueueUI">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -329,7 +329,7 @@
   <connection>
    <sender>createButton</sender>
    <signal>clicked()</signal>
-   <receiver>CLinklistEditorUI</receiver>
+   <receiver>CircleQueueUI</receiver>
    <slot>on_create_btn_clicked()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -345,7 +345,7 @@
   <connection>
    <sender>cleanButton</sender>
    <signal>clicked()</signal>
-   <receiver>CLinklistEditorUI</receiver>
+   <receiver>CircleQueueUI</receiver>
    <slot>on_clean_btn_clicked()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -361,7 +361,7 @@
   <connection>
    <sender>headinsertButton</sender>
    <signal>clicked()</signal>
-   <receiver>CLinklistEditorUI</receiver>
+   <receiver>CircleQueueUI</receiver>
    <slot>on_headinsert_btn_clicked()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -377,7 +377,7 @@
   <connection>
    <sender>tailinsertButton</sender>
    <signal>clicked()</signal>
-   <receiver>CLinklistEditorUI</receiver>
+   <receiver>CircleQueueUI</receiver>
    <slot>on_tailinsert_btn_clicked()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -393,7 +393,7 @@
   <connection>
    <sender>insertButton</sender>
    <signal>clicked()</signal>
-   <receiver>CLinklistEditorUI</receiver>
+   <receiver>CircleQueueUI</receiver>
    <slot>on_locationinsert_btn_clicked()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -409,7 +409,7 @@
   <connection>
    <sender>headdeleteButton</sender>
    <signal>clicked()</signal>
-   <receiver>CLinklistEditorUI</receiver>
+   <receiver>CircleQueueUI</receiver>
    <slot>on_headdelete_btn_clicked()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -425,7 +425,7 @@
   <connection>
    <sender>taildeleteButton</sender>
    <signal>clicked()</signal>
-   <receiver>CLinklistEditorUI</receiver>
+   <receiver>CircleQueueUI</receiver>
    <slot>on_taildelete_btn_clicked()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -441,7 +441,7 @@
   <connection>
    <sender>deleteButton</sender>
    <signal>clicked()</signal>
-   <receiver>CLinklistEditorUI</receiver>
+   <receiver>CircleQueueUI</receiver>
    <slot>on_locationdelete_btn_clicked()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -457,7 +457,7 @@
   <connection>
    <sender>searchButton</sender>
    <signal>clicked()</signal>
-   <receiver>CLinklistEditorUI</receiver>
+   <receiver>CircleQueueUI</receiver>
    <slot>on_search_btn_clicked()</slot>
    <hints>
     <hint type="sourcelabel">

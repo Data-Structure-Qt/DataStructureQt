@@ -1,8 +1,19 @@
+/*
+This file is a part of
+QVGE - Qt Visual Graph Editor
+
+(c) 2016-2020 Ars L. Masiuk (ars.masiuk@gmail.com)
+
+It can be used freely, maintaining the information above.
+*/
 
 #pragma once
 
 #include "CEditorScene.h"
 #include "CEdge.h"
+#include "SortObejct.h"
+
+
 
 class CNode;
 //class CEdge;
@@ -43,12 +54,22 @@ public:
 	bool startNewConnection(const QPointF& pos);
 	void cancel(const QPointF& pos = QPointF());
 	void insertnode(int location, int data);
-	void drawText(int location);
-	void insertfindnode(int location, int data);
 	void modifynode(int location, int data);
 	void deletenode(int location);
 	void changeNodeColor(int location);
-	void clearScreen();
+
+	void dataReset(int currentIndex, int count);
+	void dataDraw(double x, double  y, double  w, double h, int arr);
+	void dataDraw(double x, double  y, double  w, double h, int arr, int flag);
+	void circleDraw();
+	void headarrowDraw(int num);
+	void tailarrowDraw(int num);
+	void CNodeEditorScene::circleDataDraw(int data, int num);
+	void arrowLine(double head_x, double head_y, double tail_x, double tail_y);
+
+	void startSort(int interval);
+
+
 
 	EditMode getEditMode() const {
 		return m_editMode;
@@ -59,9 +80,7 @@ public:
 
 	// factorizations
 	virtual CNode* createNewNode() const;
-	virtual CNode* createSearchNode() const;
 	CNode* createNewNode(const QPointF& pos);		// calls createNewNode(), attaches to scene and sets pos
-	CNode* createSearchNode(const QPointF& pos);
 
 	virtual CEdge* createNewConnection() const;
 	CEdge* createNewConnection(CNode* startNode, CNode* endNode);	// calls createNewConnection(), attaches to scene and sets nodes
@@ -83,6 +102,8 @@ public:
 
 Q_SIGNALS:
 	void editModeChanged(int mode);
+signals:
+	void finished();
 
 public Q_SLOTS:
 	void setEditMode(EditMode mode);
@@ -147,6 +168,10 @@ protected:
 
 	// drawing
 	int m_nextIndex = 0;
+
+
+private:
+	SortObejct *_sortObj = nullptr;
 };
 
 
