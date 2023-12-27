@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LinklistUI</class>
+ <widget class="QWidget" name="LinklistUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1007</width>
+    <height>816</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox_5">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>40</y>
+     <width>851</width>
+     <height>371</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>可视化公共子串</string>
+   </property>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>100</y>
+      <width>54</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>S:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="runAlgorithmButton">
+    <property name="geometry">
+     <rect>
+      <x>194</x>
+      <y>262</y>
+      <width>191</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>开始执行</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditT">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>179</y>
+      <width>311</width>
+      <height>61</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>190</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>T:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditS">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>90</y>
+      <width>311</width>
+      <height>61</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>253</x>
+      <y>50</y>
+      <width>201</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="text">
+     <string>请输入字符串：</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>40</y>
+      <width>131</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="text">
+     <string>结果：</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowserS">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>90</y>
+      <width>261</width>
+      <height>121</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowserT">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>240</y>
+      <width>261</width>
+      <height>121</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>70</y>
+      <width>54</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>S：</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>220</y>
+      <width>54</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>T:</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>24</y>
+     <width>317</width>
+     <height>123</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>创建</string>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>11</x>
+      <y>23</y>
+      <width>144</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>请输入数据，用“，”隔开</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="dataEdit">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>44</y>
+      <width>120</width>
+      <height>19</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="createButton">
+    <property name="geometry">
+     <rect>
+      <x>138</x>
+      <y>42</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>创建</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cleanButton">
+    <property name="geometry">
+     <rect>
+      <x>225</x>
+      <y>42</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>清空</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_3">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>341</y>
+     <width>321</width>
+     <height>123</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>移除</string>
+   </property>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>11</x>
+      <y>23</y>
+      <width>24</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>位置</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="delete_spinBox">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>44</y>
+      <width>54</width>
+      <height>19</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="headdeleteButton">
+    <property name="geometry">
+     <rect>
+      <x>72</x>
+      <y>42</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>头部移除</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="taildeleteButton">
+    <property name="geometry">
+     <rect>
+      <x>153</x>
+      <y>42</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>尾部移除</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="deleteButton">
+    <property name="geometry">
+     <rect>
+      <x>234</x>
+      <y>42</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>移除</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>153</y>
+     <width>317</width>
+     <height>182</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>插入</string>
+   </property>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>11</x>
+      <y>23</y>
+      <width>24</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>数据</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="insert_Edit1">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>44</y>
+      <width>120</width>
+      <height>19</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="headinsertButton">
+    <property name="geometry">
+     <rect>
+      <x>138</x>
+      <y>42</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>头部插入</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="tailinsertButton">
+    <property name="geometry">
+     <rect>
+      <x>225</x>
+      <y>42</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>尾部插入</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="insert_Edit2">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>103</y>
+      <width>111</width>
+      <height>19</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="insert_spinBox">
+    <property name="geometry">
+     <rect>
+      <x>129</x>
+      <y>103</y>
+      <width>54</width>
+      <height>19</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="insertButton">
+    <property name="geometry">
+     <rect>
+      <x>209</x>
+      <y>101</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>插入</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>73</y>
+      <width>24</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>数据</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>88</x>
+      <y>73</y>
+      <width>24</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>位置</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_4">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>470</y>
+     <width>296</width>
+     <height>125</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>搜索</string>
+   </property>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>24</y>
+      <width>24</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>数据</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>42</x>
+      <y>24</y>
+      <width>24</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>位置</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="search_Edit">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>46</y>
+      <width>111</width>
+      <height>19</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBox">
+    <property name="geometry">
+     <rect>
+      <x>129</x>
+      <y>46</y>
+      <width>54</width>
+      <height>19</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="searchButton">
+    <property name="geometry">
+     <rect>
+      <x>209</x>
+      <y>44</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>搜索</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>runAlgorithmButton</sender>
+   <signal>clicked()</signal>
+   <receiver>LinklistUI</receiver>
+   <slot>runAlgorithm()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>651</x>
+     <y>353</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>626</x>
+     <y>536</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>createButton</sender>
+   <signal>clicked()</signal>
+   <receiver>LinklistUI</receiver>
+   <slot>on_create_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>216</x>
+     <y>80</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>37</x>
+     <y>610</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cleanButton</sender>
+   <signal>clicked()</signal>
+   <receiver>LinklistUI</receiver>
+   <slot>on_clean_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>282</x>
+     <y>81</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>71</x>
+     <y>619</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>headinsertButton</sender>
+   <signal>clicked()</signal>
+   <receiver>LinklistUI</receiver>
+   <slot>on_headinsert_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>182</x>
+     <y>212</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>113</x>
+     <y>632</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tailinsertButton</sender>
+   <signal>clicked()</signal>
+   <receiver>LinklistUI</receiver>
+   <slot>on_tailinsert_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>275</x>
+     <y>209</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>172</x>
+     <y>643</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>insertButton</sender>
+   <signal>clicked()</signal>
+   <receiver>LinklistUI</receiver>
+   <slot>on_locationinsert_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>263</x>
+     <y>269</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>211</x>
+     <y>657</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>headdeleteButton</sender>
+   <signal>clicked()</signal>
+   <receiver>LinklistUI</receiver>
+   <slot>on_headdelete_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>122</x>
+     <y>393</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>28</x>
+     <y>687</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>taildeleteButton</sender>
+   <signal>clicked()</signal>
+   <receiver>LinklistUI</receiver>
+   <slot>on_taildelete_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>234</x>
+     <y>395</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>74</x>
+     <y>705</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>deleteButton</sender>
+   <signal>clicked()</signal>
+   <receiver>LinklistUI</receiver>
+   <slot>on_locationdelete_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>295</x>
+     <y>394</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>153</x>
+     <y>722</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>LinklistUI</receiver>
+   <slot>on_search_btn_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>259</x>
+     <y>528</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>190</x>
+     <y>737</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>on_create_btn_clicked()</slot>
+  <slot>on_clean_btn_clicked()</slot>
+  <slot>on_headinsert_btn_clicked()</slot>
+  <slot>on_tailinsert_btn_clicked()</slot>
+  <slot>on_locationinsert_btn_clicked()</slot>
+  <slot>on_headdelete_btn_clicked()</slot>
+  <slot>on_taildelete_btn_clicked()</slot>
+  <slot>on_locationdelete_btn_clicked()</slot>
+  <slot>on_search_btn_clicked()</slot>
+  <slot>runAlgorithm()</slot>
+ </slots>
+</ui>
