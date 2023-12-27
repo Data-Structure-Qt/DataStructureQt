@@ -97,7 +97,6 @@ void DequeueUI::on_clean_btn_clicked() //清除按钮槽函数
 }
 void DequeueUI::on_shellsort_btn_clicked()//希尔排序按钮函数
 {
-	m_scene->clearScreen();//清屏
 	int gap = DequeueList.size();//获得初始增量
 	int act = 1;
 	for (int i = 1; i <= DequeueList.size(); ++i) //清屏后创建 
@@ -114,11 +113,11 @@ void DequeueUI::on_shellsort_btn_clicked()//希尔排序按钮函数
 	while (gap>1)
 	{
 		gap /= 2;
-		
+		m_quickHelp->shellsort_push_code(act++);//代码追踪
 		for (int i = gap; i < 18; i++) {
 			DequeueList.shellsort(gap,i);//当增量大于1时进行排序
 			m_scene->clearScreen();//清屏
-			m_quickHelp->shellsort_push_code(act++);//代码追踪
+			
 			int q = 0;
 			for (int j = 0; j < DequeueList.size(); ++j)//输出排序结果
 			{
